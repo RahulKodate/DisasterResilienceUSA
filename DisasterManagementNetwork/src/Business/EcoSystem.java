@@ -4,6 +4,12 @@
  */
 package Business;
 
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Organization.Organization;
+import Business.Role.Roles;
+import Business.Role.SystemAdminRole;
+import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
 
 /**
@@ -48,20 +54,20 @@ public class EcoSystem extends Organization{
 
         for (UserAccount user : this.getUserAccountDirectory().getUserAccountList()) {
           
-            if (user.getUsname().equals(username)) {
+            if (user.getUsername().equals(username)) {
                 return false;
             }
             for (Network network : this.getNetworkList()) {
                 for (Enterprise entprise : network.getEnterpriseDirectory().getEnterpriseList()) {
                     for (UserAccount useracc : entprise.getUserAccountDirectory().getUserAccountList()) {
                     
-                        if (useracc.getUsname().equals(username)) {
+                        if (useracc.getUsername().equals(username)) {
                             return false;
                         }
                         for (Organization org : entprise.getOrganizationDirectory().getOrganizationList()) {
                             for (UserAccount accOrgn : org.getUserAccountDirectory().getUserAccountList()) {
                                
-                                if (accOrgn.getUsname().equals(username)) {
+                                if (accOrgn.getUsername().equals(username)) {
                                     return false;
                                 }
                             }

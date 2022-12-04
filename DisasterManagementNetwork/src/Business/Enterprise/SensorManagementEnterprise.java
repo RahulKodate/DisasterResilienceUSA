@@ -4,6 +4,8 @@
  */
 package Business.Enterprise;
 
+import Business.Role.Roles;
+import Business.Role.SensorManagementAdminRole;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +20,7 @@ public class SensorManagementEnterprise extends Enterprise{
     @Override
     public ArrayList<Roles> getSupportedRole() {
         ArrayList<Roles> roles = new ArrayList<>();
-        roles.add(new EnvironmentSensorAdminRole());
+        roles.add(new SensorManagementAdminRole());
         return roles; //To change body of generated methods, choose Tools | Templates.
     }
 }
