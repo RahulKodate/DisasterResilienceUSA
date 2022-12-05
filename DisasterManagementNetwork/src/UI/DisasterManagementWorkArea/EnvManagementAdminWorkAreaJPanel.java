@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author aishw
+ * @author moins
  */
 public class EnvManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
 

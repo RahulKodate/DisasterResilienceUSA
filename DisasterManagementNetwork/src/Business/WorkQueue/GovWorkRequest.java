@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author aishw
+ * @author moins
  */
 public class GovWorkRequest extends WorkRequest {
     private CycloneStormSensor cycloneStormSensor;

@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author apurv
+ * @author moins
  */
 public class EnvironmentSensorAdminWorkAreaJPanel extends javax.swing.JPanel {
 

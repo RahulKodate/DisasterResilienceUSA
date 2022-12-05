@@ -9,7 +9,7 @@ import Business.Sensor.FloodSensor;
 import java.util.ArrayList;
 /**
  *
- * @author aishw
+ * @author moins
  */
 public class FloodManagementWorkRequest extends WorkRequest {
     private ArrayList<FloodSensor> floodManagementsensor;

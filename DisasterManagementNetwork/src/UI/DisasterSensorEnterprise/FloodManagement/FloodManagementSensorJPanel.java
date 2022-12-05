@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author aishw
+ * @author moins
  */
 public class FloodManagementSensorJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer; 

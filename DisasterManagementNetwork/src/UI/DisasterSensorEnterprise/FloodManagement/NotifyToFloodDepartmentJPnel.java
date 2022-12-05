@@ -38,7 +38,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author aishw
+ * @author moins
  */
 public class NotifyToFloodDepartmentJPnel extends javax.swing.JPanel {
     

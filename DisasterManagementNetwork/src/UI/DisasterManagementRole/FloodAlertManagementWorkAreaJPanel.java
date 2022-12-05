@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author apurv
+ * @author moins
  */
 public class FloodAlertManagementWorkAreaJPanel extends javax.swing.JPanel {
 

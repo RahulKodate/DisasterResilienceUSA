@@ -30,7 +30,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author aishw
+ * @author moins
  */
 public class ViewFloodAreaWorkQueue extends javax.swing.JPanel {
     private OrganizationDirectory organizationDirectory;

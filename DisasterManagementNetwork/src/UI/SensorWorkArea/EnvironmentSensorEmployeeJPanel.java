@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author apurv
+ * @author moins
  */
 public class EnvironmentSensorEmployeeJPanel extends javax.swing.JPanel {
 

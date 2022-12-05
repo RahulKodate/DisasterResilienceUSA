@@ -26,7 +26,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author apurv
+ * @author moins
  */
 public class FloodPollutionManagementWorkQueueJPanel extends javax.swing.JPanel {
 private OrganizationDirectory organizationdirectory;

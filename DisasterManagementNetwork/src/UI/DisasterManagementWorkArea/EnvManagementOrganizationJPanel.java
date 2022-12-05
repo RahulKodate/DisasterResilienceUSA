@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author aishw
+ * @author moins
  */
 public class EnvManagementOrganizationJPanel extends javax.swing.JPanel {
 

@@ -10,7 +10,7 @@ import Business.Sensor.FloodSensor;
 import java.util.ArrayList;
 /**
  *
- * @author aishw
+ * @author moins
  */
 public class ResidentWorkRequest extends WorkRequest{
    
