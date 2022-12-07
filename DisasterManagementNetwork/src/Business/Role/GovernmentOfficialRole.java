@@ -9,6 +9,8 @@ import Business.Enterprise.Enterprise;
 import Business.Organization.GovernmentOfficialOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import UI.GovWorkArea.GovernmentEmployeeJPanel;
+import UI.GovWorkArea.GovernmentUserJPanel;
 import javax.swing.JPanel;
 
 /**
@@ -18,6 +20,6 @@ import javax.swing.JPanel;
 public class GovernmentOfficialRole extends Roles{
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new GovernmentOfficialWorkAreaJPanel(userProcessContainer, account, (GovernmentOfficialOrganization)organization, enterprise, business); //To change body of generated methods, choose Tools | Templates.
+        return new GovernmentUserJPanel(userProcessContainer, account, (GovernmentOfficialOrganization)organization, enterprise, business); //To change body of generated methods, choose Tools | Templates.
     }
 }

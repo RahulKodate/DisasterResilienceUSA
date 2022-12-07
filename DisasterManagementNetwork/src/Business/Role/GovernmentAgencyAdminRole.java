@@ -8,6 +8,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import UI.GovWorkArea.GovernmentAdminWorkAreaJPanel;
 import javax.swing.JPanel;
 
 /**
@@ -16,6 +17,6 @@ import javax.swing.JPanel;
  */
 public class GovernmentAgencyAdminRole extends Roles{
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new GovernmentAgencyAdminWorkAreaJPanel(userProcessContainer, enterprise, business); //To change body of generated methods, choose Tools | Templates.
+        return new GovernmentAdminWorkAreaJPanel(userProcessContainer, enterprise, business); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -8,6 +8,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import UI.DisasterManagementWorkArea.EnvManagementAdminWorkAreaJPanel;
 import javax.swing.JPanel;
 
 /**
@@ -17,6 +18,7 @@ import javax.swing.JPanel;
 public class DisasterManagementAdminRole extends Roles{
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new DisasterManagementAdminWorkAreaJPanel(userProcessContainer, enterprise, business);
+        return new EnvManagementAdminWorkAreaJPanel(userProcessContainer, enterprise, business);
     
+}
 }
