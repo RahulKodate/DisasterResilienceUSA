@@ -8,7 +8,6 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
-import UI.DisasterSensorEnterprise.SensorManagement.SensorManagementWorkArea;
 import javax.swing.JPanel;
 
 /**
@@ -18,6 +17,6 @@ import javax.swing.JPanel;
 public class SensorManagementAdminRole extends Roles{
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new SensorManagementWorkArea(userProcessContainer, enterprise, business);
+        return new SensorManagementAdminWorkAreaJPanel(userProcessContainer, enterprise, business);
     }
 }

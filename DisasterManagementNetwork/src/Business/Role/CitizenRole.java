@@ -9,7 +9,6 @@ import Business.Enterprise.Enterprise;
 import Business.Organization.CitizenOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
-import UI.ResidentOrganization.ResidentWorkAreaJPanel;
 import javax.swing.JPanel;
 
 /**
@@ -19,6 +18,6 @@ import javax.swing.JPanel;
 public class CitizenRole extends Roles{
     @Override
 public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem system) {
-return new ResidentWorkAreaJPanel(userProcessContainer, account, (CitizenOrganization) organization, enterprise, system);
+return new CitizenWorkAreaJPanel(userProcessContainer, account, (CitizenOrganization) organization, enterprise, system);
 }
 }
