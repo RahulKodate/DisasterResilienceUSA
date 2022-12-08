@@ -14,7 +14,7 @@ import javax.swing.JPanel;
  *
  * @author rahul
  */
-public class GovernmentAdminWorkAreaJPanel extends javax.swing.JPanel {
+public class GovernmentAgencyAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private Enterprise enterprise; 
@@ -22,7 +22,7 @@ public class GovernmentAdminWorkAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form GovernmentAdminWorkAreaJPanel
      */
-    public GovernmentAdminWorkAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem business) {
+    public GovernmentAgencyAdminWorkAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
@@ -69,7 +69,6 @@ public class GovernmentAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(valueLabel);
         valueLabel.setBounds(440, 120, 556, 22);
 
-        btn_Manage_Ogr.setBackground(new java.awt.Color(255, 255, 255));
         btn_Manage_Ogr.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_Manage_Ogr.setText("Manage Organization");
         btn_Manage_Ogr.addActionListener(new java.awt.event.ActionListener() {

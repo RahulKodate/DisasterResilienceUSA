@@ -24,7 +24,7 @@ import javax.swing.JPanel;
  *
  * @author rahul
  */
-public class SensorManagementWorkArea extends javax.swing.JPanel {
+public class SensorMonitorWorkArea extends javax.swing.JPanel {
     
     private JPanel userProcessContainer; 
     private UserAccount account; 
@@ -34,7 +34,7 @@ public class SensorManagementWorkArea extends javax.swing.JPanel {
     /**
      * Creates new form SensorManagementWorkArea
      */
-    public SensorManagementWorkArea(JPanel userProcessContainer, UserAccount account, SensorMonitorOrganization organization, Enterprise enterprise, EcoSystem business) {
+    public SensorMonitorWorkArea(JPanel userProcessContainer, UserAccount account, SensorMonitorOrganization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

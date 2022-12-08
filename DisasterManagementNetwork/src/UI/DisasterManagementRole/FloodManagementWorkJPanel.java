@@ -16,7 +16,7 @@ import javax.swing.JPanel;
  *
  * @author moins
  */
-public class FloodAlertManagementWorkAreaJPanel extends javax.swing.JPanel {
+public class FloodManagementWorkJPanel extends javax.swing.JPanel {
 
     private final JPanel userProcessContainer;
     private final UserAccount account;
@@ -27,7 +27,7 @@ public class FloodAlertManagementWorkAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form FloodAlertManagementWorkAreaJPanel
      */
-    public FloodAlertManagementWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, FloodManagementOrganization organization, Enterprise enterprise, EcoSystem business) {
+    public FloodManagementWorkJPanel(JPanel userProcessContainer, UserAccount account, FloodManagementOrganization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;

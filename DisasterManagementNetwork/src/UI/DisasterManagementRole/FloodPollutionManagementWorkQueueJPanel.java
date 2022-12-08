@@ -119,7 +119,7 @@ private Enterprise enterprise;
              userProcessContainer.remove(this);
         //Component[] componentArray = userProcessContainer.getComponents();
         //Component component = componentArray[componentArray.length - 1];
-        JPanel panel = new FloodAlertManagementWorkAreaJPanel(userProcessContainer,userAccount,organization, enterprise,business);
+        JPanel panel = new FloodManagementWorkJPanel(userProcessContainer,userAccount,organization, enterprise,business);
         //SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
         //sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();

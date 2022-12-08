@@ -13,7 +13,7 @@ import javax.swing.JPanel;
  *
  * @author moins
  */
-public class EnvironmentSensorAdminWorkAreaJPanel extends javax.swing.JPanel {
+public class SensorManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private Enterprise enterprise; 
@@ -22,7 +22,7 @@ public class EnvironmentSensorAdminWorkAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form EnvironmentSensorAdminWorkAreaJPanel
      */
-    public EnvironmentSensorAdminWorkAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem business) {
+    public SensorManagementAdminWorkAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;

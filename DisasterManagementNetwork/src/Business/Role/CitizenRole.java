@@ -9,6 +9,7 @@ import Business.Enterprise.Enterprise;
 import Business.Organization.CitizenOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import UI.CitizenOrganization.CitizenWorkAreaJPanel;
 import javax.swing.JPanel;
 
 /**

@@ -14,7 +14,7 @@ import javax.swing.JPanel;
  *
  * @author moins
  */
-public class EnvManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
+public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     JPanel userProcessContainer;
     EcoSystem business;
@@ -23,7 +23,7 @@ public class EnvManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
     /**
      * Creates new form EnvironmentManagementAdminWorkAreaJPanel
      */
-    public EnvManagementAdminWorkAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem business) {
+    public DisasterManagementAdminWorkAreaJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem business) {
         initComponents();
         
         this.userProcessContainer = userProcessContainer;
@@ -79,7 +79,7 @@ public class EnvManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(manageOrganizationJButton);
-        manageOrganizationJButton.setBounds(250, 230, 220, 25);
+        manageOrganizationJButton.setBounds(250, 230, 220, 24);
 
         manageEmployeeJButton.setBackground(new java.awt.Color(0, 0, 204));
         manageEmployeeJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -91,7 +91,7 @@ public class EnvManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(manageEmployeeJButton);
-        manageEmployeeJButton.setBounds(260, 340, 220, 25);
+        manageEmployeeJButton.setBounds(260, 340, 220, 24);
 
         userJButton.setBackground(new java.awt.Color(0, 0, 204));
         userJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -103,7 +103,7 @@ public class EnvManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(userJButton);
-        userJButton.setBounds(260, 460, 220, 25);
+        userJButton.setBounds(260, 460, 220, 24);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/admin_work_area.jpg"))); // NOI18N
         add(jLabel2);

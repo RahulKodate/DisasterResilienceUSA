@@ -9,6 +9,7 @@ import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Organization.SensorMonitorOrganization;
 import Business.UserAccount.UserAccount;
+import UI.DisasterSensorEnterprise.SensorManagement.SensorMonitorWorkArea;
 import javax.swing.JPanel;
 
 /**

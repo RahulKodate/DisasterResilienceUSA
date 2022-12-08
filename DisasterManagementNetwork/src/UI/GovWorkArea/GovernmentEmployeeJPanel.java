@@ -169,7 +169,7 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         add(Btn_Back);
-        Btn_Back.setBounds(770, 90, 95, 21);
+        Btn_Back.setBounds(770, 90, 95, 23);
 
         btn_add_employee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_add_employee.setText("Create Employee");
@@ -179,7 +179,7 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_add_employee);
-        btn_add_employee.setBounds(390, 520, 160, 25);
+        btn_add_employee.setBounds(390, 520, 160, 24);
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/g.png"))); // NOI18N
