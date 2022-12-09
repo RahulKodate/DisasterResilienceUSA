@@ -12,7 +12,7 @@ import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import Business.Organization.CitizenOrganization;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.ResidentWorkRequest;
+import Business.WorkQueue.CitizenWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.util.ArrayList;
@@ -130,13 +130,13 @@ public class NotifyResidentJPanel extends javax.swing.JPanel {
         }
         else
         {
-        ResidentWorkRequest request = (ResidentWorkRequest)tbl_wrk_request.getValueAt(getSelectedRow, 0);
-        if(request.getAirPollutionSensor() != null){
-        lblMessage.setText(request.getAirPollutionMessage());
+        CitizenWorkRequest request = (CitizenWorkRequest)tbl_wrk_request.getValueAt(getSelectedRow, 0);
+        if(request.getCycloneStormSensor() != null){
+        lblMessage.setText(request.getCycloneStormMessage());
         }
         else
         {
-        lblMessage.setText(request.getFloodManagementMessage());
+        lblMessage.setText(request.getCycloneStormMessage());
         }
         }
     }//GEN-LAST:event_btn_view_Full_MessageActionPerformed
@@ -153,24 +153,24 @@ public class NotifyResidentJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     public void populateTable() {
-        ResidentWorkRequest resident_wrs = null;
+        CitizenWorkRequest resident_wrs = null;
         DefaultTableModel model = (DefaultTableModel) tbl_wrk_request.getModel();
         model.setRowCount(0);
         
         for(Organization organization : directory.getOrganizationList())
         {
-            if(organization instanceof ResidentOrganization) {
+            if(organization instanceof CitizenOrganization) {
         for (WorkRequest wr : organization.getWorkQueue().getWorkRequestList()) {
-            if (wr instanceof ResidentWorkRequest) 
+            if (wr instanceof CitizenWorkRequest) 
             {
-                resident_wrs = (ResidentWorkRequest)wr;
+                resident_wrs = (CitizenWorkRequest)wr;
             
-                if(resident_wrs.getAirPollutionSensor()!=null)
+                if(resident_wrs.getCycloneStormSensor()!=null)
                 {
                 Object[] row1 = new Object[3];
                 row1[0] = resident_wrs;
                 row1[1] = resident_wrs.getSender();
-                row1[2] = resident_wrs.getAirPollutionMessage();
+                row1[2] = resident_wrs.getCycloneStormMessage();
                 model.addRow(row1);
                 }
                             
@@ -179,7 +179,7 @@ public class NotifyResidentJPanel extends javax.swing.JPanel {
                 Object[] row = new Object[3];
                 row[0] = resident_wrs;
                 row[1] = resident_wrs.getSender();
-                row[2] = resident_wrs.getFloodManagementMessage();
+                row[2] = resident_wrs.getFloodMessage();
                 model.addRow(row);
                 }
                 

@@ -18,32 +18,40 @@ public class GovWorkRequest extends WorkRequest {
     private CycloneStormSensor cycloneStormSensor;
     private ArrayList<FloodSensor> floodSensorList;
     
-    private String AirPollutionMessage;
-    private String FloodManagementMessage;
+    private String CycloneStormMessage;
+    private String FloodMessage;
 
     
 
-    public String getAirPollutionMessage() {
-        return AirPollutionMessage;
+    public String getCycloneStormMessage() {
+        return CycloneStormMessage;
     }
 
-    public void setAirPollutionMessage(String AirPollutionMessage) {
-        this.AirPollutionMessage = AirPollutionMessage;
+    public void setCycloneStormMessage(String CycloneStormMessage) {
+        this.CycloneStormMessage = CycloneStormMessage;
     }
 
-    public String getFloodManagementMessage() {
-        return FloodManagementMessage;
+    public String getFloodMessage() {
+        return FloodMessage;
     }
 
-    public void setFloodManagementMessage(String FloodManagementMessage) {
-        this.FloodManagementMessage = FloodManagementMessage;
+    public void setFloodMessage(String FloodMessage) {
+        this.FloodMessage = FloodMessage;
     }
 
-    	public ArrayList<FloodSensor> getFloodSensorList() {
+    public CycloneStormSensor getCycloneStormSensor() {
+        return cycloneStormSensor;
+    }
+
+    public void setCycloneStormSensor(CycloneStormSensor cycloneStormSensor) {
+        this.cycloneStormSensor = cycloneStormSensor;
+    }
+
+    public ArrayList<FloodSensor> getFloodSensorList() {
         return floodSensorList;
     }
 
-    public void setFloodManagementSensorList(ArrayList<FloodSensor> floodSensorList) {
+    public void setFloodSensorList(ArrayList<FloodSensor> floodSensorList) {
         this.floodSensorList = floodSensorList;
     }
     

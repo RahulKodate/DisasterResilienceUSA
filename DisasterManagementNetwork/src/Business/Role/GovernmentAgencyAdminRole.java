@@ -8,7 +8,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
-import UI.GovWorkArea.GovernmentAgencyAdminWorkAreaJPanel;
+import UI.GovernmentAgencyWorkArea.GovernmentAgencyAdminWorkAreaJPanel;
 import javax.swing.JPanel;
 
 /**

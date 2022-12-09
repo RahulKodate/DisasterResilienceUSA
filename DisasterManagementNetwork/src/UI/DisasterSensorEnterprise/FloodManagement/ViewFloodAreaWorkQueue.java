@@ -333,8 +333,8 @@ public class ViewFloodAreaWorkQueue extends javax.swing.JPanel {
             
             ArrayList<FloodSensor> floodAlertSensorList = reques.getFloodManagementSensor();
             GovWorkRequest govWorkRequest = new GovWorkRequest();
-            govWorkRequest.setFloodManagementSensorList(floodAlertSensorList);
-            govWorkRequest.setFloodManagementMessage("The Area bearing pincodes "+ZipcodeList.stream().collect(Collectors.joining(","))+"'are now out of danger for floods.");
+            govWorkRequest.setFloodSensorList(floodAlertSensorList);
+            govWorkRequest.setFloodMessage("The Area bearing pincodes "+ZipcodeList.stream().collect(Collectors.joining(","))+"'are now out of danger for floods.");
             govWorkRequest.setSender(account);
             govWorkRequest.setStatus("Resolution Message Sent to Government");
 
