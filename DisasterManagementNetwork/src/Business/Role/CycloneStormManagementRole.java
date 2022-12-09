@@ -6,10 +6,10 @@ package Business.Role;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Organization.FloodManagementOrganization;
+import Business.Organization.CycloneStormManagementOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
-import UI.DisasterManagementRole.FloodManagementWorkJPanel;
+import UI.DisasterManagementRole.CycloneStormManagementWorkJPanel;
 import javax.swing.JPanel;
 
 /**
@@ -19,6 +19,6 @@ import javax.swing.JPanel;
 public class CycloneStormManagementRole extends Roles{
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new FloodManagementWorkJPanel(userProcessContainer, account, (FloodManagementOrganization)organization, enterprise, business);
+        return new CycloneStormManagementWorkJPanel(userProcessContainer, account, (CycloneStormManagementOrganization)organization, enterprise, business);
     }   
 }
