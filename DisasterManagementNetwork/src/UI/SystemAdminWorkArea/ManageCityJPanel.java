@@ -176,9 +176,11 @@ public class ManageCityJPanel extends javax.swing.JPanel {
                 
             } else {
                 JOptionPane.showMessageDialog(null, "City Should have a name.");
+                return;
             }
         } else {
             JOptionPane.showMessageDialog(null, "City Already Exists");
+            return;
         }
     }//GEN-LAST:event_btn_submitActionPerformed
 
