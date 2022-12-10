@@ -221,6 +221,7 @@ public class DisasterManagementEmployeeJPanel extends javax.swing.JPanel {
                 organization.getEmployeeDirectory().createEmployee(name);
                 
                 JOptionPane.showMessageDialog(null, "Employee created succesfully");
+                txtName.setText("");
             }
     }
         //}

@@ -96,7 +96,7 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         roleJComboBox = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
-        nameJTextField = new javax.swing.JTextField();
+        txtUserName = new javax.swing.JTextField();
         txtPassword = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         backjButton1 = new javax.swing.JButton();
@@ -190,15 +190,15 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(50, 450, 190, 22);
 
-        nameJTextField.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        nameJTextField.setForeground(new java.awt.Color(0, 0, 51));
-        nameJTextField.addActionListener(new java.awt.event.ActionListener() {
+        txtUserName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtUserName.setForeground(new java.awt.Color(0, 0, 51));
+        txtUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameJTextFieldActionPerformed(evt);
+                txtUserNameActionPerformed(evt);
             }
         });
-        add(nameJTextField);
-        nameJTextField.setBounds(336, 451, 250, 23);
+        add(txtUserName);
+        txtUserName.setBounds(336, 451, 250, 23);
 
         txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPassword.setForeground(new java.awt.Color(0, 0, 51));
@@ -256,9 +256,9 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_roleJComboBoxActionPerformed
 
-    private void nameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameJTextFieldActionPerformed
+    private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nameJTextFieldActionPerformed
+    }//GEN-LAST:event_txtUserNameActionPerformed
 
     private void backjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backjButton1ActionPerformed
         // TODO add your handling code here:
@@ -268,12 +268,12 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_backjButton1ActionPerformed
 
     private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
-          String name = nameJTextField.getText();
+          String name = txtUserName.getText();
         String pss = txtPassword.getText();
             if (name.isEmpty() || pss.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "No field should be blank");
             } else {
-        String userName = nameJTextField.getText();
+        String userName = txtUserName.getText();
         char[] passwordCharArray = txtPassword.getPassword();
         String password = String.valueOf(passwordCharArray);
         Organization organization = (Organization) organizationJComboBox.getSelectedItem();
@@ -291,6 +291,8 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
         //Add the organization to the enterprise
         populateTable();
         JOptionPane.showMessageDialog(null, "User created Succesfully");
+        txtUserName.setText("");
+        txtPassword.setText("");
             }
     }//GEN-LAST:event_createUserJButtonActionPerformed
 
@@ -307,10 +309,10 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nameJTextField;
     private javax.swing.JComboBox organizationJComboBox;
     private javax.swing.JComboBox roleJComboBox;
     private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtUserName;
     private javax.swing.JTable userJTable;
     // End of variables declaration//GEN-END:variables
 }

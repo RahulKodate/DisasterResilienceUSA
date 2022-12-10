@@ -175,6 +175,7 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
         DisasterManagementType type = (DisasterManagementType) organizationJComboBox.getSelectedItem();
 
         directory.createDisasterManagement(type);
+        JOptionPane.showMessageDialog(this, "Organization Succesfully Added!");
         populateTable();
       
     }//GEN-LAST:event_btnCreateActionPerformed
