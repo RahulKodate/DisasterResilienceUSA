@@ -281,18 +281,21 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                     UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new DisasterManagementAdminRole());
                 } else {
                     JOptionPane.showMessageDialog(null, "User name already exist");
+                    return;
                 }
             } else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.GovernmentAgency) {
                 if (system.UniqueUserName(username)) {
                     UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new GovernmentAgencyAdminRole());
                 } else {
                     JOptionPane.showMessageDialog(null, "User name already exist");
+                    return;
                 }
             } else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.SensorManagement) {
                 if (system.UniqueUserName(username)) {
                     UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new SensorManagementAdminRole());
                 } else {
                     JOptionPane.showMessageDialog(null, "User name already exist");
+                    return;
                 }
             }
             populateTable();
