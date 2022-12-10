@@ -117,7 +117,7 @@ public class SensorManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void btnManageUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageUserActionPerformed
         // TODO add your handling code here:
          // TODO add your handling code here:
-        SensorManagementJPanel sensorManagementJPanel = new SensorManagementJPanel(userProcessContainer, enterprise, business);
+        SensorUserJPanel sensorManagementJPanel = new SensorUserJPanel(userProcessContainer, enterprise, business);
         userProcessContainer.add("SensorManagementJPanel", sensorManagementJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);

@@ -77,28 +77,29 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         combo_employeeorg = new javax.swing.JComboBox();
-        txt_Name = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_Org = new javax.swing.JTable();
         Btn_Back = new javax.swing.JButton();
-        btn_add_employee = new javax.swing.JButton();
+        btnAddEmp = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 102));
         setLayout(null);
 
+        jLabel4.setBackground(new java.awt.Color(102, 102, 102));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("View Employees");
         add(jLabel4);
-        jLabel4.setBounds(280, 30, 360, 40);
+        jLabel4.setBounds(350, 50, 210, 40);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Organization");
+        jLabel1.setText("Organization :");
         add(jLabel1);
-        jLabel1.setBounds(93, 99, 150, 22);
+        jLabel1.setBounds(100, 100, 150, 22);
 
         combo_Org.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_Org.setForeground(new java.awt.Color(0, 0, 51));
@@ -115,7 +116,7 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Add Employee");
         add(jLabel5);
-        jLabel5.setBounds(100, 360, 200, 29);
+        jLabel5.setBounds(350, 350, 200, 29);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -129,15 +130,15 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
         add(combo_employeeorg);
         combo_employeeorg.setBounds(380, 420, 250, 23);
 
-        txt_Name.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_Name.setForeground(new java.awt.Color(0, 0, 51));
-        txt_Name.addActionListener(new java.awt.event.ActionListener() {
+        txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtName.setForeground(new java.awt.Color(0, 0, 51));
+        txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_NameActionPerformed(evt);
+                txtNameActionPerformed(evt);
             }
         });
-        add(txt_Name);
-        txt_Name.setBounds(380, 470, 250, 30);
+        add(txtName);
+        txtName.setBounds(380, 470, 250, 30);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -171,15 +172,15 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
         add(Btn_Back);
         Btn_Back.setBounds(770, 90, 95, 23);
 
-        btn_add_employee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_add_employee.setText("Create Employee");
-        btn_add_employee.addActionListener(new java.awt.event.ActionListener() {
+        btnAddEmp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAddEmp.setText("Create Employee");
+        btnAddEmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_add_employeeActionPerformed(evt);
+                btnAddEmpActionPerformed(evt);
             }
         });
-        add(btn_add_employee);
-        btn_add_employee.setBounds(390, 520, 160, 24);
+        add(btnAddEmp);
+        btnAddEmp.setBounds(390, 520, 160, 24);
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/g.png"))); // NOI18N
@@ -201,9 +202,9 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_Btn_BackActionPerformed
 
-    private void btn_add_employeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_employeeActionPerformed
+    private void btnAddEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddEmpActionPerformed
         // TODO add your handling code here:
-         if(txt_Name.equals("")){
+         if(txtName.equals("")){
                JOptionPane.showMessageDialog(null, "Please fill all the fields");
         }
         else{
@@ -211,25 +212,25 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
         //        if (organization instanceof ConsumerOrganization) {
             //            JOptionPane.showMessageDialog(null, "You cannot add the consumer that is responsiblity of Global Manager");
             //        } else {
-            String name = txt_Name.getText();
+            String name = txtName.getText();
             if (name.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "An Employee must have a name");
             } else {
                 organization.getEmployeeDirectory().createEmployee(name);
-                
                 JOptionPane.showMessageDialog(null, "Employee created Succesfully");
+                txtName.setText("");
             }
         }
-    }//GEN-LAST:event_btn_add_employeeActionPerformed
+    }//GEN-LAST:event_btnAddEmpActionPerformed
 
-    private void txt_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_NameActionPerformed
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_NameActionPerformed
+    }//GEN-LAST:event_txtNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_Back;
-    private javax.swing.JButton btn_add_employee;
+    private javax.swing.JButton btnAddEmp;
     private javax.swing.JComboBox combo_Org;
     private javax.swing.JComboBox combo_employeeorg;
     private javax.swing.JLabel jLabel1;
@@ -240,6 +241,6 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tbl_Org;
-    private javax.swing.JTextField txt_Name;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

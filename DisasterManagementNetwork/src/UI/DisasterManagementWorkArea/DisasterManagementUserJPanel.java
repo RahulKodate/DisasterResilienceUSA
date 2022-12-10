@@ -48,7 +48,7 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
             for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
                 Object row[] = new Object[2];
-                row[0] = ua;
+                row[0] = ua.getUsername();
                 row[1] = ua.getRole();
                 ((DefaultTableModel) userJTable.getModel()).addRow(row);
             }

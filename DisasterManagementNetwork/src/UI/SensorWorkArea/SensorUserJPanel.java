@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author moins
  */
-public class SensorManagementJPanel extends javax.swing.JPanel {
+public class SensorUserJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private Enterprise enterprise;
@@ -29,7 +29,7 @@ public class SensorManagementJPanel extends javax.swing.JPanel {
     /**
      * Creates new form EnvironmentSensorUserJPanel
      */
-    public SensorManagementJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem business) {
+    public SensorUserJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.enterprise = enterprise;
         this.userProcessContainer = userProcessContainer;
@@ -48,7 +48,7 @@ public class SensorManagementJPanel extends javax.swing.JPanel {
         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
             for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
                 Object row[] = new Object[2];
-                row[0] = ua;
+                row[0] = ua.getUsername();
                 row[1] = ua.getRole();
                 ((DefaultTableModel) tblUser.getModel()).addRow(row);
             }

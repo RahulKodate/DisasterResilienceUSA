@@ -72,9 +72,9 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_govorg = new javax.swing.JTable();
-        btn_Add_org = new javax.swing.JButton();
-        btn_delete_org = new javax.swing.JButton();
-        btn_Back = new javax.swing.JButton();
+        btnAddOrg = new javax.swing.JButton();
+        btnDeleteOrg = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 102));
@@ -128,34 +128,34 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
         add(jScrollPane2);
         jScrollPane2.setBounds(107, 111, 570, 120);
 
-        btn_Add_org.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_Add_org.setText("Add organization");
-        btn_Add_org.addActionListener(new java.awt.event.ActionListener() {
+        btnAddOrg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAddOrg.setText("Add organization");
+        btnAddOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_Add_orgActionPerformed(evt);
+                btnAddOrgActionPerformed(evt);
             }
         });
-        add(btn_Add_org);
-        btn_Add_org.setBounds(140, 420, 157, 21);
+        add(btnAddOrg);
+        btnAddOrg.setBounds(140, 420, 157, 21);
 
-        btn_delete_org.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_delete_org.setText("Delete Organization");
-        btn_delete_org.addActionListener(new java.awt.event.ActionListener() {
+        btnDeleteOrg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnDeleteOrg.setText("Delete Organization");
+        btnDeleteOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_delete_orgActionPerformed(evt);
+                btnDeleteOrgActionPerformed(evt);
             }
         });
-        add(btn_delete_org);
-        btn_delete_org.setBounds(360, 420, 177, 24);
+        add(btnDeleteOrg);
+        btnDeleteOrg.setBounds(360, 420, 177, 24);
 
-        btn_Back.setText("<<BACK");
-        btn_Back.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setText("<<BACK");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_BackActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(btn_Back);
-        btn_Back.setBounds(60, 20, 95, 23);
+        add(btnBack);
+        btnBack.setBounds(60, 20, 95, 23);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/govorganization.jpg"))); // NOI18N
         add(jLabel3);
@@ -166,16 +166,17 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_combo_orgActionPerformed
 
-    private void btn_Add_orgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Add_orgActionPerformed
+    private void btnAddOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddOrgActionPerformed
         // TODO add your handling code here:
          GovernmentAgencyType type = (GovernmentAgencyType) combo_org.getSelectedItem();
 
         directory.createGovernmentAgency(type);
         //directory.createEnvironmentManagement(type);
+        JOptionPane.showMessageDialog(this, "Organization Added Successfully!");
         populateTable();
-    }//GEN-LAST:event_btn_Add_orgActionPerformed
+    }//GEN-LAST:event_btnAddOrgActionPerformed
 
-    private void btn_delete_orgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_delete_orgActionPerformed
+    private void btnDeleteOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteOrgActionPerformed
         // TODO add your handling code here:
         // TODO add your handling code here:
         int selectedRow = tbl_govorg.getSelectedRow();
@@ -187,21 +188,21 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
         Organization org = (Organization) tbl_govorg.getValueAt(selectedRow, 0);
         directory.DeleteOrganization(org);
         populateTable();
-        JOptionPane.showMessageDialog(null, "Organization deleted Succesfully");
-    }//GEN-LAST:event_btn_delete_orgActionPerformed
+        JOptionPane.showMessageDialog(null, "Organization Deleted Succesfully");
+    }//GEN-LAST:event_btnDeleteOrgActionPerformed
 
-    private void btn_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_BackActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
          userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btn_BackActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_Add_org;
-    private javax.swing.JButton btn_Back;
-    private javax.swing.JButton btn_delete_org;
+    private javax.swing.JButton btnAddOrg;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnDeleteOrg;
     private javax.swing.JComboBox combo_org;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

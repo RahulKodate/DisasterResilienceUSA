@@ -47,7 +47,7 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
             for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
                 Object row[] = new Object[2];
-                row[0] = ua;
+                row[0] = ua.getUsername();
                 row[1] = ua.getRole();
                 ((DefaultTableModel) tbl_GovUser.getModel()).addRow(row);
             }
@@ -92,10 +92,10 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         Combo_role = new javax.swing.JComboBox();
         combo_employee = new javax.swing.JComboBox();
-        txt_Name = new javax.swing.JTextField();
+        txtUserName = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        Txt_Password = new javax.swing.JPasswordField();
+        txtPassword = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_GovUser = new javax.swing.JTable();
@@ -152,15 +152,15 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         add(combo_employee);
         combo_employee.setBounds(413, 338, 250, 23);
 
-        txt_Name.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_Name.setForeground(new java.awt.Color(0, 0, 51));
-        txt_Name.addActionListener(new java.awt.event.ActionListener() {
+        txtUserName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtUserName.setForeground(new java.awt.Color(0, 0, 51));
+        txtUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_NameActionPerformed(evt);
+                txtUserNameActionPerformed(evt);
             }
         });
-        add(txt_Name);
-        txt_Name.setBounds(413, 444, 250, 23);
+        add(txtUserName);
+        txtUserName.setBounds(413, 444, 250, 23);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -174,10 +174,10 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(126, 498, 150, 22);
 
-        Txt_Password.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Txt_Password.setForeground(new java.awt.Color(0, 0, 51));
-        add(Txt_Password);
-        Txt_Password.setBounds(413, 499, 250, 23);
+        txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(0, 0, 51));
+        add(txtPassword);
+        txtPassword.setBounds(413, 499, 250, 23);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -246,19 +246,19 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_Combo_roleActionPerformed
 
-    private void txt_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_NameActionPerformed
+    private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_NameActionPerformed
+    }//GEN-LAST:event_txtUserNameActionPerformed
 
     private void btn_createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_createActionPerformed
         // TODO add your handling code here:
-         String name = txt_Name.getText();
-        String pss = Txt_Password.getText();
+         String name = txtUserName.getText();
+        String pss = txtPassword.getText();
         if (name.isEmpty() || pss.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "No field should be blank");
             } else {
-        String userName = txt_Name.getText();
-        char[] passwordCharArray = Txt_Password.getPassword();
+        String userName = txtUserName.getText();
+        char[] passwordCharArray = txtPassword.getPassword();
         String password = String.valueOf(passwordCharArray);
         Organization organization = (Organization) combo_Org.getSelectedItem();
         Employee employee = (Employee) combo_employee.getSelectedItem();
@@ -275,6 +275,8 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         //Add the organization to the enterprise
         populateTable();
         JOptionPane.showMessageDialog(null, "User created Succesfully");
+        txtUserName.setText("");
+        txtPassword.setText("");
         }
     }//GEN-LAST:event_btn_createActionPerformed
 
@@ -288,7 +290,6 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox Combo_role;
-    private javax.swing.JPasswordField Txt_Password;
     private javax.swing.JButton btn_Back;
     private javax.swing.JButton btn_create;
     private javax.swing.JComboBox combo_Org;
@@ -302,6 +303,7 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tbl_GovUser;
-    private javax.swing.JTextField txt_Name;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
 }

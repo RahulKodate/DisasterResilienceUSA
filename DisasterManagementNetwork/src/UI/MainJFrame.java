@@ -187,6 +187,7 @@ public class MainJFrame extends javax.swing.JFrame {
         txtPassword.setEnabled(false);
     }
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        try {
         btnLogout.setEnabled(false);
         txtUserName.setEnabled(true);
         txtPassword.setEnabled(true);
@@ -201,7 +202,8 @@ public class MainJFrame extends javax.swing.JFrame {
         CardLayout crdLyt = (CardLayout) container.getLayout();
         crdLyt.next(container);
         dB4OUtil.storeSystem(system);
-        return;
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**
