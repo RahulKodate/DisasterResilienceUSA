@@ -90,7 +90,7 @@ public class GovernmentAgencyAdminWorkAreaJPanel extends javax.swing.JPanel {
         btn_Employee.setBounds(440, 300, 330, 40);
 
         btn_Manage_User.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btn_Manage_User.setText("Maage User");
+        btn_Manage_User.setText("Manage User");
         btn_Manage_User.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_Manage_UserActionPerformed(evt);

@@ -88,11 +88,11 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         Combo_enterprise = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txt_usrname = new javax.swing.JTextField();
-        txt_passwrd = new javax.swing.JPasswordField();
+        txtUsername = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txt_name = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_Admin = new javax.swing.JTable();
@@ -116,7 +116,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_city);
-        combo_city.setBounds(280, 440, 227, 25);
+        combo_city.setBounds(280, 440, 227, 23);
 
         Combo_enterprise.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Combo_enterprise.setForeground(new java.awt.Color(0, 0, 51));
@@ -126,7 +126,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(Combo_enterprise);
-        Combo_enterprise.setBounds(280, 500, 227, 25);
+        Combo_enterprise.setBounds(280, 500, 227, 23);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Enterprise");
@@ -138,20 +138,20 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(20, 610, 140, 22);
 
-        txt_usrname.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_usrname.setForeground(new java.awt.Color(0, 0, 51));
-        add(txt_usrname);
-        txt_usrname.setBounds(280, 620, 227, 23);
+        txtUsername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtUsername.setForeground(new java.awt.Color(0, 0, 51));
+        add(txtUsername);
+        txtUsername.setBounds(280, 620, 227, 23);
 
-        txt_passwrd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_passwrd.setForeground(new java.awt.Color(0, 0, 51));
-        txt_passwrd.addActionListener(new java.awt.event.ActionListener() {
+        txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(0, 0, 51));
+        txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_passwrdActionPerformed(evt);
+                txtPasswordActionPerformed(evt);
             }
         });
-        add(txt_passwrd);
-        txt_passwrd.setBounds(280, 670, 227, 23);
+        add(txtPassword);
+        txtPassword.setBounds(280, 670, 227, 23);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Password");
@@ -163,15 +163,15 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(jLabel5);
         jLabel5.setBounds(20, 560, 130, 22);
 
-        txt_name.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_name.setForeground(new java.awt.Color(0, 0, 51));
-        txt_name.addActionListener(new java.awt.event.ActionListener() {
+        txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtName.setForeground(new java.awt.Color(0, 0, 51));
+        txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_nameActionPerformed(evt);
+                txtNameActionPerformed(evt);
             }
         });
-        add(txt_name);
-        txt_name.setBounds(280, 570, 227, 23);
+        add(txtName);
+        txtName.setBounds(280, 570, 227, 23);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setText("Manage Enterprise Admin");
@@ -239,13 +239,13 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_Combo_enterpriseActionPerformed
 
-    private void txt_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nameActionPerformed
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_nameActionPerformed
+    }//GEN-LAST:event_txtNameActionPerformed
 
-    private void txt_passwrdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwrdActionPerformed
+    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_passwrdActionPerformed
+    }//GEN-LAST:event_txtPasswordActionPerformed
 
     private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
         // TODO add your handling code here:
@@ -260,9 +260,9 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
     private void txt_submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_submitActionPerformed
         // TODO add your handling code here:
-        String name = txt_name.getText();
-        String pss = txt_passwrd.getText();
-        String user =txt_usrname.getText();
+        String name = txtName.getText();
+        String pss = txtPassword.getText();
+        String user =txtUsername.getText();
         
         if(name.isEmpty() || pss.isEmpty() || user.isEmpty()){
          JOptionPane.showMessageDialog(null, "No field should be blank");
@@ -271,11 +271,11 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         try {
             Enterprise enterprise = (Enterprise) Combo_enterprise.getSelectedItem();
 
-            String username = txt_usrname.getText();
-            String password = String.valueOf(txt_passwrd.getPassword());
+            String username = txtUsername.getText();
+            String password = String.valueOf(txtPassword.getPassword());
             
-
             Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
+           
             if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.DisasterManagement) {
                 if (system.UniqueUserName(username)) {
                     UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new DisasterManagementAdminRole());
@@ -296,6 +296,11 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 }
             }
             populateTable();
+            JOptionPane.showMessageDialog(this, "Enterprise Admin Added");
+            txtName.setText("");
+            txtUsername.setText("");
+            txtPassword.setText("");
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Something is wrong! You dont have an enterprise it seems");
         }
@@ -316,9 +321,9 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tbl_Admin;
-    private javax.swing.JTextField txt_name;
-    private javax.swing.JPasswordField txt_passwrd;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtUsername;
     private javax.swing.JButton txt_submit;
-    private javax.swing.JTextField txt_usrname;
     // End of variables declaration//GEN-END:variables
 }

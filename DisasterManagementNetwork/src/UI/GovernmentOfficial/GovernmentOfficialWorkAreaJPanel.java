@@ -45,9 +45,9 @@ public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        btn_pollution_wrk_queue = new javax.swing.JButton();
-        btn_Flood_queue = new javax.swing.JButton();
-        btn_Earthquake_wrk_queue = new javax.swing.JButton();
+        btnCycloneStormQueue = new javax.swing.JButton();
+        btnViewFloodQueue = new javax.swing.JButton();
+        btnEarthquakeQueue = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(102, 0, 102));
@@ -58,70 +58,70 @@ public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(270, 60, 510, 29);
 
-        btn_pollution_wrk_queue.setForeground(new java.awt.Color(0, 0, 255));
-        btn_pollution_wrk_queue.setText("View Air Pollution Work Queue");
-        btn_pollution_wrk_queue.addActionListener(new java.awt.event.ActionListener() {
+        btnCycloneStormQueue.setForeground(new java.awt.Color(0, 0, 255));
+        btnCycloneStormQueue.setText("View Cyclone Storm Queue");
+        btnCycloneStormQueue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_pollution_wrk_queueActionPerformed(evt);
+                btnCycloneStormQueueActionPerformed(evt);
             }
         });
-        add(btn_pollution_wrk_queue);
-        btn_pollution_wrk_queue.setBounds(130, 200, 240, 40);
+        add(btnCycloneStormQueue);
+        btnCycloneStormQueue.setBounds(130, 200, 240, 40);
 
-        btn_Flood_queue.setForeground(new java.awt.Color(0, 51, 255));
-        btn_Flood_queue.setText("View Flood Alert Work Queue");
-        btn_Flood_queue.addActionListener(new java.awt.event.ActionListener() {
+        btnViewFloodQueue.setForeground(new java.awt.Color(0, 51, 255));
+        btnViewFloodQueue.setText("View Flood Queue");
+        btnViewFloodQueue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_Flood_queueActionPerformed(evt);
+                btnViewFloodQueueActionPerformed(evt);
             }
         });
-        add(btn_Flood_queue);
-        btn_Flood_queue.setBounds(500, 190, 240, 40);
+        add(btnViewFloodQueue);
+        btnViewFloodQueue.setBounds(500, 190, 240, 40);
 
-        btn_Earthquake_wrk_queue.setForeground(new java.awt.Color(0, 0, 255));
-        btn_Earthquake_wrk_queue.setText("Earthquake queue");
-        btn_Earthquake_wrk_queue.addActionListener(new java.awt.event.ActionListener() {
+        btnEarthquakeQueue.setForeground(new java.awt.Color(0, 0, 255));
+        btnEarthquakeQueue.setText("View Earthquake queue");
+        btnEarthquakeQueue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_Earthquake_wrk_queueActionPerformed(evt);
+                btnEarthquakeQueueActionPerformed(evt);
             }
         });
-        add(btn_Earthquake_wrk_queue);
-        btn_Earthquake_wrk_queue.setBounds(340, 310, 240, 40);
+        add(btnEarthquakeQueue);
+        btnEarthquakeQueue.setBounds(340, 310, 240, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/govworkqueue.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(-30, -80, 1740, 870);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_pollution_wrk_queueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_pollution_wrk_queueActionPerformed
+    private void btnCycloneStormQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCycloneStormQueueActionPerformed
         // TODO add your handling code here:
-        GovernmentOfficialWorkCycloneStormQueueJPanel governmentOfficialWorkQueueJPanel = new GovernmentOfficialWorkCycloneStormQueueJPanel(userProcessContainer, account, enterprise, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("governmentOfficialWorkQueueJPanel", governmentOfficialWorkQueueJPanel);
+        GovernmentOfficialCycloneStormQueueJPanel governmentOfficialCycloneStormQueueJPanel = new GovernmentOfficialCycloneStormQueueJPanel(userProcessContainer, account, enterprise, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("governmentOfficialWorkQueueJPanel", governmentOfficialCycloneStormQueueJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btn_pollution_wrk_queueActionPerformed
+    }//GEN-LAST:event_btnCycloneStormQueueActionPerformed
 
-    private void btn_Flood_queueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Flood_queueActionPerformed
+    private void btnViewFloodQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewFloodQueueActionPerformed
         // TODO add your handling code here:
-         GovernmentOfficialWorkFloodQueue2JPanel governmentOfficialWorkQueue2JPanel = new GovernmentOfficialWorkFloodQueue2JPanel(userProcessContainer, account, enterprise, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("governmentOfficialWorkQueue2JPanel", governmentOfficialWorkQueue2JPanel);
+        GovernmentOfficialFloodQueueJPanel governmentOfficialFloodQueueJPanel = new GovernmentOfficialFloodQueueJPanel(userProcessContainer, account, enterprise, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("governmentOfficialWorkQueue2JPanel", governmentOfficialFloodQueueJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btn_Flood_queueActionPerformed
+    }//GEN-LAST:event_btnViewFloodQueueActionPerformed
 
-    private void btn_Earthquake_wrk_queueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Earthquake_wrk_queueActionPerformed
+    private void btnEarthquakeQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEarthquakeQueueActionPerformed
         // TODO add your handling code here:
         GovernmentOfficialEarthquakeQueueJPanel governmentOfficialEarthquakeQueueJPanel = new GovernmentOfficialEarthquakeQueueJPanel(userProcessContainer, account, enterprise, enterprise.getOrganizationDirectory());
         userProcessContainer.add("governmentOfficialEarthquakeQueueJPanel", governmentOfficialEarthquakeQueueJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btn_Earthquake_wrk_queueActionPerformed
+    }//GEN-LAST:event_btnEarthquakeQueueActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_Earthquake_wrk_queue;
-    private javax.swing.JButton btn_Flood_queue;
-    private javax.swing.JButton btn_pollution_wrk_queue;
+    private javax.swing.JButton btnCycloneStormQueue;
+    private javax.swing.JButton btnEarthquakeQueue;
+    private javax.swing.JButton btnViewFloodQueue;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

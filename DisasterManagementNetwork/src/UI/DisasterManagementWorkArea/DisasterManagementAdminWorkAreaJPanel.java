@@ -41,26 +41,26 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        enterpriseLabel = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
+        lblEnterprise = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
-        manageOrganizationJButton = new javax.swing.JButton();
-        manageEmployeeJButton = new javax.swing.JButton();
-        userJButton = new javax.swing.JButton();
+        btnManageOrganization = new javax.swing.JButton();
+        btnManageEmployee = new javax.swing.JButton();
+        btnManageUser = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Environment Management Admin Work Area");
-        add(jLabel1);
-        jLabel1.setBounds(110, 100, 530, 29);
+        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setText("Environment Management Admin Work Area");
+        add(lblTitle);
+        lblTitle.setBounds(110, 100, 530, 29);
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("EnterPrise :");
-        add(enterpriseLabel);
-        enterpriseLabel.setBounds(150, 160, 120, 30);
+        lblEnterprise.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblEnterprise.setText("Enterprise :");
+        add(lblEnterprise);
+        lblEnterprise.setBounds(150, 160, 120, 30);
 
         valueLabel.setBackground(new java.awt.Color(255, 255, 255));
         valueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -69,80 +69,80 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(valueLabel);
         valueLabel.setBounds(330, 160, 406, 22);
 
-        manageOrganizationJButton.setBackground(new java.awt.Color(0, 0, 204));
-        manageOrganizationJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        manageOrganizationJButton.setForeground(new java.awt.Color(255, 255, 255));
-        manageOrganizationJButton.setText("Manage Organization");
-        manageOrganizationJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnManageOrganization.setBackground(new java.awt.Color(0, 0, 204));
+        btnManageOrganization.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnManageOrganization.setForeground(new java.awt.Color(255, 255, 255));
+        btnManageOrganization.setText("Manage Organization");
+        btnManageOrganization.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageOrganizationJButtonActionPerformed(evt);
+                btnManageOrganizationActionPerformed(evt);
             }
         });
-        add(manageOrganizationJButton);
-        manageOrganizationJButton.setBounds(250, 230, 220, 24);
+        add(btnManageOrganization);
+        btnManageOrganization.setBounds(250, 230, 220, 24);
 
-        manageEmployeeJButton.setBackground(new java.awt.Color(0, 0, 204));
-        manageEmployeeJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        manageEmployeeJButton.setForeground(new java.awt.Color(255, 255, 255));
-        manageEmployeeJButton.setText("Manage Employee");
-        manageEmployeeJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnManageEmployee.setBackground(new java.awt.Color(0, 0, 204));
+        btnManageEmployee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnManageEmployee.setForeground(new java.awt.Color(255, 255, 255));
+        btnManageEmployee.setText("Manage Employee");
+        btnManageEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageEmployeeJButtonActionPerformed(evt);
+                btnManageEmployeeActionPerformed(evt);
             }
         });
-        add(manageEmployeeJButton);
-        manageEmployeeJButton.setBounds(260, 340, 220, 24);
+        add(btnManageEmployee);
+        btnManageEmployee.setBounds(260, 340, 220, 24);
 
-        userJButton.setBackground(new java.awt.Color(0, 0, 204));
-        userJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        userJButton.setForeground(new java.awt.Color(255, 255, 255));
-        userJButton.setText("Manage User");
-        userJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnManageUser.setBackground(new java.awt.Color(0, 0, 204));
+        btnManageUser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnManageUser.setForeground(new java.awt.Color(255, 255, 255));
+        btnManageUser.setText("Manage User");
+        btnManageUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userJButtonActionPerformed(evt);
+                btnManageUserActionPerformed(evt);
             }
         });
-        add(userJButton);
-        userJButton.setBounds(260, 460, 220, 24);
+        add(btnManageUser);
+        btnManageUser.setBounds(260, 460, 220, 24);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/admin_work_area.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 0, 790, 600);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void manageOrganizationJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationJButtonActionPerformed
+    private void btnManageOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganizationActionPerformed
 
-        EnvManagementOrganizationJPanel environmentManagementOrganizationJPanel = new EnvManagementOrganizationJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("environmentManagementOrganizationJPanel", environmentManagementOrganizationJPanel);
+        DisasterManagementOrganizationJPanel disasterManagementOrganizationJPanel = new DisasterManagementOrganizationJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("disasterManagementOrganizationJPanel", disasterManagementOrganizationJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
+    }//GEN-LAST:event_btnManageOrganizationActionPerformed
 
-    private void manageEmployeeJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmployeeJButtonActionPerformed
+    private void btnManageEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEmployeeActionPerformed
 
-        EnvManagementEmployeeJPanel environmentManagementEmployeeJPanel = new EnvManagementEmployeeJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("environmentManagementEmployeeJPanel", environmentManagementEmployeeJPanel);
+        DisasterManagementEmployeeJPanel disasterManagementEmployeeJPanel = new DisasterManagementEmployeeJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("disasterManagementEmployeeJPanel", disasterManagementEmployeeJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
 
-    }//GEN-LAST:event_manageEmployeeJButtonActionPerformed
+    }//GEN-LAST:event_btnManageEmployeeActionPerformed
 
-    private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed
+    private void btnManageUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageUserActionPerformed
         // TODO add your handling code here:
-        EnvManagementUserJPanel environmentManagementUserJPanel = new EnvManagementUserJPanel(userProcessContainer, enterprise,business);
-        userProcessContainer.add("environmentManagementUserJPanel", environmentManagementUserJPanel);
+        DisasterManagementUserJPanel disasterManagementUserJPanel = new DisasterManagementUserJPanel(userProcessContainer, enterprise,business);
+        userProcessContainer.add("disasterManagementUserJPanel", disasterManagementUserJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_userJButtonActionPerformed
+    }//GEN-LAST:event_btnManageUserActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel enterpriseLabel;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnManageEmployee;
+    private javax.swing.JButton btnManageOrganization;
+    private javax.swing.JButton btnManageUser;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton manageEmployeeJButton;
-    private javax.swing.JButton manageOrganizationJButton;
-    private javax.swing.JButton userJButton;
+    private javax.swing.JLabel lblEnterprise;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel valueLabel;
     // End of variables declaration//GEN-END:variables
 }

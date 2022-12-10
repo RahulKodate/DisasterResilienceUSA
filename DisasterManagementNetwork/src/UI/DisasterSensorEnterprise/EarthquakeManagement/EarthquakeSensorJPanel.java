@@ -53,15 +53,15 @@ public class EarthquakeSensorJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         btnSendRequest = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnViewRequests = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Air Pollution Sensor");
+        jLabel1.setText("Earthquake Sensor");
         add(jLabel1);
         jLabel1.setBounds(110, 10, 527, 61);
 
@@ -76,25 +76,25 @@ public class EarthquakeSensorJPanel extends javax.swing.JPanel {
         add(btnSendRequest);
         btnSendRequest.setBounds(490, 100, 180, 38);
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 51, 255));
-        jButton2.setText("View Sent Requests");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnViewRequests.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnViewRequests.setForeground(new java.awt.Color(0, 51, 255));
+        btnViewRequests.setText("View Sent Requests");
+        btnViewRequests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnViewRequestsActionPerformed(evt);
             }
         });
-        add(jButton2);
-        jButton2.setBounds(490, 190, 190, 38);
+        add(btnViewRequests);
+        btnViewRequests.setBounds(490, 190, 190, 38);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(jButton3);
-        jButton3.setBounds(20, 30, 100, 50);
+        add(btnBack);
+        btnBack.setBounds(20, 30, 100, 50);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/maxresdefault.jpg"))); // NOI18N
         add(jLabel2);
@@ -114,15 +114,15 @@ public class EarthquakeSensorJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnSendRequestActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnViewRequestsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewRequestsActionPerformed
         // TODO add your handling code here:
          ViewEarthquakeWorkQueue viewWorkQueueJPanel = new ViewEarthquakeWorkQueue(userProcessContainer, account, enterprise.getOrganizationDirectory(), business);
         userProcessContainer.add("viewWorkQueueJPanel", viewWorkQueueJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnViewRequestsActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         JPanel panel = new SensorMonitorWorkArea(userProcessContainer,account,organization, enterprise,business);
@@ -130,13 +130,13 @@ public class EarthquakeSensorJPanel extends javax.swing.JPanel {
         //Component component = componentArray[componentArray.length - 1];
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSendRequest;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnViewRequests;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

@@ -134,7 +134,7 @@ public class SensorDirectory {
         return sensorAlreadyPresent;
     }
    
-   public boolean FloodSensorSensorExists(String zipcode)
+   public boolean FloodSensorExists(String zipcode)
     {
         boolean sensorAlreadyPresent = false;
         ArrayList<FloodSensor> floodSensorList = new ArrayList<FloodSensor>();

@@ -6,6 +6,7 @@
 package Business.WorkQueue;
 
 import Business.Sensor.CycloneStormSensor;
+import Business.Sensor.EarthquakeSensor;
 import Business.Sensor.FloodSensor;
 import java.util.ArrayList;
 /**
@@ -15,9 +16,35 @@ import java.util.ArrayList;
 public class CitizenWorkRequest extends WorkRequest{
    
     private CycloneStormSensor cycloneStormSensor;
-    private ArrayList<FloodSensor> floodSensorList;
+    private EarthquakeSensor EarthquakeSensor;
+    private FloodSensor floodSensor;
     private String CycloneStormMessage;
+    private String EarthquakeMessage;
     private String FloodMessage; 
+
+    public CycloneStormSensor getCycloneStormSensor() {
+        return cycloneStormSensor;
+    }
+
+    public void setCycloneStormSensor(CycloneStormSensor cycloneStormSensor) {
+        this.cycloneStormSensor = cycloneStormSensor;
+    }
+
+    public EarthquakeSensor getEarthquakeSensor() {
+        return EarthquakeSensor;
+    }
+
+    public void setEarthquakeSensor(EarthquakeSensor EarthquakeSensor) {
+        this.EarthquakeSensor = EarthquakeSensor;
+    }
+
+    public FloodSensor getFloodSensor() {
+        return floodSensor;
+    }
+
+    public void setFloodSensor(FloodSensor floodSensor) {
+        this.floodSensor = floodSensor;
+    }
 
     public String getCycloneStormMessage() {
         return CycloneStormMessage;
@@ -25,6 +52,14 @@ public class CitizenWorkRequest extends WorkRequest{
 
     public void setCycloneStormMessage(String CycloneStormMessage) {
         this.CycloneStormMessage = CycloneStormMessage;
+    }
+
+    public String getEarthquakeMessage() {
+        return EarthquakeMessage;
+    }
+
+    public void setEarthquakeMessage(String EarthquakeMessage) {
+        this.EarthquakeMessage = EarthquakeMessage;
     }
 
     public String getFloodMessage() {
@@ -35,20 +70,5 @@ public class CitizenWorkRequest extends WorkRequest{
         this.FloodMessage = FloodMessage;
     }
 
-    public CycloneStormSensor getCycloneStormSensor() {
-        return cycloneStormSensor;
-    }
-
-    public void setCycloneStormSensor(CycloneStormSensor cycloneStormSensor) {
-        this.cycloneStormSensor = cycloneStormSensor;
-    }
-    
-    public ArrayList<FloodSensor> getFloodManagementSensorList() {
-        return floodSensorList;
-    }
-
-    public void setFloodSensorList(ArrayList<FloodSensor> floodSensorList) {
-        this.floodSensorList = floodSensorList;
-    }
     
 }

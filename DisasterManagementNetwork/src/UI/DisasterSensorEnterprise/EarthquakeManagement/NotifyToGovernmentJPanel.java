@@ -18,7 +18,7 @@ import Business.Sensor.Sensor;
 import Business.Sensor.SensorDirectory;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.EarthquakeWorkRequest;
-import Business.WorkQueue.GovWorkRequest;
+import Business.WorkQueue.GovernmentWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -81,7 +81,7 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
             }
         }   }
             
-            DefaultTableModel model = (DefaultTableModel) HighlyAirPollutedAreasJTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) tblEarthquake.getModel();
         model.setRowCount(0);
         
         for(EarthquakeSensor eq : tempEarthquakeSensorList)
@@ -109,15 +109,15 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        HighlyAirPollutedAreasJTable = new javax.swing.JTable();
+        tblEarthquake = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        btnRequestToGovernment = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setLayout(null);
 
-        HighlyAirPollutedAreasJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblEarthquake.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -125,58 +125,58 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Sensor ID", "Zipcode", "Air Pollution Quality Index"
+                "Sensor ID", "Zipcode", "Seismic Readings"
             }
         ));
-        jScrollPane1.setViewportView(HighlyAirPollutedAreasJTable);
+        jScrollPane1.setViewportView(tblEarthquake);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(50, 150, 695, 110);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Air Pollution Sensor Readings for the Desired Zipcode");
+        jLabel1.setText("Earthquake Sensor Readings");
         add(jLabel1);
         jLabel1.setBounds(50, 90, 708, 45);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(jButton1);
-        jButton1.setBounds(20, 300, 115, 50);
+        add(btnBack);
+        btnBack.setBounds(20, 300, 88, 50);
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setText("Send Request To Government");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnRequestToGovernment.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnRequestToGovernment.setText("Send Request To Government");
+        btnRequestToGovernment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnRequestToGovernmentActionPerformed(evt);
             }
         });
-        add(jButton2);
-        jButton2.setBounds(490, 310, 330, 33);
+        add(btnRequestToGovernment);
+        btnRequestToGovernment.setBounds(490, 310, 330, 33);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/maxresdefault.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 0, 870, 630);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnRequestToGovernmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestToGovernmentActionPerformed
         // TODO add your handling code here:
-        int row = HighlyAirPollutedAreasJTable.getSelectedRow();
+        int row = tblEarthquake.getSelectedRow();
         if(row <0){
             JOptionPane.showMessageDialog(null, "No row selected");
         }else{
         //AirPollutionSensor airPollutionSensor = (AirPollutionSensor)SensorReadingsjTable.getValueAt(row, 0);
         
-        Sensor EarthquakeSenso = (Sensor)HighlyAirPollutedAreasJTable.getValueAt(row, 0);
+        Sensor sensor = (Sensor)tblEarthquake.getValueAt(row, 0);
         
-        EarthquakeSensor earthquakeSensor = (EarthquakeSensor) EarthquakeSenso;
-        GovWorkRequest reques = new GovWorkRequest();
+        EarthquakeSensor earthquakeSensor = (EarthquakeSensor) sensor;
+        GovernmentWorkRequest reques = new GovernmentWorkRequest();
         reques.setEarthquakeSensor(earthquakeSensor);
-        reques.setEarthquakeMessage("The Area bearing pincode "+earthquakeSensor.getZipcode()+" has Earthquake, please inform residents to avoid this area until further notice");
+        reques.setEarthquakeMessage("Area-code "+earthquakeSensor.getZipcode()+" is affected by Earthquake, please inform citizens to avoid this area until further notice");
         reques.setSender(userAccount);
         reques.setStatus("Successfully Notified to Government");
         
@@ -210,9 +210,9 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
             {
             for(WorkRequest request1 : orgn.getWorkQueue().getWorkRequestList())
             {
-                if(request1 instanceof GovWorkRequest)
+                if(request1 instanceof GovernmentWorkRequest)
                 {
-                    GovWorkRequest reque = (GovWorkRequest) request1;
+                    GovernmentWorkRequest reque = (GovernmentWorkRequest) request1;
                     
                     if(reque.getEarthquakeSensor() != null)
                     {
@@ -240,9 +240,9 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
                 }
             }
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnRequestToGovernmentActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         //JPanel panel = new NotifytoAirPolltuionSolutionDepartment(userProcessContainer,userAccount,business,organizationDirectory);
@@ -252,15 +252,15 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         //sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable HighlyAirPollutedAreasJTable;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnRequestToGovernment;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tblEarthquake;
     // End of variables declaration//GEN-END:variables
 }

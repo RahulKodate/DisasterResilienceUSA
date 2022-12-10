@@ -56,22 +56,22 @@ private OrganizationDirectory directory;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_WorkQueue = new javax.swing.JTable();
-        btn_Back = new javax.swing.JButton();
-        btn_Resolve = new javax.swing.JButton();
+        tblWorkQueue = new javax.swing.JTable();
+        btnBack = new javax.swing.JButton();
+        btnResolve = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 102));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Air Pollution Management Work Queue");
-        add(jLabel1);
-        jLabel1.setBounds(0, 10, 500, 44);
+        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setText("Cyclone & Storm Management Work Queue");
+        add(lblTitle);
+        lblTitle.setBounds(0, 10, 530, 44);
 
-        tbl_WorkQueue.setModel(new javax.swing.table.DefaultTableModel(
+        tblWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -82,42 +82,42 @@ private OrganizationDirectory directory;
                 "Work_Request", "Sender", "Sensor_Id", "Zip"
             }
         ));
-        jScrollPane1.setViewportView(tbl_WorkQueue);
+        jScrollPane1.setViewportView(tblWorkQueue);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(24, 60, 452, 99);
 
-        btn_Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
-        btn_Back.setText("<<Back");
-        btn_Back.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.setText("<<Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_BackActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(btn_Back);
-        btn_Back.setBounds(24, 220, 91, 50);
+        add(btnBack);
+        btnBack.setBounds(24, 220, 91, 50);
 
-        btn_Resolve.setBackground(new java.awt.Color(0, 0, 255));
-        btn_Resolve.setForeground(new java.awt.Color(255, 255, 255));
-        btn_Resolve.setText("Resolve");
-        btn_Resolve.addActionListener(new java.awt.event.ActionListener() {
+        btnResolve.setBackground(new java.awt.Color(0, 0, 255));
+        btnResolve.setForeground(new java.awt.Color(255, 255, 255));
+        btnResolve.setText("Resolve");
+        btnResolve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_ResolveActionPerformed(evt);
+                btnResolveActionPerformed(evt);
             }
         });
-        add(btn_Resolve);
-        btn_Resolve.setBounds(300, 220, 122, 50);
+        add(btnResolve);
+        btnResolve.setBounds(300, 220, 122, 50);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/air-pollution.jpg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 500, 500);
+        jLabel2.setBounds(0, 0, 550, 500);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_BackActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
                                                    
         userProcessContainer.remove(this);
-         JPanel panel = new CycloneStormManagementWorkJPanel(userProcessContainer,userAccount,organization, enterprise,business);
+        JPanel panel = new CycloneStormManagementWorkJPanel(userProcessContainer,userAccount,organization, enterprise,business);
 
         //Component[] componentArray = userProcessContainer.getComponents();
         //Component component = componentArray[componentArray.length - 1];
@@ -126,43 +126,43 @@ private OrganizationDirectory directory;
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
        
-    }//GEN-LAST:event_btn_BackActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btn_ResolveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ResolveActionPerformed
+    private void btnResolveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResolveActionPerformed
         // TODO add your handling code here:
-        int getSelectedRow = tbl_WorkQueue.getSelectedRow();
+        int getSelectedRow = tblWorkQueue.getSelectedRow();
         if(getSelectedRow <0){
             JOptionPane.showMessageDialog(null, "No row selected");
         }else{
         Random rn = new Random();
         
-        WorkRequest workRequest = (WorkRequest) tbl_WorkQueue.getValueAt(getSelectedRow, 0);
+        WorkRequest workRequest = (WorkRequest) tblWorkQueue.getValueAt(getSelectedRow, 0);
         
-        CycloneStormWorkRequest airPollutionSolutionWorkRequest = (CycloneStormWorkRequest)workRequest;
-        airPollutionSolutionWorkRequest.setStatus("Resolved");
-        airPollutionSolutionWorkRequest.setResolveDate(new Date());
+        CycloneStormWorkRequest cycloneStormSolutionWorkRequest = (CycloneStormWorkRequest)workRequest;
+        cycloneStormSolutionWorkRequest.setStatus("Resolved");
+        cycloneStormSolutionWorkRequest.setResolveDate(new Date());
         
-        airPollutionSolutionWorkRequest.getCycloneStormSensor().setWindSpeed(rn.nextInt(75));
+        cycloneStormSolutionWorkRequest.getCycloneStormSensor().setWindSpeed(rn.nextInt(75));
         
         populateTable();
         
         JOptionPane.showMessageDialog(null, "Problem Resolved");
         }
-    }//GEN-LAST:event_btn_ResolveActionPerformed
+    }//GEN-LAST:event_btnResolveActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_Back;
-    private javax.swing.JButton btn_Resolve;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnResolve;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tbl_WorkQueue;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JTable tblWorkQueue;
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {
           CycloneStormWorkRequest air_wrs = null;
-        DefaultTableModel model = (DefaultTableModel) tbl_WorkQueue.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblWorkQueue.getModel();
         model.setRowCount(0);
         
         for(Organization organization : directory.getOrganizationList())

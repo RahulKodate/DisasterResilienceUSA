@@ -46,48 +46,48 @@ public class CitizenWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        Btn_View_Notification = new javax.swing.JButton();
+        lblTitle = new javax.swing.JLabel();
+        btnViewNotification = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 102));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Resident Work Area");
-        add(jLabel1);
-        jLabel1.setBounds(0, 23, 970, 44);
+        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Resident Work Area");
+        add(lblTitle);
+        lblTitle.setBounds(0, 23, 970, 44);
 
-        Btn_View_Notification.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        Btn_View_Notification.setText("View Notification");
-        Btn_View_Notification.addActionListener(new java.awt.event.ActionListener() {
+        btnViewNotification.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnViewNotification.setText("View Notification");
+        btnViewNotification.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_View_NotificationActionPerformed(evt);
+                btnViewNotificationActionPerformed(evt);
             }
         });
-        add(Btn_View_Notification);
-        Btn_View_Notification.setBounds(350, 180, 210, 40);
+        add(btnViewNotification);
+        btnViewNotification.setBounds(350, 180, 210, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/resident.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(-90, -160, 1150, 710);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Btn_View_NotificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_View_NotificationActionPerformed
+    private void btnViewNotificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewNotificationActionPerformed
         // TODO add your handling code here:
         // TODO add your handling code here:
-        NotifyResidentJPanel citizenNotificationJPanel = new NotifyResidentJPanel(userProcessContainer, account, enterprise.getOrganizationDirectory());
+        NotifyCitizenJPanel citizenNotificationJPanel = new NotifyCitizenJPanel(userProcessContainer, account, enterprise.getOrganizationDirectory());
         userProcessContainer.add("citizenNotificationJPanel", citizenNotificationJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_Btn_View_NotificationActionPerformed
+    }//GEN-LAST:event_btnViewNotificationActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Btn_View_Notification;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnViewNotification;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 }

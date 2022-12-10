@@ -16,7 +16,7 @@ import Business.Sensor.EarthquakeSensor;
 import Business.Sensor.Sensor;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.EarthquakeWorkRequest;
-import Business.WorkQueue.GovWorkRequest;
+import Business.WorkQueue.GovernmentWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -108,7 +108,7 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Air Pollution Work Queue");
+        jLabel1.setText("Earthquake Work Queue");
 
         PendingReqJTable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         PendingReqJTable.setForeground(new java.awt.Color(255, 0, 51));
@@ -341,11 +341,11 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
             EarthquakeWorkRequest earthquakeWorkRequest = (EarthquakeWorkRequest)ResolvedJTable.getValueAt(row, 0);
 
             EarthquakeSensor earthquakeSensor = earthquakeWorkRequest.getEarthquakeSensor();
-            GovWorkRequest reques = new GovWorkRequest();
-            reques.setEarthquakeSensor(earthquakeSensor);
-            reques.setCycloneStormMessage("The Area bearing pincode "+earthquakeSensor.getZipcode()+"Earthquake is now better.");
-            reques.setSender(userAccount);
-            reques.setStatus("Resolution Message Sent to Government");
+            GovernmentWorkRequest request = new GovernmentWorkRequest();
+            request.setEarthquakeSensor(earthquakeSensor);
+            request.setEarthquakeMessage("Area-code "+earthquakeSensor.getZipcode()+"is now clear from Earthquake");
+            request.setSender(userAccount);
+            request.setStatus("Resolution Message Sent to Government");
 
             Organization orgzn = null;
             for(Network ntwk: business.getNetworkList())
@@ -367,8 +367,8 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
                 ArrayList<Integer> sensorIDsArray = new ArrayList<Integer>();
                 boolean workRequestAlreadyPresent = false;
 
-                orgzn.getWorkQueue().getWorkRequestList().add(reques);
-                userAccount.getWorkQ().getWorkRequestList().add(reques);
+                orgzn.getWorkQueue().getWorkRequestList().add(request);
+                userAccount.getWorkQ().getWorkRequestList().add(request);
                 JOptionPane.showMessageDialog(null, "Request Successfully sent to Government");
             }
         }

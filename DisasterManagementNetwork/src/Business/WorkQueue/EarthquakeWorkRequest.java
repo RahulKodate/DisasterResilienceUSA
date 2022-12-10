@@ -5,7 +5,6 @@
  */
 package Business.WorkQueue;
 
-import Business.Sensor.CycloneStormSensor;
 import Business.Sensor.EarthquakeSensor;
 /**
  *

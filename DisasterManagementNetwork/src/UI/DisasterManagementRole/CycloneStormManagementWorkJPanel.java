@@ -45,47 +45,47 @@ public class CycloneStormManagementWorkJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        btn_View_Work_request = new javax.swing.JButton();
+        lblTitle = new javax.swing.JLabel();
+        btnViewWorkRequest = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 102));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Air Pollution Management Work Area");
-        add(jLabel1);
-        jLabel1.setBounds(10, 27, 480, 29);
+        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Cyclone & Storm Management Work Area");
+        add(lblTitle);
+        lblTitle.setBounds(10, 27, 520, 29);
 
-        btn_View_Work_request.setForeground(new java.awt.Color(0, 0, 153));
-        btn_View_Work_request.setText("View Work request");
-        btn_View_Work_request.addActionListener(new java.awt.event.ActionListener() {
+        btnViewWorkRequest.setForeground(new java.awt.Color(0, 0, 153));
+        btnViewWorkRequest.setText("View Work request");
+        btnViewWorkRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_View_Work_requestActionPerformed(evt);
+                btnViewWorkRequestActionPerformed(evt);
             }
         });
-        add(btn_View_Work_request);
-        btn_View_Work_request.setBounds(140, 140, 170, 60);
+        add(btnViewWorkRequest);
+        btnViewWorkRequest.setBounds(140, 140, 170, 60);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/air-pollution.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 0, 980, 680);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_View_Work_requestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_View_Work_requestActionPerformed
+    private void btnViewWorkRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewWorkRequestActionPerformed
         // TODO add your handling code here:
-          CycloneStormManagementWorkQueueJPanel airPollutionManagementWorkQueue = new CycloneStormManagementWorkQueueJPanel(userProcessContainer, account, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("airPollutionManagementWorkQueue", airPollutionManagementWorkQueue);
+          CycloneStormManagementWorkQueueJPanel cycloneStormManagementWorkQueue = new CycloneStormManagementWorkQueueJPanel(userProcessContainer, account, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("cycloneStormManagementWorkQueue", cycloneStormManagementWorkQueue);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btn_View_Work_requestActionPerformed
+    }//GEN-LAST:event_btnViewWorkRequestActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_View_Work_request;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnViewWorkRequest;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 
 }

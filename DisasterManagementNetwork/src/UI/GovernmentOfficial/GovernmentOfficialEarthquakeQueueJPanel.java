@@ -15,12 +15,12 @@ import Business.Organization.SensorMonitorOrganization;
 import Business.Organization.GovernmentOfficialOrganization;
 import Business.Organization.OrganizationDirectory;
 import Business.Organization.CitizenOrganization;
-import Business.Sensor.CycloneStormSensor;
+import Business.Sensor.EarthquakeSensor;
 import Business.Sensor.Sensor;
 
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.CitizenWorkRequest;
-import Business.WorkQueue.GovWorkRequest;
+import Business.WorkQueue.GovernmentWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 
@@ -57,23 +57,23 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
     }
 
     public void populateTable(){
-        GovWorkRequest gov_wrs = null;
-        DefaultTableModel model = (DefaultTableModel) tbl_Gov_wrd_queue.getModel();
+        GovernmentWorkRequest gov_wrs = null;
+        DefaultTableModel model = (DefaultTableModel) tblWorkQueue.getModel();
         model.setRowCount(0);
         
         for(Organization organization : directory.getOrganizationList())
         {
         for (WorkRequest wr : organization.getWorkQueue().getWorkRequestList()) {
-            if (wr instanceof GovWorkRequest)
+            if (wr instanceof GovernmentWorkRequest)
             {                
-                gov_wrs = (GovWorkRequest)wr;
+                gov_wrs = (GovernmentWorkRequest)wr;
             
-                if(gov_wrs.getCycloneStormSensor() != null)
+                if(gov_wrs.getEarthquakeSensor() != null)
                 {
                 Object[] row = new Object[3];
                 row[0] = gov_wrs;
                 row[1] = gov_wrs.getSender();
-                row[2] = gov_wrs.getCycloneStormMessage();
+                row[2] = gov_wrs.getEarthquakeMessage();
                 model.addRow(row);
                 }
             }
@@ -93,10 +93,10 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
         jLabel1 = new javax.swing.JLabel();
         MessagejLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tbl_Gov_wrd_queue = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
-        btnNotifyResidents = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        tblWorkQueue = new javax.swing.JTable();
+        btnBack = new javax.swing.JButton();
+        btnResolve = new javax.swing.JButton();
+        btnAlert = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 102));
@@ -112,7 +112,7 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
         add(MessagejLabel);
         MessagejLabel.setBounds(663, 446, 0, 0);
 
-        tbl_Gov_wrd_queue.setModel(new javax.swing.table.DefaultTableModel(
+        tblWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -131,45 +131,45 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(tbl_Gov_wrd_queue);
+        jScrollPane2.setViewportView(tblWorkQueue);
 
         add(jScrollPane2);
         jScrollPane2.setBounds(10, 144, 1000, 90);
 
-        jButton2.setBackground(new java.awt.Color(0, 51, 255));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("<<Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setBackground(new java.awt.Color(0, 51, 255));
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("<<Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(jButton2);
-        jButton2.setBounds(10, 20, 100, 23);
+        add(btnBack);
+        btnBack.setBounds(10, 20, 100, 23);
 
-        btnNotifyResidents.setBackground(new java.awt.Color(0, 255, 0));
-        btnNotifyResidents.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnNotifyResidents.setForeground(new java.awt.Color(255, 255, 255));
-        btnNotifyResidents.setText("Send Resolved Notification");
-        btnNotifyResidents.addActionListener(new java.awt.event.ActionListener() {
+        btnResolve.setBackground(new java.awt.Color(0, 255, 0));
+        btnResolve.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnResolve.setForeground(new java.awt.Color(255, 255, 255));
+        btnResolve.setText("Send Resolved Notification");
+        btnResolve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNotifyResidentsActionPerformed(evt);
+                btnResolveActionPerformed(evt);
             }
         });
-        add(btnNotifyResidents);
-        btnNotifyResidents.setBounds(30, 530, 280, 24);
+        add(btnResolve);
+        btnResolve.setBounds(30, 530, 280, 24);
 
-        jButton5.setBackground(new java.awt.Color(255, 0, 51));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Send Alert Notification to Residents");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnAlert.setBackground(new java.awt.Color(255, 0, 51));
+        btnAlert.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAlert.setForeground(new java.awt.Color(255, 255, 255));
+        btnAlert.setText("Send Alert Notification to Residents");
+        btnAlert.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnAlertActionPerformed(evt);
             }
         });
-        add(jButton5);
-        jButton5.setBounds(720, 520, 260, 24);
+        add(btnAlert);
+        btnAlert.setBounds(720, 520, 260, 24);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Boston-120419-Governor-office-renovations-PHOTO-scaled.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -177,27 +177,27 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
         jLabel2.setBounds(0, 0, 1120, 590);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-         userProcessContainer.remove(this);
-         JPanel panel = new GovernmentOfficialWorkAreaJPanel(userProcessContainer,userAccount,organization, enterprise,business);
+        userProcessContainer.remove(this);
+        JPanel panel = new GovernmentOfficialWorkAreaJPanel(userProcessContainer,userAccount,organization, enterprise,business);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnNotifyResidentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotifyResidentsActionPerformed
+    private void btnResolveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResolveActionPerformed
         // TODO add your handling code here:
-        int row = tbl_Gov_wrd_queue.getSelectedRow();
+        int row = tblWorkQueue.getSelectedRow();
         if(row <0){
             JOptionPane.showMessageDialog(null, "No row selected");
         }else{
         
-        GovWorkRequest request = (GovWorkRequest)tbl_Gov_wrd_queue.getValueAt(row, 0);
+        GovernmentWorkRequest request = (GovernmentWorkRequest)tblWorkQueue.getValueAt(row, 0);
         
         CitizenWorkRequest citizenWorkRequest = new CitizenWorkRequest();
         
-        citizenWorkRequest.setCycloneStormSensor(request.getCycloneStormSensor());
-        citizenWorkRequest.setCycloneStormMessage("The Area bearing pincode "+request.getCycloneStormSensor().getZipcode()+"'s air quality has now improved.");
+        citizenWorkRequest.setEarthquakeSensor(request.getEarthquakeSensor());
+        citizenWorkRequest.setEarthquakeMessage("Area-code "+request.getEarthquakeSensor().getZipcode()+"is no longer prone to Eartquake.");
         citizenWorkRequest.setSender(userAccount);
         citizenWorkRequest.setStatus("Message Sent to Citizens");
         
@@ -230,21 +230,21 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
         }
          JOptionPane.showMessageDialog(null, "Request Sent to Citizen");
         }
-    }//GEN-LAST:event_btnNotifyResidentsActionPerformed
+    }//GEN-LAST:event_btnResolveActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnAlertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlertActionPerformed
         // TODO add your handling code here:
-        int row = tbl_Gov_wrd_queue.getSelectedRow();
+        int row = tblWorkQueue.getSelectedRow();
         if(row <0){
             JOptionPane.showMessageDialog(null, "No row selected");
         }else{
         
-        GovWorkRequest request = (GovWorkRequest)tbl_Gov_wrd_queue.getValueAt(row, 0);
+        GovernmentWorkRequest request = (GovernmentWorkRequest)tblWorkQueue.getValueAt(row, 0);
         
         CitizenWorkRequest citizenWorkRequest = new CitizenWorkRequest();
         
-        citizenWorkRequest.setCycloneStormSensor(request.getCycloneStormSensor());
-        citizenWorkRequest.setCycloneStormMessage("The Area bearing pincode "+request.getCycloneStormSensor().getZipcode()+" has bad air quality please avoid this area until further notice");
+        citizenWorkRequest.setEarthquakeSensor(request.getEarthquakeSensor());
+        citizenWorkRequest.setEarthquakeMessage("Area-code "+request.getEarthquakeSensor().getZipcode()+" is prone to Earthquakes! Please avoid this area until further notice");
         citizenWorkRequest.setSender(userAccount);
         citizenWorkRequest.setStatus("Message Sent to Citizens");
         
@@ -277,17 +277,17 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
         }
          JOptionPane.showMessageDialog(null, "Request Sent to Citizen");
         }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnAlertActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel MessagejLabel;
-    private javax.swing.JButton btnNotifyResidents;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btnAlert;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnResolve;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable tbl_Gov_wrd_queue;
+    private javax.swing.JTable tblWorkQueue;
     // End of variables declaration//GEN-END:variables
 }

@@ -16,7 +16,7 @@ import Business.Sensor.CycloneStormSensor;
 import Business.Sensor.Sensor;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.CycloneStormWorkRequest;
-import Business.WorkQueue.GovWorkRequest;
+import Business.WorkQueue.GovernmentWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -108,7 +108,7 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Air Pollution Work Queue");
+        jLabel1.setText("Cyclone & Storm Work Queue");
 
         PendingReqJTable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         PendingReqJTable.setForeground(new java.awt.Color(255, 0, 51));
@@ -341,11 +341,11 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
             CycloneStormWorkRequest CycloneStormWorkRequest = (CycloneStormWorkRequest)ResolvedJTable.getValueAt(row, 0);
 
             CycloneStormSensor cycloneStormSensor = CycloneStormWorkRequest.getCycloneStormSensor();
-            GovWorkRequest reques = new GovWorkRequest();
-            reques.setCycloneStormSensor(cycloneStormSensor);
-            reques.setCycloneStormMessage("The Area bearing pincode "+cycloneStormSensor.getZipcode()+"'s air quality is now better.");
-            reques.setSender(userAccount);
-            reques.setStatus("Resolution Message Sent to Government");
+            GovernmentWorkRequest request = new GovernmentWorkRequest();
+            request.setCycloneStormSensor(cycloneStormSensor);
+            request.setCycloneStormMessage("Area-code "+cycloneStormSensor.getZipcode()+"is now clear of Cyclone/Storm");
+            request.setSender(userAccount);
+            request.setStatus("Resolution Message Sent to Government");
 
             Organization orgzn = null;
             for(Network ntwk: business.getNetworkList())
@@ -367,8 +367,8 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
                 ArrayList<Integer> sensorIDsArray = new ArrayList<Integer>();
                 boolean workRequestAlreadyPresent = false;
 
-                orgzn.getWorkQueue().getWorkRequestList().add(reques);
-                userAccount.getWorkQ().getWorkRequestList().add(reques);
+                orgzn.getWorkQueue().getWorkRequestList().add(request);
+                userAccount.getWorkQ().getWorkRequestList().add(request);
                 JOptionPane.showMessageDialog(null, "Request Successfully sent to Government");
             }
         }

@@ -38,9 +38,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        btn_MAnage_City = new javax.swing.JButton();
-        btn_ent = new javax.swing.JButton();
-        btn_ent_admin = new javax.swing.JButton();
+        btnManageCity = new javax.swing.JButton();
+        btnManageEnterprise = new javax.swing.JButton();
+        btnMangeEnteprise = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 102));
@@ -51,53 +51,53 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(290, 70, 431, 29);
 
-        btn_MAnage_City.setBackground(new java.awt.Color(0, 0, 0));
-        btn_MAnage_City.setForeground(new java.awt.Color(255, 255, 255));
-        btn_MAnage_City.setText("MANAGE CITY");
-        btn_MAnage_City.addActionListener(new java.awt.event.ActionListener() {
+        btnManageCity.setBackground(new java.awt.Color(0, 0, 0));
+        btnManageCity.setForeground(new java.awt.Color(255, 255, 255));
+        btnManageCity.setText("MANAGE CITY");
+        btnManageCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_MAnage_CityActionPerformed(evt);
+                btnManageCityActionPerformed(evt);
             }
         });
-        add(btn_MAnage_City);
-        btn_MAnage_City.setBounds(140, 150, 171, 21);
+        add(btnManageCity);
+        btnManageCity.setBounds(140, 150, 171, 23);
 
-        btn_ent.setBackground(new java.awt.Color(0, 0, 0));
-        btn_ent.setForeground(new java.awt.Color(255, 255, 255));
-        btn_ent.setText("MANAGE ENTERPRISE");
-        btn_ent.addActionListener(new java.awt.event.ActionListener() {
+        btnManageEnterprise.setBackground(new java.awt.Color(0, 0, 0));
+        btnManageEnterprise.setForeground(new java.awt.Color(255, 255, 255));
+        btnManageEnterprise.setText("MANAGE ENTERPRISE");
+        btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_entActionPerformed(evt);
+                btnManageEnterpriseActionPerformed(evt);
             }
         });
-        add(btn_ent);
-        btn_ent.setBounds(400, 150, 171, 30);
+        add(btnManageEnterprise);
+        btnManageEnterprise.setBounds(400, 150, 171, 30);
 
-        btn_ent_admin.setBackground(new java.awt.Color(0, 0, 0));
-        btn_ent_admin.setForeground(new java.awt.Color(255, 255, 255));
-        btn_ent_admin.setText("MANAGE ENTERPRISE ADMIN");
-        btn_ent_admin.addActionListener(new java.awt.event.ActionListener() {
+        btnMangeEnteprise.setBackground(new java.awt.Color(0, 0, 0));
+        btnMangeEnteprise.setForeground(new java.awt.Color(255, 255, 255));
+        btnMangeEnteprise.setText("MANAGE ENTERPRISE ADMIN");
+        btnMangeEnteprise.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_ent_adminActionPerformed(evt);
+                btnMangeEntepriseActionPerformed(evt);
             }
         });
-        add(btn_ent_admin);
-        btn_ent_admin.setBounds(650, 150, 169, 21);
+        add(btnMangeEnteprise);
+        btnMangeEnteprise.setBounds(650, 150, 240, 23);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/enterprise1.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, -160, 1060, 930);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_MAnage_CityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_MAnage_CityActionPerformed
+    private void btnManageCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCityActionPerformed
         // TODO add your handling code here:
          ManageCityJPanel manageCityJPanel = new ManageCityJPanel(userProcessContainer, system);
         userProcessContainer.add("manageCityJPanel", manageCityJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btn_MAnage_CityActionPerformed
+    }//GEN-LAST:event_btnManageCityActionPerformed
 
-    private void btn_entActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entActionPerformed
+    private void btnManageEnterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEnterpriseActionPerformed
         // TODO add your handling code here:
         
         ManageEnterpriseJPanel manageEnterpriseJPanel = new ManageEnterpriseJPanel(userProcessContainer, system);
@@ -105,22 +105,22 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btn_entActionPerformed
+    }//GEN-LAST:event_btnManageEnterpriseActionPerformed
 
-    private void btn_ent_adminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ent_adminActionPerformed
+    private void btnMangeEntepriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMangeEntepriseActionPerformed
         // TODO add your handling code here:
           ManageEnterpriseAdminJPanel manageEnterpriseAdminJPanel = new ManageEnterpriseAdminJPanel(userProcessContainer, system);
         userProcessContainer.add("manageEnterpriseAdminJPanel", manageEnterpriseAdminJPanel);
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btn_ent_adminActionPerformed
+    }//GEN-LAST:event_btnMangeEntepriseActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_MAnage_City;
-    private javax.swing.JButton btn_ent;
-    private javax.swing.JButton btn_ent_admin;
+    private javax.swing.JButton btnManageCity;
+    private javax.swing.JButton btnManageEnterprise;
+    private javax.swing.JButton btnMangeEnteprise;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

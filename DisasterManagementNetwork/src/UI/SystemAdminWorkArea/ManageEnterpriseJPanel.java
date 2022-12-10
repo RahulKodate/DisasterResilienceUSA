@@ -78,7 +78,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         combo_enterprise = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txt_name = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_ent = new javax.swing.JTable();
@@ -99,7 +99,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         combo_City.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_City.setForeground(new java.awt.Color(0, 0, 51));
         add(combo_City);
-        combo_City.setBounds(210, 240, 242, 25);
+        combo_City.setBounds(210, 240, 242, 23);
 
         combo_enterprise.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_enterprise.setForeground(new java.awt.Color(0, 0, 51));
@@ -109,7 +109,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_enterprise);
-        combo_enterprise.setBounds(210, 300, 242, 25);
+        combo_enterprise.setBounds(210, 300, 242, 23);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Enterprise Type");
@@ -121,10 +121,10 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(40, 350, 120, 22);
 
-        txt_name.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_name.setForeground(new java.awt.Color(0, 0, 51));
-        add(txt_name);
-        txt_name.setBounds(210, 350, 242, 23);
+        txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtName.setForeground(new java.awt.Color(0, 0, 51));
+        add(txtName);
+        txtName.setBounds(210, 350, 242, 23);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("Manage Enterprise");
@@ -202,7 +202,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
     private void btn_SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SubmitActionPerformed
         // TODO add your handling code here:
-        String name = txt_name.getText();
+        String name = txtName.getText();
         if(name.isEmpty()){
         JOptionPane.showMessageDialog(null, "Filed is empty");
         }
@@ -219,6 +219,8 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         if (!network.setEnterprise(name)) {
             Enterprise enterprise = network.getEnterpriseDirectory().createAndAddEnterprise(name, type);
             populateTable();
+            JOptionPane.showMessageDialog(this, "Enterprise Successfully Added.");
+            txtName.setText("");
         } else {
             JOptionPane.showMessageDialog(null, "An Enterprise with the same name already exists");
         }
@@ -240,6 +242,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             n.getEnterpriseDirectory().Delete_Enterprise(ent);
 
         }
+        JOptionPane.showMessageDialog(this, "Enterprise Deleted Successfully!");
         populateTable();
 
     }//GEN-LAST:event_btn_deleteActionPerformed
@@ -262,6 +265,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tbl_ent;
-    private javax.swing.JTextField txt_name;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

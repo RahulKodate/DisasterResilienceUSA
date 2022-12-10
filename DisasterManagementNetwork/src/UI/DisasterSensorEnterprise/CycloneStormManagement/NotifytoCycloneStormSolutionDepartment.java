@@ -64,7 +64,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
     public void readFromCSV() throws IOException
     {
         ArrayList<Sensor> sensorList = null;
-        String csvFile = "src\\CSV_Files\\AirPollutionReadingsData.csv";
+        String csvFile = "src\\CSV_files\\AreaCodes.csv";
 	        BufferedReader bufferedReader = null;
 	        String line = "";
 	        String cvsSplitBy = ",";
@@ -135,7 +135,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
             }
         }   }
             
-            DefaultTableModel model = (DefaultTableModel) AirPollutionReadingsJTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) tblWindSpeed.getModel();
         model.setRowCount(0);
         
         for(CycloneStormSensor airps : tempCycloneStormSensorList)
@@ -158,13 +158,13 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        AirPollutionReadingsJTable = new javax.swing.JTable();
-        btnHighlyAirPollutedAreas = new javax.swing.JButton();
+        tblWindSpeed = new javax.swing.JTable();
+        btnCycloneStormAreas = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        HighlyAirPollutedReadingsJTable = new javax.swing.JTable();
+        tblCycloneStorm = new javax.swing.JTable();
         btnNotifyGov = new javax.swing.JButton();
-        btnNotifyAirPollution = new javax.swing.JButton();
+        btnNotifyCycloneStorm = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
@@ -172,9 +172,9 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Air Pollution Sensor Readings");
+        jLabel1.setText("Cyclone & Storm Sensor Readings");
 
-        AirPollutionReadingsJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblWindSpeed.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -182,24 +182,24 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Sensor ID", "Zipcode", "Pollution Readings"
+                "Sensor ID", "Zipcode", "Wind Speed"
             }
         ));
-        jScrollPane1.setViewportView(AirPollutionReadingsJTable);
+        jScrollPane1.setViewportView(tblWindSpeed);
 
-        btnHighlyAirPollutedAreas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnHighlyAirPollutedAreas.setText("Get Highly Air Polluted Areas");
-        btnHighlyAirPollutedAreas.addActionListener(new java.awt.event.ActionListener() {
+        btnCycloneStormAreas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnCycloneStormAreas.setText("Get Areas affected by Cyclone & Storm");
+        btnCycloneStormAreas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHighlyAirPollutedAreasActionPerformed(evt);
+                btnCycloneStormAreasActionPerformed(evt);
             }
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Polluted Sensor Readings with Zipcode");
+        jLabel2.setText("Areas facing Cyclone & Storm");
 
-        HighlyAirPollutedReadingsJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblCycloneStorm.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -207,10 +207,10 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Sensor ID", "Zipcode", "Pollution Reading"
+                "Sensor ID", "Zipcode", "Wind Speed"
             }
         ));
-        jScrollPane2.setViewportView(HighlyAirPollutedReadingsJTable);
+        jScrollPane2.setViewportView(tblCycloneStorm);
 
         btnNotifyGov.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnNotifyGov.setText("Send Sensor Information to Government");
@@ -220,11 +220,11 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
             }
         });
 
-        btnNotifyAirPollution.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnNotifyAirPollution.setText("Send Request to Air Pollution Department");
-        btnNotifyAirPollution.addActionListener(new java.awt.event.ActionListener() {
+        btnNotifyCycloneStorm.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnNotifyCycloneStorm.setText("Send Request to Cyclone Storm Department");
+        btnNotifyCycloneStorm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNotifyAirPollutionActionPerformed(evt);
+                btnNotifyCycloneStormActionPerformed(evt);
             }
         });
 
@@ -252,12 +252,12 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                             .addGap(119, 119, 119)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnHighlyAirPollutedAreas)
+                                .addComponent(btnCycloneStormAreas)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 601, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnNotifyAirPollution)
+                            .addComponent(btnNotifyCycloneStorm)
                             .addGap(18, 18, 18)
                             .addComponent(btnNotifyGov, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
@@ -277,7 +277,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(btnHighlyAirPollutedAreas, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnCycloneStormAreas, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -287,7 +287,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                         .addComponent(jLabel3)))
                 .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNotifyAirPollution, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNotifyCycloneStorm, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnNotifyGov, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(btnBack)
@@ -295,22 +295,22 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnNotifyAirPollutionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotifyAirPollutionActionPerformed
+    private void btnNotifyCycloneStormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotifyCycloneStormActionPerformed
         // TODO add your handling code here:
-        int row = HighlyAirPollutedReadingsJTable.getSelectedRow();
+        int row = tblCycloneStorm.getSelectedRow();
         if(row <0){
             JOptionPane.showMessageDialog(null, "No row selected");
         }else{
         //AirPollutionSensor airPollutionSensor = (AirPollutionSensor)SensorReadingsjTable.getValueAt(row, 0);
         
-        Sensor airPollutionSenso = (Sensor)HighlyAirPollutedReadingsJTable.getValueAt(row, 0);
+        Sensor sensor = (Sensor)tblCycloneStorm.getValueAt(row, 0);
         
-        CycloneStormSensor cycloneStormSensor = (CycloneStormSensor) airPollutionSenso;
+        CycloneStormSensor cycloneStormSensor = (CycloneStormSensor) sensor;
         CycloneStormWorkRequest reques = new CycloneStormWorkRequest();
         reques.setCycloneStormSensor(cycloneStormSensor);
         reques.setSender(userAccount);
         reques.setStatus("Sent");
-        reques.setMessage("Air Pollution is detriorating please have a look");
+        reques.setMessage("Wind Speed is increasing! Please have a look");
         
         Organization orgzn = null;
         Organization orgzn1 = null;
@@ -344,7 +344,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
             {
                 orgzn.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
-                JOptionPane.showMessageDialog(null, "Request Successfully sent to Air Pollution Solution Department");
+                JOptionPane.showMessageDialog(null, "Request Successfully sent to Cyclone Storm Solution Department");
             }
             else
             {
@@ -365,13 +365,13 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
             }
                     if(workRequestAlreadyPresent)   
                     {
-                        JOptionPane.showMessageDialog(null, "Request has already been sent about the respective sensor to the Air Pollution Department");
+                        JOptionPane.showMessageDialog(null, "Request has already been sent about the respective sensor to the Cyclone Storm Department");
                     }
                     else
                     {
                         orgzn.getWorkQueue().getWorkRequestList().add(reques);
                         userAccount.getWorkQ().getWorkRequestList().add(reques);
-                        JOptionPane.showMessageDialog(null, "Request sent to Air Pollution Department successfully");
+                        JOptionPane.showMessageDialog(null, "Request sent to Cyclone Storm Department successfully");
                     }
                 }
             }
@@ -409,7 +409,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                 }
         }
         }
-    }//GEN-LAST:event_btnNotifyAirPollutionActionPerformed
+    }//GEN-LAST:event_btnNotifyCycloneStormActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -423,7 +423,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnHighlyAirPollutedAreasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHighlyAirPollutedAreasActionPerformed
+    private void btnCycloneStormAreasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCycloneStormAreasActionPerformed
         // TODO add your handling code here:
         ArrayList<CycloneStormSensor> tempCycloneStormSensorList = new ArrayList<CycloneStormSensor>();
 
@@ -451,7 +451,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
             }
         }   }
             
-        DefaultTableModel model = (DefaultTableModel) HighlyAirPollutedReadingsJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblCycloneStorm.getModel();
         model.setRowCount(0);
         
         for(CycloneStormSensor airps : tempCycloneStormSensorList)
@@ -465,7 +465,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                         model.addRow(row);
                     }
                 }
-    }//GEN-LAST:event_btnHighlyAirPollutedAreasActionPerformed
+    }//GEN-LAST:event_btnCycloneStormAreasActionPerformed
 
     private void btnNotifyGovActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotifyGovActionPerformed
         // TODO add your handling code here:
@@ -477,16 +477,16 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable AirPollutionReadingsJTable;
-    private javax.swing.JTable HighlyAirPollutedReadingsJTable;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnHighlyAirPollutedAreas;
-    private javax.swing.JButton btnNotifyAirPollution;
+    private javax.swing.JButton btnCycloneStormAreas;
+    private javax.swing.JButton btnNotifyCycloneStorm;
     private javax.swing.JButton btnNotifyGov;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable tblCycloneStorm;
+    private javax.swing.JTable tblWindSpeed;
     // End of variables declaration//GEN-END:variables
 }

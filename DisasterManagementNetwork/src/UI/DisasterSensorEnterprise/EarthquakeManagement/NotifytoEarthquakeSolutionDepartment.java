@@ -8,7 +8,6 @@ package UI.DisasterSensorEnterprise.EarthquakeManagement;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
-import Business.Organization.FloodManagementOrganization;
 import Business.Organization.EarthquakeManagementOrganization;
 import Business.Organization.SensorMonitorOrganization;
 import Business.Organization.Organization;
@@ -65,7 +64,7 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
     public void readFromCSV() throws IOException
     {
         ArrayList<Sensor> sensorList = null;
-        String csvFile = "src\\CSV_Files\\NoisePollutionReadingsData.csv";
+        String csvFile = "src\\CSV_files\\AreaCodes.csv";
 	        BufferedReader bufferedReader = null;
 	        String line = "";
 	        String cvsSplitBy = ",";
@@ -136,7 +135,7 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
             }
         }   }
             
-            DefaultTableModel model = (DefaultTableModel) AirPollutionReadingsJTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) tblSeismicReadings.getModel();
         model.setRowCount(0);
         
         for(EarthquakeSensor eqs :tempEarthquakeSensorList)
@@ -159,13 +158,13 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        AirPollutionReadingsJTable = new javax.swing.JTable();
+        tblSeismicReadings = new javax.swing.JTable();
         btnHighlyAirPollutedAreas = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        HighlyAirPollutedReadingsJTable = new javax.swing.JTable();
+        tblEarthquake = new javax.swing.JTable();
         btnNotifyGov = new javax.swing.JButton();
-        btnNotifyAirPollution = new javax.swing.JButton();
+        btnNotifyEarthquake = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
@@ -173,9 +172,9 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Air Pollution Sensor Readings");
+        jLabel1.setText("Earthquake Sensor Readings");
 
-        AirPollutionReadingsJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblSeismicReadings.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -183,13 +182,13 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Sensor ID", "Zipcode", "Pollution Readings"
+                "Sensor ID", "Zipcode", "Seismic Readings"
             }
         ));
-        jScrollPane1.setViewportView(AirPollutionReadingsJTable);
+        jScrollPane1.setViewportView(tblSeismicReadings);
 
         btnHighlyAirPollutedAreas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        btnHighlyAirPollutedAreas.setText("Get Highly Air Polluted Areas");
+        btnHighlyAirPollutedAreas.setText("Get Earthquake Prone Areas");
         btnHighlyAirPollutedAreas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHighlyAirPollutedAreasActionPerformed(evt);
@@ -198,9 +197,9 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Polluted Sensor Readings with Zipcode");
+        jLabel2.setText("Areas prone to Earthquake");
 
-        HighlyAirPollutedReadingsJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tblEarthquake.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -208,10 +207,10 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Sensor ID", "Zipcode", "Pollution Reading"
+                "Sensor ID", "Zipcode", "Seismic Reading"
             }
         ));
-        jScrollPane2.setViewportView(HighlyAirPollutedReadingsJTable);
+        jScrollPane2.setViewportView(tblEarthquake);
 
         btnNotifyGov.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnNotifyGov.setText("Send Sensor Information to Government");
@@ -221,11 +220,11 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
             }
         });
 
-        btnNotifyAirPollution.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnNotifyAirPollution.setText("Send Request to Air Pollution Department");
-        btnNotifyAirPollution.addActionListener(new java.awt.event.ActionListener() {
+        btnNotifyEarthquake.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnNotifyEarthquake.setText("Send Request to Earthquake Department");
+        btnNotifyEarthquake.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNotifyAirPollutionActionPerformed(evt);
+                btnNotifyEarthquakeActionPerformed(evt);
             }
         });
 
@@ -258,7 +257,7 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 601, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnNotifyAirPollution)
+                            .addComponent(btnNotifyEarthquake)
                             .addGap(18, 18, 18)
                             .addComponent(btnNotifyGov, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
@@ -288,7 +287,7 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
                         .addComponent(jLabel3)))
                 .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNotifyAirPollution, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNotifyEarthquake, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnNotifyGov, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(btnBack)
@@ -296,22 +295,22 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnNotifyAirPollutionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotifyAirPollutionActionPerformed
+    private void btnNotifyEarthquakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotifyEarthquakeActionPerformed
         // TODO add your handling code here:
-        int row = HighlyAirPollutedReadingsJTable.getSelectedRow();
+        int row = tblEarthquake.getSelectedRow();
         if(row <0){
             JOptionPane.showMessageDialog(null, "No row selected");
         }else{
         //AirPollutionSensor airPollutionSensor = (AirPollutionSensor)SensorReadingsjTable.getValueAt(row, 0);
         
-        Sensor earthquakeSenso = (Sensor)HighlyAirPollutedReadingsJTable.getValueAt(row, 0);
+        Sensor sensor = (Sensor)tblEarthquake.getValueAt(row, 0);
         
-        EarthquakeSensor earthquakeSensor = (EarthquakeSensor) earthquakeSenso;
+        EarthquakeSensor earthquakeSensor = (EarthquakeSensor) sensor;
         EarthquakeWorkRequest reques = new EarthquakeWorkRequest();
         reques.setEarthquakeSensor(earthquakeSensor);
         reques.setSender(userAccount);
         reques.setStatus("Sent");
-        reques.setMessage("Earthquake is detriorating please have a look");
+        reques.setMessage("Earthquake Alert! Please have a look");
         
         Organization orgzn = null;
         Organization orgzn1 = null;
@@ -345,7 +344,7 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
             {
                 orgzn.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
-                JOptionPane.showMessageDialog(null, "Request Successfully sent to Air Pollution Solution Department");
+                JOptionPane.showMessageDialog(null, "Request Successfully sent to Earthquake Solution Department");
             }
             else
             {
@@ -410,7 +409,7 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
                 }
         }
         }
-    }//GEN-LAST:event_btnNotifyAirPollutionActionPerformed
+    }//GEN-LAST:event_btnNotifyEarthquakeActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -452,7 +451,7 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
             }
         }   }
             
-        DefaultTableModel model = (DefaultTableModel) HighlyAirPollutedReadingsJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblEarthquake.getModel();
         model.setRowCount(0);
         
         for(EarthquakeSensor eqs : tempEarthquakeSensorList)
@@ -478,16 +477,16 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable AirPollutionReadingsJTable;
-    private javax.swing.JTable HighlyAirPollutedReadingsJTable;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnHighlyAirPollutedAreas;
-    private javax.swing.JButton btnNotifyAirPollution;
+    private javax.swing.JButton btnNotifyEarthquake;
     private javax.swing.JButton btnNotifyGov;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable tblEarthquake;
+    private javax.swing.JTable tblSeismicReadings;
     // End of variables declaration//GEN-END:variables
 }

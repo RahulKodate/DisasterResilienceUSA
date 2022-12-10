@@ -13,7 +13,7 @@ import Business.Organization.SensorMonitorOrganization;
 import Business.UserAccount.UserAccount;
 import UI.DisasterSensorEnterprise.CycloneStormManagement.CycloneStormSensorJPanel;
 import UI.DisasterSensorEnterprise.EarthquakeManagement.EarthquakeSensorJPanel;
-import UI.DisasterSensorEnterprise.FloodManagement.FloodManagementSensorJPanel;
+import UI.DisasterSensorEnterprise.FloodManagement.FloodSensorJPanel;
 //
 //import userinterface.EnvironmentSensorEnterprise.NoisePollutionManagement.NoisePollutionManagementSensorJPanel;
 import java.awt.CardLayout;
@@ -61,8 +61,8 @@ public class SensorMonitorWorkArea extends javax.swing.JPanel {
         lblOrganizationvalue = new javax.swing.JLabel();
         lblEnterprise2 = new javax.swing.JLabel();
         lblEnterprisevalue = new javax.swing.JLabel();
-        btnAirPollutionManagement1 = new javax.swing.JButton();
-        btnNoiePollutionManagement = new javax.swing.JButton();
+        btnCycloneStormManagement = new javax.swing.JButton();
+        btnEarthquakeManagement = new javax.swing.JButton();
         btnFloodManagement = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
@@ -94,29 +94,29 @@ public class SensorMonitorWorkArea extends javax.swing.JPanel {
         add(lblEnterprisevalue);
         lblEnterprisevalue.setBounds(370, 86, 308, 34);
 
-        btnAirPollutionManagement1.setBackground(new java.awt.Color(0, 102, 255));
-        btnAirPollutionManagement1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnAirPollutionManagement1.setForeground(new java.awt.Color(255, 255, 255));
-        btnAirPollutionManagement1.setText("Air Pollution Management");
-        btnAirPollutionManagement1.addActionListener(new java.awt.event.ActionListener() {
+        btnCycloneStormManagement.setBackground(new java.awt.Color(0, 102, 255));
+        btnCycloneStormManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnCycloneStormManagement.setForeground(new java.awt.Color(255, 255, 255));
+        btnCycloneStormManagement.setText("Cyclone Storm Management");
+        btnCycloneStormManagement.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAirPollutionManagement1ActionPerformed(evt);
+                btnCycloneStormManagementActionPerformed(evt);
             }
         });
-        add(btnAirPollutionManagement1);
-        btnAirPollutionManagement1.setBounds(460, 210, 340, 42);
+        add(btnCycloneStormManagement);
+        btnCycloneStormManagement.setBounds(460, 210, 340, 42);
 
-        btnNoiePollutionManagement.setBackground(new java.awt.Color(0, 51, 255));
-        btnNoiePollutionManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        btnNoiePollutionManagement.setForeground(new java.awt.Color(255, 255, 255));
-        btnNoiePollutionManagement.setText("Noise Pollution Management");
-        btnNoiePollutionManagement.addActionListener(new java.awt.event.ActionListener() {
+        btnEarthquakeManagement.setBackground(new java.awt.Color(0, 51, 255));
+        btnEarthquakeManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnEarthquakeManagement.setForeground(new java.awt.Color(255, 255, 255));
+        btnEarthquakeManagement.setText("Earthquake Management");
+        btnEarthquakeManagement.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNoiePollutionManagementActionPerformed(evt);
+                btnEarthquakeManagementActionPerformed(evt);
             }
         });
-        add(btnNoiePollutionManagement);
-        btnNoiePollutionManagement.setBounds(460, 280, 340, 42);
+        add(btnEarthquakeManagement);
+        btnEarthquakeManagement.setBounds(460, 280, 340, 42);
 
         btnFloodManagement.setBackground(new java.awt.Color(0, 51, 255));
         btnFloodManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -135,35 +135,35 @@ public class SensorMonitorWorkArea extends javax.swing.JPanel {
         jLabel3.setBounds(-20, 50, 990, 660);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAirPollutionManagement1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAirPollutionManagement1ActionPerformed
+    private void btnCycloneStormManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCycloneStormManagementActionPerformed
         // TODO add your handling code here:
-        CycloneStormSensorJPanel airPollutionSensorManagement = new CycloneStormSensorJPanel(userProcessContainer, account, organization, enterprise, business);
-        userProcessContainer.add("airPollutionSensorJPanel", airPollutionSensorManagement);
+        CycloneStormSensorJPanel cycloneStormSensorManagement = new CycloneStormSensorJPanel(userProcessContainer, account, organization, enterprise, business);
+        userProcessContainer.add("cycloneStormSensorJPanel", cycloneStormSensorManagement);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnAirPollutionManagement1ActionPerformed
+    }//GEN-LAST:event_btnCycloneStormManagementActionPerformed
 
-    private void btnNoiePollutionManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNoiePollutionManagementActionPerformed
+    private void btnEarthquakeManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEarthquakeManagementActionPerformed
         // TODO add your handling code here:
         EarthquakeSensorJPanel earthquakeSensorJPanel = new EarthquakeSensorJPanel(userProcessContainer, account, organization, enterprise, business);
         userProcessContainer.add("earthquakeSensorJPanel",earthquakeSensorJPanel );
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnNoiePollutionManagementActionPerformed
+    }//GEN-LAST:event_btnEarthquakeManagementActionPerformed
 
     private void btnFloodManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFloodManagementActionPerformed
         // TODO add your handling code here:
-        FloodManagementSensorJPanel floodsensor = new FloodManagementSensorJPanel(userProcessContainer, account, organization, enterprise, business);
-        userProcessContainer.add("floodsensor", floodsensor);
+        FloodSensorJPanel floodSensorJPanel = new FloodSensorJPanel(userProcessContainer, account, organization, enterprise, business);
+        userProcessContainer.add("floodsensorJPanel", floodSensorJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnFloodManagementActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAirPollutionManagement1;
+    private javax.swing.JButton btnCycloneStormManagement;
+    private javax.swing.JButton btnEarthquakeManagement;
     private javax.swing.JButton btnFloodManagement;
-    private javax.swing.JButton btnNoiePollutionManagement;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblEnterprise;

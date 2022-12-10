@@ -47,17 +47,17 @@ public class FloodManagementWorkJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         btnViewWorkQueue = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 102));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Flood Alert Management Work Area");
-        add(jLabel1);
-        jLabel1.setBounds(0, 10, 490, 44);
+        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setText("Flood Management Work Area");
+        add(lblTitle);
+        lblTitle.setBounds(60, 10, 490, 44);
 
         btnViewWorkQueue.setText("View Work Queue");
         btnViewWorkQueue.addActionListener(new java.awt.event.ActionListener() {
@@ -70,12 +70,12 @@ public class FloodManagementWorkJPanel extends javax.swing.JPanel {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/flood_management.jpg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(100, 90, 0, 410);
+        jLabel2.setBounds(100, 90, 280, 410);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewWorkQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewWorkQueueActionPerformed
         // TODO add your handling code here:
-FloodPollutionManagementWorkQueueJPanel floodmanagementWorkQueue = new FloodPollutionManagementWorkQueueJPanel(userProcessContainer, account, enterprise.getOrganizationDirectory());        userProcessContainer.add("floodManagementWorkQueue", floodmanagementWorkQueue);
+        FloodManagementWorkQueueJPanel floodmanagementWorkQueue = new FloodManagementWorkQueueJPanel(userProcessContainer, account, enterprise.getOrganizationDirectory());        userProcessContainer.add("floodManagementWorkQueue", floodmanagementWorkQueue);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnViewWorkQueueActionPerformed
@@ -83,7 +83,7 @@ FloodPollutionManagementWorkQueueJPanel floodmanagementWorkQueue = new FloodPoll
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnViewWorkQueue;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 }
