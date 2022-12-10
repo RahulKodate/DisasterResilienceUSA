@@ -53,7 +53,7 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
         setLayout(null);
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lblTitle.setText("Environment Management Admin Work Area");
+        lblTitle.setText("Disaster Management Admin Work Area");
         add(lblTitle);
         lblTitle.setBounds(110, 100, 530, 29);
 

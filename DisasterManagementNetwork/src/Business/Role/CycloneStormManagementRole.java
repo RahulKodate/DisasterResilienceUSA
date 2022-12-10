@@ -9,7 +9,7 @@ import Business.Enterprise.Enterprise;
 import Business.Organization.CycloneStormManagementOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
-import UI.DisasterManagementRole.CycloneStormManagementWorkJPanel;
+import UI.DisasterManagementWorkQueue.CycloneStormManagementWorkJPanel;
 import javax.swing.JPanel;
 
 /**

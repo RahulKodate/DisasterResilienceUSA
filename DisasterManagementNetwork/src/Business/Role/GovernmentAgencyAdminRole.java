@@ -16,6 +16,7 @@ import javax.swing.JPanel;
  * @author Arnab
  */
 public class GovernmentAgencyAdminRole extends Roles{
+    @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business) {
         return new GovernmentAgencyAdminWorkAreaJPanel(userProcessContainer, enterprise, business); //To change body of generated methods, choose Tools | Templates.
     }

@@ -3,12 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.DisasterManagementRole;
+package UI.DisasterManagementWorkQueue;
 
-import UI.DisasterManagementRole.*;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Organization.EarthquakeManagementOrganization;
+import Business.Organization.CycloneStormManagementOrganization;
 import Business.Organization.OrganizationDirectory;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
@@ -19,16 +18,16 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author moins
  */
-public class EarthquakeManagementWorkJPanel extends javax.swing.JPanel {
+public class CycloneStormManagementWorkJPanel extends javax.swing.JPanel {
    private JPanel userProcessContainer;
     private UserAccount account; 
-    private EarthquakeManagementOrganization organization; 
+    private CycloneStormManagementOrganization organization; 
     private Enterprise enterprise; 
     private EcoSystem business;
     /**
      * Creates new form AirPollutionManagementWorkJPanel
      */
-    public EarthquakeManagementWorkJPanel(JPanel userProcessContainer, UserAccount account, EarthquakeManagementOrganization organization, Enterprise enterprise, EcoSystem business) {
+    public CycloneStormManagementWorkJPanel(JPanel userProcessContainer, UserAccount account, CycloneStormManagementOrganization organization, Enterprise enterprise, EcoSystem business) {
         this.userProcessContainer = userProcessContainer;
         this.account = account;
        this.organization = organization;
@@ -55,9 +54,9 @@ public class EarthquakeManagementWorkJPanel extends javax.swing.JPanel {
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setText("Earthquake Management Work Area");
+        lblTitle.setText("Cyclone & Storm Management Work Area");
         add(lblTitle);
-        lblTitle.setBounds(10, 27, 480, 29);
+        lblTitle.setBounds(10, 27, 520, 29);
 
         btnViewWorkRequest.setForeground(new java.awt.Color(0, 0, 153));
         btnViewWorkRequest.setText("View Work request");
@@ -76,8 +75,8 @@ public class EarthquakeManagementWorkJPanel extends javax.swing.JPanel {
 
     private void btnViewWorkRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewWorkRequestActionPerformed
         // TODO add your handling code here:
-        EarthquakeManagementWorkQueueJPanel earthquakeManagementWorkQueue = new EarthquakeManagementWorkQueueJPanel(userProcessContainer, account, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("earthquakeManagementWorkQueue", earthquakeManagementWorkQueue);
+          CycloneStormManagementWorkQueueJPanel cycloneStormManagementWorkQueue = new CycloneStormManagementWorkQueueJPanel(userProcessContainer, account, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("cycloneStormManagementWorkQueue", cycloneStormManagementWorkQueue);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnViewWorkRequestActionPerformed

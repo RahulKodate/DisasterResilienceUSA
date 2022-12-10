@@ -25,7 +25,9 @@ public abstract class Roles {
         GovernmentOfficial("Government Official"),
         Citizen("Citizen"),
         SensorManagementAdmin("Sensor Management Admin"),
-        SensorMonitor("Sensor Management Admin");
+        SensorMonitor("Sensor Management Admin"),
+        RNDAdmin("RND Admin"),
+        RNDAnalyst("RND Analyst");
 
         private String value;
         private RoleType(String value){

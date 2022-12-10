@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.DisasterManagementRole;
+package UI.DisasterManagementWorkQueue;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Organization.EarthquakeManagementOrganization;
+import Business.Organization.FloodManagementOrganization;
 import Business.Organization.Organization;
+import Business.WorkQueue.FloodWorkRequest;
 import Business.Organization.OrganizationDirectory;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.EarthquakeWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -24,18 +24,18 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author moins
  */
-public class EarthquakeManagementWorkQueueJPanel extends javax.swing.JPanel {
+public class FloodManagementWorkQueueJPanel extends javax.swing.JPanel {
 private OrganizationDirectory directory;
     private UserAccount userAccount;
-    private EarthquakeManagementOrganization organization;
+    private FloodManagementOrganization organization;
     private Enterprise enterprise; 
     private EcoSystem business;
     private JPanel userProcessContainer;
     /**
-     * Creates new form AirPollutionManagementWorkQueueJPanel
+     * Creates new form FloodManagementWorkQueueJPanel
      * @param userProcessContainer
      */
-    public EarthquakeManagementWorkQueueJPanel(JPanel userProcessContainer, UserAccount userAccount, OrganizationDirectory directory) {
+    public FloodManagementWorkQueueJPanel(JPanel userProcessContainer, UserAccount userAccount, OrganizationDirectory directory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
@@ -56,7 +56,7 @@ private OrganizationDirectory directory;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblWorkQueue = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
@@ -66,10 +66,10 @@ private OrganizationDirectory directory;
         setBackground(new java.awt.Color(0, 153, 102));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Earthqauke Management Work Queue");
-        add(jLabel1);
-        jLabel1.setBounds(0, 10, 500, 44);
+        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setText("Flood Management Work Queue");
+        add(lblTitle);
+        lblTitle.setBounds(0, 10, 500, 44);
 
         tblWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -117,7 +117,7 @@ private OrganizationDirectory directory;
         // TODO add your handling code here:
                                                    
         userProcessContainer.remove(this);
-        JPanel panel = new EarthquakeManagementWorkJPanel(userProcessContainer,userAccount,organization, enterprise,business);
+        JPanel panel = new FloodManagementWorkJPanel(userProcessContainer,userAccount,organization, enterprise,business);
 
         //Component[] componentArray = userProcessContainer.getComponents();
         //Component component = componentArray[componentArray.length - 1];
@@ -138,11 +138,11 @@ private OrganizationDirectory directory;
         
         WorkRequest workRequest = (WorkRequest) tblWorkQueue.getValueAt(getSelectedRow, 0);
         
-        EarthquakeWorkRequest earthquakeSolutionWorkRequest = (EarthquakeWorkRequest)workRequest;
-        earthquakeSolutionWorkRequest.setStatus("Resolved");
-        earthquakeSolutionWorkRequest.setResolveDate(new Date());
+        FloodWorkRequest floodSolutionWorkRequest = (FloodWorkRequest)workRequest;
+        floodSolutionWorkRequest.setStatus("Resolved");
+        floodSolutionWorkRequest.setResolveDate(new Date());
         
-        earthquakeSolutionWorkRequest.getEarthquakeSensor().setSeismicReading(rn.nextInt(75));
+        floodSolutionWorkRequest.getFloodSensor().setCurrentlevel(rn.nextInt(75));
         
         populateTable();
         
@@ -154,28 +154,28 @@ private OrganizationDirectory directory;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnResolve;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JTable tblWorkQueue;
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {
-        EarthquakeWorkRequest air_wrs = null;
+        FloodWorkRequest air_wrs = null;
         DefaultTableModel model = (DefaultTableModel) tblWorkQueue.getModel();
         model.setRowCount(0);
         
         for(Organization organization : directory.getOrganizationList())
         {
         for (WorkRequest wr : organization.getWorkQueue().getWorkRequestList()) {
-            if (wr instanceof EarthquakeWorkRequest) {
-                air_wrs = (EarthquakeWorkRequest)wr;
+            if (wr instanceof FloodWorkRequest) {
+                air_wrs = (FloodWorkRequest)wr;
             
                 Object[] row = new Object[8];
                 row[0] = air_wrs;
                 row[1] = air_wrs.getSender();
-                row[2] = air_wrs.getEarthquakeSensor().getSensorId();
-                row[3] = air_wrs.getEarthquakeSensor().getZipcode();
+                row[2] = air_wrs.getFloodSensor().getSensorId();
+                row[3] = air_wrs.getFloodSensor().getZipcode();
                 row[4] = air_wrs.getStatus();
                 row[5] = air_wrs.getMessage();
                 row[6] = air_wrs.getRequestDate();

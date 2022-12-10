@@ -9,7 +9,7 @@ import Business.Enterprise.Enterprise;
 import Business.Organization.FloodManagementOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
-import UI.DisasterManagementRole.FloodManagementWorkJPanel;
+import UI.DisasterManagementWorkQueue.FloodManagementWorkJPanel;
 import javax.swing.JPanel;
 
 /**
