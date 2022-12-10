@@ -16,7 +16,7 @@ import java.util.Random;
 public class CycloneStormSensor extends Sensor{
     Random rndm = new Random();
     int minimum = 10;
-    int maximum = 100;
+    int maximum = 50;
     private float windSpeed = rndm.nextInt(maximum - minimum) + minimum;
     
     private Map<Date, Float> sensorResponseValues = new HashMap<Date, Float>();

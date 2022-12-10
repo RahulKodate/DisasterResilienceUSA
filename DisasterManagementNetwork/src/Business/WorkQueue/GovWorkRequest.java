@@ -17,9 +17,19 @@ import java.util.ArrayList;
 public class GovWorkRequest extends WorkRequest {
     private CycloneStormSensor cycloneStormSensor;
     private ArrayList<FloodSensor> floodSensorList;
-    
+    private EarthquakeSensor earthquakeSensor;
     private String CycloneStormMessage;
     private String FloodMessage;
+    private String EarthquakeMessage;
+
+    
+    public String getEarthquakeMessage() {
+        return EarthquakeMessage;
+    }
+
+    public void setEarthquakeMessage(String EarthquakeMessage) {
+        this.EarthquakeMessage = EarthquakeMessage;
+    }
 
     
 
@@ -29,6 +39,13 @@ public class GovWorkRequest extends WorkRequest {
 
     public void setCycloneStormMessage(String CycloneStormMessage) {
         this.CycloneStormMessage = CycloneStormMessage;
+    }
+    public EarthquakeSensor getEarthquakeSensor() {
+        return earthquakeSensor;
+    }
+
+    public void setEarthquakeSensor(EarthquakeSensor earthquakeSensor) {
+        this.earthquakeSensor = earthquakeSensor;
     }
 
     public String getFloodMessage() {

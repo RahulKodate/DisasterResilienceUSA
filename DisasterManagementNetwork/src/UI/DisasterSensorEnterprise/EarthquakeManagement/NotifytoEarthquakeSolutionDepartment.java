@@ -3,20 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.DisasterSensorEnterprise.CycloneStormManagement;
+package UI.DisasterSensorEnterprise.EarthquakeManagement;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.CycloneStormManagementOrganization;
+import Business.Organization.EarthquakeManagementOrganization;
 import Business.Organization.SensorMonitorOrganization;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import Business.Sensor.CycloneStormSensor;
+import Business.Sensor.EarthquakeSensor;
 import Business.Sensor.SensorDirectory;
 import Business.Sensor.Sensor;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.CycloneStormWorkRequest;
+import Business.WorkQueue.EarthquakeWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -39,7 +42,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author moins
  */
-public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
+public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private EcoSystem business;
     private Enterprise enterprise; 
@@ -49,7 +52,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
     /**
      * Creates new form NotifytoAirPolltuionSolutionDepartment
      */
-    public NotifytoCycloneStormSolutionDepartment(JPanel userProcessContainer, UserAccount userAccount, EcoSystem business, OrganizationDirectory organizationDirectory) throws IOException {
+    public NotifytoEarthquakeSolutionDepartment(JPanel userProcessContainer, UserAccount userAccount, EcoSystem business, OrganizationDirectory organizationDirectory) throws IOException {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.business = business;
@@ -64,7 +67,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
     public void readFromCSV() throws IOException
     {
         ArrayList<Sensor> sensorList = null;
-        String csvFile = "src\\CSV_Files\\AirPollutionReadingsData.csv";
+        String csvFile = "src\\CSV_Files\\NoisePollutionReadingsData.csv";
 	        BufferedReader bufferedReader = null;
 	        String line = "";
 	        String cvsSplitBy = ",";
@@ -84,19 +87,19 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                                         SensorMonitorOrganization envso = (SensorMonitorOrganization)orgn;
                                         SensorDirectory sensedirect = envso.getSensorDirectory();
                                         String valuesOfArray2[] = dataCsvArr.get(i);
-                                        if(sensedirect.CycloneStormSensorExists(valuesOfArray2[1]))
+                                        if(sensedirect.EarthquakeSensorExists(valuesOfArray2[1]))
                                         {
                                             break;
                                         }
                                         else
                                         {
-                                        Sensor sense = sensedirect.createSensor(Sensor.SensorType.CycloneStormSensor);
-                                        CycloneStormSensor airps = (CycloneStormSensor) sense;
+                                        Sensor sense = sensedirect.createSensor(Sensor.SensorType.EarthquakeSensor);
+                                        EarthquakeSensor eqs = (EarthquakeSensor) sense;
                                         String valuesOfArray[] = dataCsvArr.get(i);
-                                        airps.setLocation(valuesOfArray[0]);
-                                        airps.setZipcode(valuesOfArray[1]);
-                                        airps.setLatitude(valuesOfArray[2]);
-                                        airps.setLongitude(valuesOfArray[3]);
+                                        eqs.setLocation(valuesOfArray[0]);
+                                        eqs.setZipcode(valuesOfArray[1]);
+                                        eqs.setLatitude(valuesOfArray[2]);
+                                        eqs.setLongitude(valuesOfArray[3]);
                                         }                                        
                                         }
                                 }
@@ -109,7 +112,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
     }
     public void populateTable()
     {
-        ArrayList<CycloneStormSensor> tempCycloneStormSensorList = new ArrayList<CycloneStormSensor>();
+        ArrayList<EarthquakeSensor> tempEarthquakeSensorList = new ArrayList<EarthquakeSensor>();
 
         for(Network ntwk: business.getNetworkList())
         {
@@ -124,10 +127,10 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                 
                 for(Sensor sense : sensedirect.getSensorList())
                 {
-                    if(sense instanceof CycloneStormSensor)
+                    if(sense instanceof EarthquakeSensor)
                     {
-                        CycloneStormSensor airps = (CycloneStormSensor)sense;
-                        tempCycloneStormSensorList.add(airps);
+                        EarthquakeSensor eqs = (EarthquakeSensor)sense;
+                        tempEarthquakeSensorList.add(eqs);
                     }
                 }
             }
@@ -138,12 +141,12 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
             DefaultTableModel model = (DefaultTableModel) AirPollutionReadingsJTable.getModel();
         model.setRowCount(0);
         
-        for(CycloneStormSensor airps : tempCycloneStormSensorList)
+        for(EarthquakeSensor eqs :tempEarthquakeSensorList)
                 {
                 Object[] row = new Object[3];
-                row[0] = airps;
-                row[1] = airps.getZipcode();
-                row[2] = airps.getWindSpeed();
+                row[0] = eqs;
+                row[1] = eqs.getZipcode();
+                row[2] = eqs.getSeismicReading();
                 model.addRow(row);
                 }
     }
@@ -303,14 +306,14 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
         }else{
         //AirPollutionSensor airPollutionSensor = (AirPollutionSensor)SensorReadingsjTable.getValueAt(row, 0);
         
-        Sensor airPollutionSenso = (Sensor)HighlyAirPollutedReadingsJTable.getValueAt(row, 0);
+        Sensor earthquakeSenso = (Sensor)HighlyAirPollutedReadingsJTable.getValueAt(row, 0);
         
-        CycloneStormSensor cycloneStormSensor = (CycloneStormSensor) airPollutionSenso;
-        CycloneStormWorkRequest reques = new CycloneStormWorkRequest();
-        reques.setCycloneStormSensor(cycloneStormSensor);
+        EarthquakeSensor earthquakeSensor = (EarthquakeSensor) earthquakeSenso;
+        EarthquakeWorkRequest reques = new EarthquakeWorkRequest();
+        reques.setEarthquakeSensor(earthquakeSensor);
         reques.setSender(userAccount);
         reques.setStatus("Sent");
-        reques.setMessage("Air Pollution is detriorating please have a look");
+        reques.setMessage("Earthquake is detriorating please have a look");
         
         Organization orgzn = null;
         Organization orgzn1 = null;
@@ -320,7 +323,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
             {
                 for(Organization orgn : enterprise.getOrganizationDirectory().getOrganizationList())
                 {
-                    if (orgn instanceof CycloneStormManagementOrganization){
+                    if (orgn instanceof EarthquakeManagementOrganization){
                         orgzn = orgn;
                         break;
                     }
@@ -350,13 +353,13 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
             {
             for(WorkRequest request1 : orgzn.getWorkQueue().getWorkRequestList())
             {
-                if(request1 instanceof CycloneStormWorkRequest)
+                if(request1 instanceof EarthquakeWorkRequest)
                 {
-                    CycloneStormWorkRequest reque = (CycloneStormWorkRequest) request1; 
-                    sensorIDsArray.add(reque.getCycloneStormSensor().getSensorId());
+                    EarthquakeWorkRequest reque = (EarthquakeWorkRequest) request1; 
+                    sensorIDsArray.add(reque.getEarthquakeSensor().getSensorId());
                     for(int i=0; i<sensorIDsArray.size(); i++)
                     {
-                        if(reques.getCycloneStormSensor().getSensorId() == sensorIDsArray.get(i))
+                        if(reques.getEarthquakeSensor().getSensorId() == sensorIDsArray.get(i))
                         {
                             workRequestAlreadyPresent = true;
                         }
@@ -390,11 +393,11 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
             {
                 if(request1 instanceof CycloneStormWorkRequest)
                 {
-                    CycloneStormWorkRequest reque = (CycloneStormWorkRequest) request1; 
-                    sensorIDsArray.add(reque.getCycloneStormSensor().getSensorId());
+                    EarthquakeWorkRequest reque = (EarthquakeWorkRequest) request1; 
+                    sensorIDsArray.add(reque.getEarthquakeSensor().getSensorId());
                     for(int i=0; i<sensorIDsArray.size(); i++)
                     {
-                        if(reques.getCycloneStormSensor().getSensorId() == sensorIDsArray.get(i))
+                        if(reques.getEarthquakeSensor().getSensorId() == sensorIDsArray.get(i))
                         {
                             workRequestAlreadyPresent = true;
                         }
@@ -414,7 +417,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
-        JPanel panel = new CycloneStormSensorJPanel(userProcessContainer,userAccount,organization,enterprise,business);
+        JPanel panel = new EarthquakeSensorJPanel(userProcessContainer,userAccount,organization,enterprise,business);
         //Component[] componentArray = userProcessContainer.getComponents();
         //Component component = componentArray[componentArray.length - 1];
         //SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
@@ -425,7 +428,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
 
     private void btnHighlyAirPollutedAreasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHighlyAirPollutedAreasActionPerformed
         // TODO add your handling code here:
-        ArrayList<CycloneStormSensor> tempCycloneStormSensorList = new ArrayList<CycloneStormSensor>();
+        ArrayList<EarthquakeSensor> tempEarthquakeSensorList = new ArrayList<EarthquakeSensor>();
 
         for(Network ntwk: business.getNetworkList())
         {
@@ -440,10 +443,10 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                 
                 for(Sensor sense : sensedirect.getSensorList())
                 {
-                    if(sense instanceof CycloneStormSensor)
+                    if(sense instanceof EarthquakeSensor)
                     {
-                        CycloneStormSensor airp = (CycloneStormSensor)sense;
-                        tempCycloneStormSensorList.add(airp);
+                        EarthquakeSensor eqs = (EarthquakeSensor)sense;
+                        tempEarthquakeSensorList.add(eqs);
                     }
                 }
             }
@@ -454,14 +457,14 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) HighlyAirPollutedReadingsJTable.getModel();
         model.setRowCount(0);
         
-        for(CycloneStormSensor airps : tempCycloneStormSensorList)
+        for(EarthquakeSensor eqs : tempEarthquakeSensorList)
                 {
-                    if(airps.getWindSpeed()>30)
+                    if(eqs.getSeismicReading()>20)
                     {
                         Object[] row = new Object[4];
-                        row[0] = airps;
-                        row[1] = airps.getZipcode();
-                        row[2] = airps.getWindSpeed();
+                        row[0] = eqs;
+                        row[1] = eqs.getZipcode();
+                        row[2] = eqs.getSeismicReading();
                         model.addRow(row);
                     }
                 }

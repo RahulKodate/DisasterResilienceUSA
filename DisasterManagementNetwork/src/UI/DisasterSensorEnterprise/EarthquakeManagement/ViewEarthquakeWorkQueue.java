@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.DisasterSensorEnterprise.CycloneStormManagement;
+package UI.DisasterSensorEnterprise.EarthquakeManagement;
 
+import UI.DisasterSensorEnterprise.CycloneStormManagement.*;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -32,7 +33,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author moins
  */
-public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
+public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
     
     private OrganizationDirectory directory;
     private UserAccount userAccount;
@@ -42,7 +43,7 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
     /**
      * Creates new form ViewAirPollutionWorkQueue
      */
-    public ViewCycloneStormWorkQueue(JPanel userProcessContainer, UserAccount userAccount, OrganizationDirectory directory, EcoSystem business) {
+    public ViewEarthquakeWorkQueue(JPanel userProcessContainer, UserAccount userAccount, OrganizationDirectory directory, EcoSystem business) {
         initComponents();
         
         this.userProcessContainer = userProcessContainer;

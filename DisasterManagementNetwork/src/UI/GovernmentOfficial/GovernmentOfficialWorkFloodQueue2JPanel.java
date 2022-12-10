@@ -30,7 +30,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author apurv
+ * @author moins
  */
 public class GovernmentOfficialWorkFloodQueue2JPanel extends javax.swing.JPanel {
 

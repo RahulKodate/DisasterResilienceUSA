@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.DisasterSensorEnterprise.CycloneStormManagement;
+package UI.DisasterSensorEnterprise.EarthquakeManagement;
+
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
@@ -21,7 +22,7 @@ import UI.DisasterSensorEnterprise.SensorManagement.SensorMonitorWorkArea;
  *
  * @author moins
  */
-public class CycloneStormSensorJPanel extends javax.swing.JPanel {
+public class EarthquakeSensorJPanel extends javax.swing.JPanel {
     
     private JPanel userProcessContainer; 
     private UserAccount account; 
@@ -32,7 +33,7 @@ public class CycloneStormSensorJPanel extends javax.swing.JPanel {
     /**
      * Creates new form AirPollutionSensorJPanel
      */
-    public CycloneStormSensorJPanel(JPanel userProcessContainer, UserAccount account, SensorMonitorOrganization organization, Enterprise enterprise, EcoSystem business) {
+    public EarthquakeSensorJPanel(JPanel userProcessContainer, UserAccount account, SensorMonitorOrganization organization, Enterprise enterprise, EcoSystem business) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.account = account;
@@ -102,20 +103,20 @@ public class CycloneStormSensorJPanel extends javax.swing.JPanel {
 
     private void btnSendRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendRequestActionPerformed
         // TODO add your handling code here:
-       NotifytoCycloneStormSolutionDepartment notifytoAirPolltuionSolutionDepartment;
+       NotifytoEarthquakeSolutionDepartment notifytoEarthquakeSolutionDepartment;
        try{
-            notifytoAirPolltuionSolutionDepartment = new NotifytoCycloneStormSolutionDepartment(userProcessContainer, account, business, enterprise.getOrganizationDirectory());
-            userProcessContainer.add("NotifytoAirPolltuionSolutionDepartment", notifytoAirPolltuionSolutionDepartment);
+            notifytoEarthquakeSolutionDepartment = new NotifytoEarthquakeSolutionDepartment(userProcessContainer, account, business, enterprise.getOrganizationDirectory());
+            userProcessContainer.add("NotifytoEarthquakeSolutionDepartment", notifytoEarthquakeSolutionDepartment);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
         } catch (IOException ex) {
-            Logger.getLogger(CycloneStormSensorJPanel.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EarthquakeSensorJPanel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnSendRequestActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-         ViewCycloneStormWorkQueue viewWorkQueueJPanel = new ViewCycloneStormWorkQueue(userProcessContainer, account, enterprise.getOrganizationDirectory(), business);
+         ViewEarthquakeWorkQueue viewWorkQueueJPanel = new ViewEarthquakeWorkQueue(userProcessContainer, account, enterprise.getOrganizationDirectory(), business);
         userProcessContainer.add("viewWorkQueueJPanel", viewWorkQueueJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);

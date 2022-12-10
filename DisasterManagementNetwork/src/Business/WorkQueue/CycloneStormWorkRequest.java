@@ -8,7 +8,7 @@ package Business.WorkQueue;
 import Business.Sensor.CycloneStormSensor;
 /**
  *
- * @author aishw
+ * @author moins
  */
 public class CycloneStormWorkRequest extends WorkRequest{
     private CycloneStormSensor cycloneStormSensor;

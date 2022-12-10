@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author apurv
+ * @author moins
  */
 public class NotifyResidentJPanel extends javax.swing.JPanel {
     private OrganizationDirectory directory;

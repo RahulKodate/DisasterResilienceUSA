@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.DisasterSensorEnterprise.CycloneStormManagement;
+package UI.DisasterSensorEnterprise.EarthquakeManagement;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
@@ -14,6 +14,7 @@ import Business.Organization.GovernmentOfficialOrganization;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
 import Business.Sensor.CycloneStormSensor;
+import Business.Sensor.EarthquakeSensor;
 import Business.Sensor.Sensor;
 import Business.Sensor.SensorDirectory;
 import Business.UserAccount.UserAccount;
@@ -55,7 +56,7 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
     }
     
     public void populateTable(){
-         ArrayList<CycloneStormSensor> tempCycloneStormSensorList = new ArrayList<CycloneStormSensor>();
+         ArrayList<EarthquakeSensor> tempEarthquakeSensorList = new ArrayList<EarthquakeSensor>();
 
         for(Network ntwk: business.getNetworkList())
         {
@@ -70,10 +71,10 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
                 
                 for(Sensor sense : sensedirect.getSensorList())
                 {
-                    if(sense instanceof CycloneStormSensor)
+                    if(sense instanceof EarthquakeSensor)
                     {
-                        CycloneStormSensor air = (CycloneStormSensor)sense;
-                        tempCycloneStormSensorList.add(air);
+                        EarthquakeSensor Earthq = (EarthquakeSensor)sense;
+                        tempEarthquakeSensorList.add(Earthq);
                     }
                 }
             }
@@ -84,14 +85,14 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
             DefaultTableModel model = (DefaultTableModel) HighlyAirPollutedAreasJTable.getModel();
         model.setRowCount(0);
         
-        for(CycloneStormSensor css : tempCycloneStormSensorList)
+        for(EarthquakeSensor eq : tempEarthquakeSensorList)
                 {
-                    if(css.getWindSpeed()>150)
+                    if(eq.getSeismicReading()>150)
                     {
                         Object[] row = new Object[4];
-                        row[0] = css;
-                        row[1] = css.getZipcode();
-                        row[2] = css.getWindSpeed();
+                        row[0] = eq;
+                        row[1] = eq.getZipcode();
+                        row[2] = eq.getSeismicReading();
                         model.addRow(row);
                     }
                 }
@@ -171,12 +172,12 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         }else{
         //AirPollutionSensor airPollutionSensor = (AirPollutionSensor)SensorReadingsjTable.getValueAt(row, 0);
         
-        Sensor airPollutionSenso = (Sensor)HighlyAirPollutedAreasJTable.getValueAt(row, 0);
+        Sensor EarthquakeSenso = (Sensor)HighlyAirPollutedAreasJTable.getValueAt(row, 0);
         
-        CycloneStormSensor cycloneStormSensor = (CycloneStormSensor) airPollutionSenso;
+        EarthquakeSensor earthquakeSensor = (EarthquakeSensor) EarthquakeSenso;
         GovWorkRequest reques = new GovWorkRequest();
-        reques.setCycloneStormSensor(cycloneStormSensor);
-        reques.setCycloneStormMessage("The Area bearing pincode "+cycloneStormSensor.getZipcode()+" has bad air quality for now, please inform residents to avoid this area until further notice");
+        reques.setEarthquakeSensor(earthquakeSensor);
+        reques.setEarthquakeMessage("The Area bearing pincode "+earthquakeSensor.getZipcode()+" has bad air quality for now, please inform residents to avoid this area until further notice");
         reques.setSender(userAccount);
         reques.setStatus("Successfully Notified to Government");
         

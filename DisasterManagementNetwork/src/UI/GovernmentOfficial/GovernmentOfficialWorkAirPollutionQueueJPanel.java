@@ -30,7 +30,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author apurv
+ * @author moins
  */
 public class GovernmentOfficialWorkAirPollutionQueueJPanel extends javax.swing.JPanel {
 

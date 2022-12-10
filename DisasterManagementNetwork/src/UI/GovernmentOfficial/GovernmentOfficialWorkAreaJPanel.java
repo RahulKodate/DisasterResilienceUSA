@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author apurv
+ * @author moins
  */
 public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
 
