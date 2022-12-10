@@ -37,6 +37,11 @@ public class EnterpriseDirectory {
             enterpriseList.add(enterprise);
         }
         
+        else if (type == Enterprise.EnterpriseType.ResearchAndDevelopment) {
+            enterprise = new ResearchAndDevelopmentEnterprise(name, type);
+            enterpriseList.add(enterprise);
+        }
+        
         return enterprise;
     }
 

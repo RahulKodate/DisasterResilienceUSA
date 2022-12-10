@@ -75,6 +75,21 @@ public abstract class Organization {
         }
     }
     
+    public enum ResearchAndDevelopmentType {
+
+        RNDAdmin("RND Admin Organization"), 
+        RNDAnalyst("RND Analysis Organization");
+        private String value;
+
+        private ResearchAndDevelopmentType(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+    }
+    
     public Organization(String name) {
         this.name = name;
         workQueue = new WorkQueue();

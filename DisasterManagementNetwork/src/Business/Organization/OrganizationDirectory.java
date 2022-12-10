@@ -6,6 +6,7 @@ package Business.Organization;
 
 import Business.Organization.Organization.DisasterManagementType;
 import Business.Organization.Organization.GovernmentAgencyType;
+import Business.Organization.Organization.ResearchAndDevelopmentType;
 import Business.Organization.Organization.SensorManagementType;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -162,6 +163,32 @@ public class OrganizationDirectory {
         return organization;
      }
      
+    public Organization createRND(ResearchAndDevelopmentType type){
+         Organization organization = null;
+         
+         boolean doesRNDOrganizationExist = false;
+         
+         for (Organization org : organizationList) {
+            if (org instanceof RNDAnalysisOrganization) {
+                doesRNDOrganizationExist = true;
+                break;
+            } else {
+                doesRNDOrganizationExist = false;
+            }
+        }
+         
+        if (type.getValue().equals(ResearchAndDevelopmentType.RNDAnalyst.getValue())){
+            if(!doesRNDOrganizationExist) {
+            organization = new RNDAnalysisOrganization();
+            organizationList.add(organization);
+            //JOptionPane.showMessageDialog(null, "Organization added Succesfully");
+            } else {
+                JOptionPane.showMessageDialog(null, "You can add only one RND Analysis Organization for an Enterprise");
+            }
+        }
+        return organization;
+     }
+    
      public void DeleteOrganization(Organization org) {
         organizationList.remove(org);
     }

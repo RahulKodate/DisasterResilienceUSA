@@ -37,7 +37,8 @@ public class Enterprise extends Organization{
 
         DisasterManagement("Disaster Management"),
         GovernmentAgency("Government Agency"), 
-        SensorManagement("Sensor Management");
+        SensorManagement("Sensor Management"),
+        ResearchAndDevelopment("Research and Development");
         
         private String val;
 
