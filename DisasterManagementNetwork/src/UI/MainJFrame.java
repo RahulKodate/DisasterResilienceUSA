@@ -201,6 +201,7 @@ public class MainJFrame extends javax.swing.JFrame {
         CardLayout crdLyt = (CardLayout) container.getLayout();
         crdLyt.next(container);
         dB4OUtil.storeSystem(system);
+        return;
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**

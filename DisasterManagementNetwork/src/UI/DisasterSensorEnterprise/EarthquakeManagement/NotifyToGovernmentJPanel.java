@@ -8,17 +8,16 @@ package UI.DisasterSensorEnterprise.EarthquakeManagement;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
-import Business.Organization.CycloneStormManagementOrganization;
+import Business.Organization.EarthquakeManagementOrganization;
 import Business.Organization.SensorMonitorOrganization;
 import Business.Organization.GovernmentOfficialOrganization;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
-import Business.Sensor.CycloneStormSensor;
 import Business.Sensor.EarthquakeSensor;
 import Business.Sensor.Sensor;
 import Business.Sensor.SensorDirectory;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.CycloneStormWorkRequest;
+import Business.WorkQueue.EarthquakeWorkRequest;
 import Business.WorkQueue.GovWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -177,7 +176,7 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         EarthquakeSensor earthquakeSensor = (EarthquakeSensor) EarthquakeSenso;
         GovWorkRequest reques = new GovWorkRequest();
         reques.setEarthquakeSensor(earthquakeSensor);
-        reques.setEarthquakeMessage("The Area bearing pincode "+earthquakeSensor.getZipcode()+" has bad air quality for now, please inform residents to avoid this area until further notice");
+        reques.setEarthquakeMessage("The Area bearing pincode "+earthquakeSensor.getZipcode()+" has Earthquake, please inform residents to avoid this area until further notice");
         reques.setSender(userAccount);
         reques.setStatus("Successfully Notified to Government");
         
@@ -215,12 +214,12 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
                 {
                     GovWorkRequest reque = (GovWorkRequest) request1;
                     
-                    if(reque.getCycloneStormSensor() != null)
+                    if(reque.getEarthquakeSensor() != null)
                     {
-                    sensorIDsArray.add(reque.getCycloneStormSensor().getSensorId());
+                    sensorIDsArray.add(reque.getEarthquakeSensor().getSensorId());
                     for(int i=0; i<sensorIDsArray.size(); i++)
                     {
-                        if(reques.getCycloneStormSensor().getSensorId() == sensorIDsArray.get(i))
+                        if(reques.getEarthquakeSensor().getSensorId() == sensorIDsArray.get(i))
                         {
                             workRequestAlreadyPresent = true;
                         }

@@ -8,17 +8,15 @@ package UI.DisasterSensorEnterprise.EarthquakeManagement;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
-import Business.Organization.CycloneStormManagementOrganization;
+import Business.Organization.FloodManagementOrganization;
 import Business.Organization.EarthquakeManagementOrganization;
 import Business.Organization.SensorMonitorOrganization;
 import Business.Organization.Organization;
 import Business.Organization.OrganizationDirectory;
-import Business.Sensor.CycloneStormSensor;
 import Business.Sensor.EarthquakeSensor;
 import Business.Sensor.SensorDirectory;
 import Business.Sensor.Sensor;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.CycloneStormWorkRequest;
 import Business.WorkQueue.EarthquakeWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -368,13 +366,13 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
             }
                     if(workRequestAlreadyPresent)   
                     {
-                        JOptionPane.showMessageDialog(null, "Request has already been sent about the respective sensor to the Air Pollution Department");
+                        JOptionPane.showMessageDialog(null, "Request has already been sent about the respective sensor to the Earthquake Department");
                     }
                     else
                     {
                         orgzn.getWorkQueue().getWorkRequestList().add(reques);
                         userAccount.getWorkQ().getWorkRequestList().add(reques);
-                        JOptionPane.showMessageDialog(null, "Request sent to Air Pollution Department successfully");
+                        JOptionPane.showMessageDialog(null, "Request sent to Earthquake Department successfully");
                     }
                 }
             }
@@ -391,7 +389,7 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
             {
             for(WorkRequest request1 : orgzn1.getWorkQueue().getWorkRequestList())
             {
-                if(request1 instanceof CycloneStormWorkRequest)
+                if(request1 instanceof EarthquakeWorkRequest)
                 {
                     EarthquakeWorkRequest reque = (EarthquakeWorkRequest) request1; 
                     sensorIDsArray.add(reque.getEarthquakeSensor().getSensorId());
@@ -459,7 +457,7 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
         
         for(EarthquakeSensor eqs : tempEarthquakeSensorList)
                 {
-                    if(eqs.getSeismicReading()>20)
+                    if(eqs.getSeismicReading()>5)
                     {
                         Object[] row = new Object[4];
                         row[0] = eqs;

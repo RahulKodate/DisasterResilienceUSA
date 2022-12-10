@@ -32,7 +32,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author moins
  */
-public class GovernmentOfficialWorkAirPollutionQueueJPanel extends javax.swing.JPanel {
+public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel {
 
     private OrganizationDirectory directory;
     private UserAccount userAccount;
@@ -43,7 +43,7 @@ public class GovernmentOfficialWorkAirPollutionQueueJPanel extends javax.swing.J
     /**
      * Creates new form GovernmentOfficialWorkQueueJPanel
      */
-    public GovernmentOfficialWorkAirPollutionQueueJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise, OrganizationDirectory directory) {
+    public GovernmentOfficialEarthquakeQueueJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise, OrganizationDirectory directory) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;

@@ -5,7 +5,6 @@
  */
 package UI.DisasterSensorEnterprise.EarthquakeManagement;
 
-import UI.DisasterSensorEnterprise.CycloneStormManagement.*;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -13,10 +12,10 @@ import Business.Organization.Organization;
 import Business.Organization.SensorMonitorOrganization;
 import Business.Organization.GovernmentOfficialOrganization;
 import Business.Organization.OrganizationDirectory;
-import Business.Sensor.CycloneStormSensor;
+import Business.Sensor.EarthquakeSensor;
 import Business.Sensor.Sensor;
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.CycloneStormWorkRequest;
+import Business.WorkQueue.EarthquakeWorkRequest;
 import Business.WorkQueue.GovWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
@@ -55,7 +54,7 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
     }
     
     public void populateTable(){
-        CycloneStormWorkRequest air_works = null;
+        EarthquakeWorkRequest eq_works = null;
         DefaultTableModel model = (DefaultTableModel) WorkQueueJTable.getModel();
         model.setRowCount(0);
         
@@ -64,17 +63,17 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
             if(organization instanceof SensorMonitorOrganization)
             {
                 for (WorkRequest workr : organization.getWorkQueue().getWorkRequestList()) {
-                    if (workr instanceof CycloneStormWorkRequest){
-                        air_works = (CycloneStormWorkRequest)workr;
+                    if (workr instanceof EarthquakeWorkRequest){
+                        eq_works = (EarthquakeWorkRequest)workr;
             
                         Object[] row = new Object[7];
-                        row[0] = air_works;
-                        row[1] = air_works.getSender();
-                        row[2] = air_works.getCycloneStormSensor().getSensorId();
-                        row[3] = air_works.getCycloneStormSensor().getZipcode();
-                        row[4] = air_works.getStatus();
-                        row[5] = air_works.getMessage();
-                        row[6] = air_works.getRequestDate();
+                        row[0] = eq_works;
+                        row[1] = eq_works.getSender();
+                        row[2] = eq_works.getEarthquakeSensor().getSensorId();
+                        row[3] = eq_works.getEarthquakeSensor().getZipcode();
+                        row[4] = eq_works.getStatus();
+                        row[5] = eq_works.getMessage();
+                        row[6] = eq_works.getRequestDate();
                         model.addRow(row);
                     }
                 }
@@ -265,7 +264,7 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
 
     private void btnPendingReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPendingReqActionPerformed
         // TODO add your handling code here:
-        CycloneStormWorkRequest air_works = null;
+        EarthquakeWorkRequest eq_works = null;
         DefaultTableModel model = (DefaultTableModel) PendingReqJTable.getModel();
         model.setRowCount(0);
         
@@ -274,19 +273,19 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
             if(organization instanceof SensorMonitorOrganization)
             {
                 for (WorkRequest workr : organization.getWorkQueue().getWorkRequestList()) {
-                    if (workr instanceof CycloneStormWorkRequest)  {
-                        air_works = (CycloneStormWorkRequest)workr;
+                    if (workr instanceof EarthquakeWorkRequest)  {
+                        eq_works = (EarthquakeWorkRequest)workr;
             
-                    if(!air_works.getStatus().equalsIgnoreCase("Resolved"))
+                    if(!eq_works.getStatus().equalsIgnoreCase("Resolved"))
                     {
                         Object[] row = new Object[7];
-                        row[0] = air_works;
-                        row[1] = air_works.getSender();
-                        row[2] = air_works.getCycloneStormSensor().getSensorId();
-                        row[3] = air_works.getCycloneStormSensor().getZipcode();
-                        row[4] = air_works.getStatus();
-                        row[5] = air_works.getMessage();
-                        row[6] = air_works.getRequestDate();
+                        row[0] = eq_works;
+                        row[1] = eq_works.getSender();
+                        row[2] = eq_works.getEarthquakeSensor().getSensorId();
+                        row[3] = eq_works.getEarthquakeSensor().getZipcode();
+                        row[4] = eq_works.getStatus();
+                        row[5] = eq_works.getMessage();
+                        row[6] = eq_works.getRequestDate();
                         model.addRow(row);
                     }
                     }
@@ -297,7 +296,7 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
 
     private void btnResolvedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResolvedActionPerformed
         // TODO add your handling code here:
-        CycloneStormWorkRequest air_works = null;
+        EarthquakeWorkRequest eq_works = null;
         DefaultTableModel model = (DefaultTableModel) ResolvedJTable.getModel();
         model.setRowCount(0);
         
@@ -306,21 +305,21 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
             if(organization instanceof SensorMonitorOrganization)
             {
                 for (WorkRequest workr : organization.getWorkQueue().getWorkRequestList()) {
-                    if (workr instanceof CycloneStormWorkRequest)
+                    if (workr instanceof EarthquakeWorkRequest)
                     {
-                        air_works = (CycloneStormWorkRequest)workr;
+                        eq_works = (EarthquakeWorkRequest)workr;
             
-                    if(air_works.getStatus().equalsIgnoreCase("Resolved"))
+                    if(eq_works.getStatus().equalsIgnoreCase("Resolved"))
                     {
                         Object[] row = new Object[8];
-                        row[0] = air_works;
-                        row[1] = air_works.getSender();
-                        row[2] = air_works.getCycloneStormSensor().getSensorId();
-                        row[3] = air_works.getCycloneStormSensor().getZipcode();
-                        row[4] = air_works.getStatus();
-                        row[5] = air_works.getMessage();
-                        row[6] = air_works.getRequestDate();
-                        row[7] = air_works.getResolveDate();
+                        row[0] = eq_works;
+                        row[1] = eq_works.getSender();
+                        row[2] = eq_works.getEarthquakeSensor().getSensorId();
+                        row[3] = eq_works.getEarthquakeSensor().getZipcode();
+                        row[4] = eq_works.getStatus();
+                        row[5] = eq_works.getMessage();
+                        row[6] = eq_works.getRequestDate();
+                        row[7] = eq_works.getResolveDate();
                         model.addRow(row);
                     }
                     }
@@ -339,12 +338,12 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
         else
         {
             
-            CycloneStormWorkRequest CycloneStormWorkRequest = (CycloneStormWorkRequest)ResolvedJTable.getValueAt(row, 0);
+            EarthquakeWorkRequest earthquakeWorkRequest = (EarthquakeWorkRequest)ResolvedJTable.getValueAt(row, 0);
 
-            CycloneStormSensor cycloneStormSensor = CycloneStormWorkRequest.getCycloneStormSensor();
+            EarthquakeSensor earthquakeSensor = earthquakeWorkRequest.getEarthquakeSensor();
             GovWorkRequest reques = new GovWorkRequest();
-            reques.setCycloneStormSensor(cycloneStormSensor);
-            reques.setCycloneStormMessage("The Area bearing pincode "+cycloneStormSensor.getZipcode()+"'s air quality is now better.");
+            reques.setEarthquakeSensor(earthquakeSensor);
+            reques.setCycloneStormMessage("The Area bearing pincode "+earthquakeSensor.getZipcode()+"Earthquake is now better.");
             reques.setSender(userAccount);
             reques.setStatus("Resolution Message Sent to Government");
 

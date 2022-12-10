@@ -12,6 +12,7 @@ import Business.Enterprise.Enterprise;
 import Business.Organization.SensorMonitorOrganization;
 import Business.UserAccount.UserAccount;
 import UI.DisasterSensorEnterprise.CycloneStormManagement.CycloneStormSensorJPanel;
+import UI.DisasterSensorEnterprise.EarthquakeManagement.EarthquakeSensorJPanel;
 import UI.DisasterSensorEnterprise.FloodManagement.FloodManagementSensorJPanel;
 //
 //import userinterface.EnvironmentSensorEnterprise.NoisePollutionManagement.NoisePollutionManagementSensorJPanel;
@@ -144,10 +145,10 @@ public class SensorMonitorWorkArea extends javax.swing.JPanel {
 
     private void btnNoiePollutionManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNoiePollutionManagementActionPerformed
         // TODO add your handling code here:
-//        NoisePollutionManagementSensorJPanel noisePollutionSensorManagement = new NoisePollutionManagementSensorJPanel(userProcessContainer, account, organization, enterprise, business);
-//        userProcessContainer.add("noisePollutionSensorManagement", noisePollutionSensorManagement);
-//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//        layout.next(userProcessContainer);
+        EarthquakeSensorJPanel earthquakeSensorJPanel = new EarthquakeSensorJPanel(userProcessContainer, account, organization, enterprise, business);
+        userProcessContainer.add("earthquakeSensorJPanel",earthquakeSensorJPanel );
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnNoiePollutionManagementActionPerformed
 
     private void btnFloodManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFloodManagementActionPerformed
