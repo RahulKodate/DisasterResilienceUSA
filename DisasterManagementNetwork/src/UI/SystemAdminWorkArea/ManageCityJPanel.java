@@ -77,7 +77,7 @@ public class ManageCityJPanel extends javax.swing.JPanel {
         txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));
         add(txtName);
-        txtName.setBounds(140, 190, 179, 23);
+        txtName.setBounds(140, 190, 180, 30);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Manage City");

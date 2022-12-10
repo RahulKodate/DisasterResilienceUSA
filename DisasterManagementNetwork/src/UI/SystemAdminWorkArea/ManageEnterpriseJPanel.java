@@ -99,7 +99,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         combo_City.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_City.setForeground(new java.awt.Color(0, 0, 51));
         add(combo_City);
-        combo_City.setBounds(210, 240, 242, 23);
+        combo_City.setBounds(210, 240, 242, 30);
 
         combo_enterprise.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_enterprise.setForeground(new java.awt.Color(0, 0, 51));
@@ -109,7 +109,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_enterprise);
-        combo_enterprise.setBounds(210, 300, 242, 23);
+        combo_enterprise.setBounds(210, 300, 242, 30);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Enterprise Type");
@@ -124,7 +124,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));
         add(txtName);
-        txtName.setBounds(210, 350, 242, 23);
+        txtName.setBounds(210, 350, 242, 30);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("Manage Enterprise");
