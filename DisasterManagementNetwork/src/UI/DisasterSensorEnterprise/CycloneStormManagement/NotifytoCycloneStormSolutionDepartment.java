@@ -345,6 +345,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                 orgzn.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
                 JOptionPane.showMessageDialog(null, "Request Successfully sent to Cyclone Storm Solution Department");
+                return;
             }
             else
             {
