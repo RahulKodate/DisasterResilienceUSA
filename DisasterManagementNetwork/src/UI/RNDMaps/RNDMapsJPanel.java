@@ -7,9 +7,18 @@ package UI.RNDMaps;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.RNDAnalysisOrganization;
+import Business.Sensor.Sensor;
 import Business.UserAccount.UserAccount;
+import UI.DisasterSensorEnterprise.SensorManagement.SensorMonitorWorkArea;
+import UI.RNDAnalyst.RNDAnalystWorkArea;
 import UI.Waypoint.MyWaypoint;
 import UI.Waypoint.WaypointRender;
+import java.awt.CardLayout;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 import javax.swing.JPanel;
@@ -21,6 +30,8 @@ import org.jxmapviewer.viewer.DefaultTileFactory;
 import org.jxmapviewer.viewer.GeoPosition;
 import org.jxmapviewer.viewer.TileFactoryInfo;
 import org.jxmapviewer.viewer.WaypointPainter;
+import java.io.FileReader;
+import org.jxmapviewer.VirtualEarthTileFactoryInfo;
 
 /**
  *
@@ -53,13 +64,35 @@ public class RNDMapsJPanel extends javax.swing.JPanel {
         TileFactoryInfo info = new OSMTileFactoryInfo();
         DefaultTileFactory tileFactory = new DefaultTileFactory(info);
         jXMapViewer1.setTileFactory(tileFactory);
-        GeoPosition geo = new GeoPosition(42.338093,-71.0916502);
-        jXMapViewer1.setAddressLocation(geo);
-        jXMapViewer1.setZoom(12);
-        MouseInputListener mn = new PanMouseInputListener(jXMapViewer1);
-        jXMapViewer1.addMouseListener(mn);
-        jXMapViewer1.addMouseMotionListener(mn);
-        jXMapViewer1.addMouseWheelListener(new ZoomMouseWheelListenerCenter(jXMapViewer1));
+        
+         String path = "src\\CSV_files\\AreaCodes.csv";
+	        String line = "";
+	        
+	        try {
+                     BufferedReader br = new BufferedReader(new FileReader(path));
+                     while((line = br.readLine())!=null){
+                         String[] values = line.split(",");
+                         GeoPosition geo = new GeoPosition(Double.parseDouble(values[2]),Double.parseDouble(values[3]) );
+
+                         waypoints.add(new MyWaypoint("Location 1", new GeoPosition(Double.parseDouble(values[2]),Double.parseDouble(values[3]))));
+                         jXMapViewer1.setAddressLocation(geo);
+                        jXMapViewer1.setZoom(8);
+                        MouseInputListener mn = new PanMouseInputListener(jXMapViewer1);
+                        jXMapViewer1.addMouseListener(mn);
+                        jXMapViewer1.addMouseMotionListener(mn);
+                        jXMapViewer1.addMouseWheelListener(new ZoomMouseWheelListenerCenter(jXMapViewer1));
+                     }
+                }
+                 catch(FileNotFoundException e)   {
+                     
+                 }
+        catch(IOException e){
+            
+        }
+        
+        
+        
+        
         
     }
     
@@ -90,9 +123,8 @@ public class RNDMapsJPanel extends javax.swing.JPanel {
 
         jXMapViewer1 = new org.jxmapviewer.JXMapViewer();
         BtnAddWaypoints = new javax.swing.JButton();
-        btnClearWaypoint = new javax.swing.JButton();
-
-        setBackground(new java.awt.Color(222, 222, 248));
+        btnBack = new javax.swing.JButton();
+        CmbMapType = new javax.swing.JComboBox<>();
 
         BtnAddWaypoints.setText("Add Waypoint");
         BtnAddWaypoints.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +133,19 @@ public class RNDMapsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnClearWaypoint.setText("Clear Waypoint");
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
+        CmbMapType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Open Street", "Virtual Earth ", "Hybrid", "Satellite" }));
+        CmbMapType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CmbMapTypeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jXMapViewer1Layout = new javax.swing.GroupLayout(jXMapViewer1);
         jXMapViewer1.setLayout(jXMapViewer1Layout);
@@ -111,8 +155,10 @@ public class RNDMapsJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(BtnAddWaypoints)
                 .addGap(29, 29, 29)
-                .addComponent(btnClearWaypoint)
-                .addContainerGap(741, Short.MAX_VALUE))
+                .addComponent(btnBack)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 673, Short.MAX_VALUE)
+                .addComponent(CmbMapType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jXMapViewer1Layout.setVerticalGroup(
             jXMapViewer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,7 +166,8 @@ public class RNDMapsJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jXMapViewer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnAddWaypoints)
-                    .addComponent(btnClearWaypoint))
+                    .addComponent(btnBack)
+                    .addComponent(CmbMapType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(568, Short.MAX_VALUE))
         );
 
@@ -143,14 +190,45 @@ public class RNDMapsJPanel extends javax.swing.JPanel {
     private void BtnAddWaypointsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAddWaypointsActionPerformed
         // TODO add your handling code here:
         
-        waypoints.add(new MyWaypoint("Location 1", new GeoPosition(42.338093,-71.0916502)));
+      //  waypoints.add(new MyWaypoint("Location 1", new GeoPosition(42.338093,-71.0916502)));
         initWaypoint();
     }//GEN-LAST:event_BtnAddWaypointsActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+         userProcessContainer.remove(this);
+        JPanel panel = new RNDAnalystWorkArea(userProcessContainer,account,organization, enterprise,business);
+        //Component[] componentArray = userProcessContainer.getComponents();
+        //Component component = componentArray[componentArray.length - 1];
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+        
+        clearWaypoint();
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void CmbMapTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CmbMapTypeActionPerformed
+        // TODO add your handling code here:
+        
+        TileFactoryInfo info;
+        int index = CmbMapType.getSelectedIndex();
+        if(index==0){
+            info = new OSMTileFactoryInfo();
+        }else if(index==1){
+            info = new VirtualEarthTileFactoryInfo(VirtualEarthTileFactoryInfo.MAP);
+        }else if(index==2){
+            info = new VirtualEarthTileFactoryInfo(VirtualEarthTileFactoryInfo.HYBRID);
+        }else {
+            info = new VirtualEarthTileFactoryInfo(VirtualEarthTileFactoryInfo.SATELLITE);
+        } 
+        DefaultTileFactory tileFactory = new DefaultTileFactory(info);
+        jXMapViewer1.setTileFactory(tileFactory);
+    }//GEN-LAST:event_CmbMapTypeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnAddWaypoints;
-    private javax.swing.JButton btnClearWaypoint;
+    private javax.swing.JComboBox<String> CmbMapType;
+    private javax.swing.JButton btnBack;
     private org.jxmapviewer.JXMapViewer jXMapViewer1;
     // End of variables declaration//GEN-END:variables
 }
