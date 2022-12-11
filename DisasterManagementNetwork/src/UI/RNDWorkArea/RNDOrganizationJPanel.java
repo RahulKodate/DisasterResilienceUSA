@@ -71,9 +71,9 @@ public class RNDOrganizationJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_org = new javax.swing.JTable();
-        btn_back = new javax.swing.JButton();
-        btn_add_org = new javax.swing.JButton();
-        btn_delete_Org = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        btnAddOrg = new javax.swing.JButton();
+        btnDeleteOrg = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 102));
@@ -116,37 +116,37 @@ public class RNDOrganizationJPanel extends javax.swing.JPanel {
         add(jScrollPane2);
         jScrollPane2.setBounds(81, 101, 452, 112);
 
-        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
-        btn_back.setText("<<Back");
-        btn_back.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.setText("<<Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_backActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(btn_back);
-        btn_back.setBounds(10, 10, 95, 40);
+        add(btnBack);
+        btnBack.setBounds(10, 10, 95, 40);
 
-        btn_add_org.setBackground(new java.awt.Color(0, 0, 255));
-        btn_add_org.setForeground(new java.awt.Color(255, 255, 255));
-        btn_add_org.setText("Add Organization");
-        btn_add_org.addActionListener(new java.awt.event.ActionListener() {
+        btnAddOrg.setBackground(new java.awt.Color(0, 0, 255));
+        btnAddOrg.setForeground(new java.awt.Color(255, 255, 255));
+        btnAddOrg.setText("Add Organization");
+        btnAddOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_add_orgActionPerformed(evt);
+                btnAddOrgActionPerformed(evt);
             }
         });
-        add(btn_add_org);
-        btn_add_org.setBounds(82, 445, 140, 50);
+        add(btnAddOrg);
+        btnAddOrg.setBounds(82, 445, 140, 50);
 
-        btn_delete_Org.setBackground(new java.awt.Color(0, 102, 255));
-        btn_delete_Org.setForeground(new java.awt.Color(255, 255, 255));
-        btn_delete_Org.setText("Delete Organization");
-        btn_delete_Org.addActionListener(new java.awt.event.ActionListener() {
+        btnDeleteOrg.setBackground(new java.awt.Color(0, 102, 255));
+        btnDeleteOrg.setForeground(new java.awt.Color(255, 255, 255));
+        btnDeleteOrg.setText("Delete Organization");
+        btnDeleteOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_delete_OrgActionPerformed(evt);
+                btnDeleteOrgActionPerformed(evt);
             }
         });
-        add(btn_delete_Org);
-        btn_delete_Org.setBounds(380, 440, 170, 50);
+        add(btnDeleteOrg);
+        btnDeleteOrg.setBounds(380, 440, 170, 50);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Sensor.png"))); // NOI18N
         add(jLabel3);
@@ -157,24 +157,25 @@ public class RNDOrganizationJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_combo_OrganizationActionPerformed
 
-    private void btn_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_backActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btn_backActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btn_add_orgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_orgActionPerformed
+    private void btnAddOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddOrgActionPerformed
         // TODO add your handling code here:
         
         ResearchAndDevelopmentType type = (ResearchAndDevelopmentType) combo_Organization.getSelectedItem();
 
         directory.createRND(type);
         //directory.createEnvironmentManagement(type);
+        JOptionPane.showMessageDialog(this, "Organization Successfully Added!");
         populateTable();
-    }//GEN-LAST:event_btn_add_orgActionPerformed
+    }//GEN-LAST:event_btnAddOrgActionPerformed
 
-    private void btn_delete_OrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_delete_OrgActionPerformed
+    private void btnDeleteOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteOrgActionPerformed
         // TODO add your handling code here:
            // TODO add your handling code here:
         int selectedRow = tbl_org.getSelectedRow();
@@ -186,14 +187,14 @@ public class RNDOrganizationJPanel extends javax.swing.JPanel {
         Organization org = (Organization) tbl_org.getValueAt(selectedRow, 0);
         directory.DeleteOrganization(org);
         populateTable();
-        JOptionPane.showMessageDialog(null, "Organization deleted Succesfully");
-    }//GEN-LAST:event_btn_delete_OrgActionPerformed
+        JOptionPane.showMessageDialog(null, "Organization Deleted Succesfully!");
+    }//GEN-LAST:event_btnDeleteOrgActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_add_org;
-    private javax.swing.JButton btn_back;
-    private javax.swing.JButton btn_delete_Org;
+    private javax.swing.JButton btnAddOrg;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnDeleteOrg;
     private javax.swing.JComboBox combo_Organization;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

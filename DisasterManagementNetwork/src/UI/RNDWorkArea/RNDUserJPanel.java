@@ -48,7 +48,7 @@ public class RNDUserJPanel extends javax.swing.JPanel {
         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
             for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
                 Object row[] = new Object[2];
-                row[0] = ua;
+                row[0] = ua.getUsername();
                 row[1] = ua.getRole();
                 ((DefaultTableModel) tblUser.getModel()).addRow(row);
             }
@@ -93,10 +93,10 @@ public class RNDUserJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         combo_role = new javax.swing.JComboBox();
-        txt_Name = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        txt_Password = new javax.swing.JPasswordField();
+        txtPassword = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblUser = new javax.swing.JTable();
@@ -149,15 +149,15 @@ public class RNDUserJPanel extends javax.swing.JPanel {
         add(combo_role);
         combo_role.setBounds(391, 396, 250, 23);
 
-        txt_Name.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_Name.setForeground(new java.awt.Color(0, 0, 51));
-        txt_Name.addActionListener(new java.awt.event.ActionListener() {
+        txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtName.setForeground(new java.awt.Color(0, 0, 51));
+        txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_NameActionPerformed(evt);
+                txtNameActionPerformed(evt);
             }
         });
-        add(txt_Name);
-        txt_Name.setBounds(391, 451, 250, 23);
+        add(txtName);
+        txtName.setBounds(391, 451, 250, 23);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Password");
@@ -169,10 +169,10 @@ public class RNDUserJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(154, 450, 120, 22);
 
-        txt_Password.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_Password.setForeground(new java.awt.Color(0, 0, 51));
-        add(txt_Password);
-        txt_Password.setBounds(391, 501, 250, 23);
+        txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPassword.setForeground(new java.awt.Color(0, 0, 51));
+        add(txtPassword);
+        txtPassword.setBounds(391, 501, 250, 23);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setText("RND Analyst");
@@ -226,34 +226,37 @@ public class RNDUserJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_combo_roleActionPerformed
 
-    private void txt_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_NameActionPerformed
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_NameActionPerformed
+    }//GEN-LAST:event_txtNameActionPerformed
 
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
-        String name = txt_Name.getText();
-        String pss = txt_Password.getText();
+        String name = txtName.getText();
+        String pss = txtPassword.getText();
         if (name.isEmpty() || pss.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "No field should be empty");
-            } else {String userName = txt_Name.getText();
-        char[] passwordCharArray = txt_Password.getPassword();
+            } else {String userName = txtName.getText();
+        char[] passwordCharArray = txtPassword.getPassword();
         String password = String.valueOf(passwordCharArray);
         Organization organization = (Organization) combo_Org.getSelectedItem();
         Employee employee = (Employee) combo_emp.getSelectedItem();
         Roles role = (Roles) combo_role.getSelectedItem();
         if (employee == null) {
             JOptionPane.showMessageDialog(null, "You cannot add user account as employee combo box is empty");
+            return;
         } else if (business.UniqueUserName(userName)) {
             organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
         } else {
             JOptionPane.showMessageDialog(null, "Username should be unique");
-
+            return;
         }
         //enterprise.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
         //Add the organization to the enterprise
         populateTable();
         JOptionPane.showMessageDialog(null, "User created Succesfully");
+        txtName.setText("");
+        txtPassword.setText("");
         }
     }//GEN-LAST:event_btnCreateActionPerformed
 
@@ -279,7 +282,7 @@ public class RNDUserJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblUser;
-    private javax.swing.JTextField txt_Name;
-    private javax.swing.JPasswordField txt_Password;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
 }

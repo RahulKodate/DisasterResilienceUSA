@@ -76,12 +76,12 @@ public class RNDEmployeeJPanel extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Combo_organizationEmp = new javax.swing.JComboBox();
-        txt_Name = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_emp = new javax.swing.JTable();
-        btn_Back = new javax.swing.JButton();
-        btn_create = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+        btnCreate = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 153, 102));
         setLayout(null);
@@ -123,10 +123,10 @@ public class RNDEmployeeJPanel extends javax.swing.JPanel {
         add(Combo_organizationEmp);
         Combo_organizationEmp.setBounds(291, 398, 250, 23);
 
-        txt_Name.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_Name.setForeground(new java.awt.Color(0, 0, 51));
-        add(txt_Name);
-        txt_Name.setBounds(291, 451, 250, 30);
+        txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtName.setForeground(new java.awt.Color(0, 0, 51));
+        add(txtName);
+        txtName.setBounds(291, 451, 250, 30);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Name");
@@ -157,23 +157,23 @@ public class RNDEmployeeJPanel extends javax.swing.JPanel {
         add(jScrollPane2);
         jScrollPane2.setBounds(70, 149, 461, 95);
 
-        btn_Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
-        btn_Back.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_BackActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(btn_Back);
-        btn_Back.setBounds(80, 533, 95, 40);
+        add(btnBack);
+        btnBack.setBounds(80, 533, 95, 40);
 
-        btn_create.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/create.png"))); // NOI18N
-        btn_create.addActionListener(new java.awt.event.ActionListener() {
+        btnCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/create.png"))); // NOI18N
+        btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_createActionPerformed(evt);
+                btnCreateActionPerformed(evt);
             }
         });
-        add(btn_create);
-        btn_create.setBounds(408, 533, 120, 50);
+        add(btnCreate);
+        btnCreate.setBounds(408, 533, 120, 50);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_OrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_OrgActionPerformed
@@ -183,34 +183,35 @@ public class RNDEmployeeJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_combo_OrgActionPerformed
 
-    private void btn_createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_createActionPerformed
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
         Organization organization = (Organization) Combo_organizationEmp.getSelectedItem();
         //        if (organization instanceof ConsumerOrganization) {
             //            JOptionPane.showMessageDialog(null, "You cannot add the consumer that is responsiblity of Global Manager");
             //        } else {
-            String name = txt_Name.getText();
+            String name = txtName.getText();
             if (name.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "An Employee must have a name");
             } else {
                 organization.getEmployeeDirectory().createEmployee(name);
                 populateTable(organization);
                 JOptionPane.showMessageDialog(null, "Employee created Succefully");
+                txtName.setText("");
             }
-    }//GEN-LAST:event_btn_createActionPerformed
+    }//GEN-LAST:event_btnCreateActionPerformed
 
-    private void btn_BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_BackActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
            userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btn_BackActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox Combo_organizationEmp;
-    private javax.swing.JButton btn_Back;
-    private javax.swing.JButton btn_create;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnCreate;
     private javax.swing.JComboBox combo_Org;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -219,6 +220,6 @@ public class RNDEmployeeJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tbl_emp;
-    private javax.swing.JTextField txt_Name;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }
