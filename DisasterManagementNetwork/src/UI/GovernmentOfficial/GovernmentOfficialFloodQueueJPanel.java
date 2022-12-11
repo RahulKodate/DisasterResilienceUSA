@@ -72,7 +72,7 @@ public class GovernmentOfficialFloodQueueJPanel extends javax.swing.JPanel {
                 {
                 Object[] row = new Object[3];
                 row[0] = gov_wrs;
-                row[1] = gov_wrs.getSender();
+                row[1] = gov_wrs.getSender().getUsername();
                 row[2] = gov_wrs.getFloodMessage();
                 model.addRow(row);
                 }

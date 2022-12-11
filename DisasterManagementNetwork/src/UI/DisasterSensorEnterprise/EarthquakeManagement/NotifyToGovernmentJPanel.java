@@ -86,7 +86,7 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         
         for(EarthquakeSensor eq : tempEarthquakeSensorList)
                 {
-                    if(eq.getSeismicReading()>150)
+                    if(eq.getSeismicReading()>5)
                     {
                         Object[] row = new Object[4];
                         row[0] = eq;

@@ -72,7 +72,7 @@ public class GovernmentOfficialCycloneStormQueueJPanel extends javax.swing.JPane
                 {
                 Object[] row = new Object[3];
                 row[0] = gov_wrs;
-                row[1] = gov_wrs.getSender();
+                row[1] = gov_wrs.getSender().getUsername();
                 row[2] = gov_wrs.getCycloneStormMessage();
                 model.addRow(row);
                 }

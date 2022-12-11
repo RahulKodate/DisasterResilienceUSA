@@ -54,7 +54,7 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
     }
     
     public void populateTable(){
-        EarthquakeWorkRequest eq_works = null;
+        EarthquakeWorkRequest eqWorks = null;
         DefaultTableModel model = (DefaultTableModel) WorkQueueJTable.getModel();
         model.setRowCount(0);
         
@@ -64,16 +64,16 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
             {
                 for (WorkRequest workr : organization.getWorkQueue().getWorkRequestList()) {
                     if (workr instanceof EarthquakeWorkRequest){
-                        eq_works = (EarthquakeWorkRequest)workr;
+                        eqWorks = (EarthquakeWorkRequest)workr;
             
                         Object[] row = new Object[7];
-                        row[0] = eq_works;
-                        row[1] = eq_works.getSender();
-                        row[2] = eq_works.getEarthquakeSensor().getSensorId();
-                        row[3] = eq_works.getEarthquakeSensor().getZipcode();
-                        row[4] = eq_works.getStatus();
-                        row[5] = eq_works.getMessage();
-                        row[6] = eq_works.getRequestDate();
+                        row[0] = eqWorks;
+                        row[1] = eqWorks.getSender().getUsername();
+                        row[2] = eqWorks.getEarthquakeSensor().getSensorId();
+                        row[3] = eqWorks.getEarthquakeSensor().getZipcode();
+                        row[4] = eqWorks.getStatus();
+                        row[5] = eqWorks.getMessage();
+                        row[6] = eqWorks.getRequestDate();
                         model.addRow(row);
                     }
                 }
@@ -264,7 +264,7 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
 
     private void btnPendingReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPendingReqActionPerformed
         // TODO add your handling code here:
-        EarthquakeWorkRequest eq_works = null;
+        EarthquakeWorkRequest eqWorks = null;
         DefaultTableModel model = (DefaultTableModel) PendingReqJTable.getModel();
         model.setRowCount(0);
         
@@ -274,18 +274,18 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
             {
                 for (WorkRequest workr : organization.getWorkQueue().getWorkRequestList()) {
                     if (workr instanceof EarthquakeWorkRequest)  {
-                        eq_works = (EarthquakeWorkRequest)workr;
+                        eqWorks = (EarthquakeWorkRequest)workr;
             
-                    if(!eq_works.getStatus().equalsIgnoreCase("Resolved"))
+                    if(!eqWorks.getStatus().equalsIgnoreCase("Resolved"))
                     {
                         Object[] row = new Object[7];
-                        row[0] = eq_works;
-                        row[1] = eq_works.getSender();
-                        row[2] = eq_works.getEarthquakeSensor().getSensorId();
-                        row[3] = eq_works.getEarthquakeSensor().getZipcode();
-                        row[4] = eq_works.getStatus();
-                        row[5] = eq_works.getMessage();
-                        row[6] = eq_works.getRequestDate();
+                        row[0] = eqWorks;
+                        row[1] = eqWorks.getSender().getUsername();
+                        row[2] = eqWorks.getEarthquakeSensor().getSensorId();
+                        row[3] = eqWorks.getEarthquakeSensor().getZipcode();
+                        row[4] = eqWorks.getStatus();
+                        row[5] = eqWorks.getMessage();
+                        row[6] = eqWorks.getRequestDate();
                         model.addRow(row);
                     }
                     }
@@ -296,7 +296,7 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
 
     private void btnResolvedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResolvedActionPerformed
         // TODO add your handling code here:
-        EarthquakeWorkRequest eq_works = null;
+        EarthquakeWorkRequest eqWorks = null;
         DefaultTableModel model = (DefaultTableModel) ResolvedJTable.getModel();
         model.setRowCount(0);
         
@@ -307,19 +307,19 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
                 for (WorkRequest workr : organization.getWorkQueue().getWorkRequestList()) {
                     if (workr instanceof EarthquakeWorkRequest)
                     {
-                        eq_works = (EarthquakeWorkRequest)workr;
+                        eqWorks = (EarthquakeWorkRequest)workr;
             
-                    if(eq_works.getStatus().equalsIgnoreCase("Resolved"))
+                    if(eqWorks.getStatus().equalsIgnoreCase("Resolved"))
                     {
                         Object[] row = new Object[8];
-                        row[0] = eq_works;
-                        row[1] = eq_works.getSender();
-                        row[2] = eq_works.getEarthquakeSensor().getSensorId();
-                        row[3] = eq_works.getEarthquakeSensor().getZipcode();
-                        row[4] = eq_works.getStatus();
-                        row[5] = eq_works.getMessage();
-                        row[6] = eq_works.getRequestDate();
-                        row[7] = eq_works.getResolveDate();
+                        row[0] = eqWorks;
+                        row[1] = eqWorks.getSender().getUsername();
+                        row[2] = eqWorks.getEarthquakeSensor().getSensorId();
+                        row[3] = eqWorks.getEarthquakeSensor().getZipcode();
+                        row[4] = eqWorks.getStatus();
+                        row[5] = eqWorks.getMessage();
+                        row[6] = eqWorks.getRequestDate();
+                        row[7] = eqWorks.getResolveDate();
                         model.addRow(row);
                     }
                     }

@@ -174,7 +174,7 @@ public class NotifyCitizenJPanel extends javax.swing.JPanel {
                 {
                 Object[] row1 = new Object[3];
                 row1[0] = cwr;
-                row1[1] = cwr.getSender();
+                row1[1] = cwr.getSender().getUsername();
                 row1[2] = cwr.getCycloneStormMessage();
                 model.addRow(row1);
                 }
@@ -183,7 +183,7 @@ public class NotifyCitizenJPanel extends javax.swing.JPanel {
                 {
                 Object[] row = new Object[3];
                 row[0] = cwr;
-                row[1] = cwr.getSender();
+                row[1] = cwr.getSender().getUsername();
                 row[2] = cwr.getEarthquakeMessage();
                 model.addRow(row);
                 }
@@ -192,7 +192,7 @@ public class NotifyCitizenJPanel extends javax.swing.JPanel {
                 {
                 Object[] row = new Object[3];
                 row[0] = cwr;
-                row[1] = cwr.getSender();
+                row[1] = cwr.getSender().getUsername();
                 row[2] = cwr.getFloodMessage();
                 model.addRow(row);
                 }

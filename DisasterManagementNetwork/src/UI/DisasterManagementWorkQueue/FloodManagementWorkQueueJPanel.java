@@ -173,7 +173,7 @@ private OrganizationDirectory directory;
             
                 Object[] row = new Object[8];
                 row[0] = air_wrs;
-                row[1] = air_wrs.getSender();
+                row[1] = air_wrs.getSender().getUsername();
                 row[2] = air_wrs.getFloodSensor().getSensorId();
                 row[3] = air_wrs.getFloodSensor().getZipcode();
                 row[4] = air_wrs.getStatus();
