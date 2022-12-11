@@ -83,13 +83,13 @@ public class SensorEmployeeJPanel extends javax.swing.JPanel {
         btn_Back = new javax.swing.JButton();
         btnCreate = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("View Employees");
         add(jLabel4);
-        jLabel4.setBounds(80, 33, 270, 29);
+        jLabel4.setBounds(190, 30, 270, 29);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Organization");
@@ -110,7 +110,7 @@ public class SensorEmployeeJPanel extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel5.setText("Add Employee");
         add(jLabel5);
-        jLabel5.setBounds(80, 336, 280, 29);
+        jLabel5.setBounds(190, 330, 280, 29);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Organization");
@@ -155,25 +155,25 @@ public class SensorEmployeeJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_emp);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(70, 149, 461, 95);
+        jScrollPane2.setBounds(50, 149, 530, 95);
 
-        btn_Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btn_Back.setText("<< Back");
         btn_Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_BackActionPerformed(evt);
             }
         });
         add(btn_Back);
-        btn_Back.setBounds(80, 533, 95, 40);
+        btn_Back.setBounds(110, 520, 120, 50);
 
-        btnCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/create.png"))); // NOI18N
+        btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateActionPerformed(evt);
             }
         });
         add(btnCreate);
-        btnCreate.setBounds(408, 533, 120, 50);
+        btnCreate.setBounds(380, 520, 120, 50);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_OrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_OrgActionPerformed

@@ -83,13 +83,13 @@ public class RNDEmployeeJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         btnCreate = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("View Employees");
         add(jLabel4);
-        jLabel4.setBounds(80, 33, 270, 29);
+        jLabel4.setBounds(150, 30, 270, 29);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Organization");
@@ -110,7 +110,7 @@ public class RNDEmployeeJPanel extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel5.setText("Add Employee");
         add(jLabel5);
-        jLabel5.setBounds(80, 336, 280, 29);
+        jLabel5.setBounds(150, 340, 280, 29);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Organization");
@@ -157,16 +157,16 @@ public class RNDEmployeeJPanel extends javax.swing.JPanel {
         add(jScrollPane2);
         jScrollPane2.setBounds(70, 149, 461, 95);
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         add(btnBack);
-        btnBack.setBounds(80, 533, 95, 40);
+        btnBack.setBounds(120, 530, 120, 50);
 
-        btnCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/create.png"))); // NOI18N
+        btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateActionPerformed(evt);

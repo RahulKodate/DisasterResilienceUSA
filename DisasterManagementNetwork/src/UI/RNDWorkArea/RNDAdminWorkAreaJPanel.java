@@ -47,13 +47,13 @@ public class RNDAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageUser = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("RND Admin Work Area");
         add(jLabel1);
-        jLabel1.setBounds(145, 25, 540, 29);
+        jLabel1.setBounds(160, 40, 540, 29);
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setText("Enterprise :");
@@ -73,7 +73,7 @@ public class RNDAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageOrganization);
-        btnManageOrganization.setBounds(264, 194, 170, 40);
+        btnManageOrganization.setBounds(220, 200, 170, 40);
 
         btnManageEmployee.setText("Manage Employee");
         btnManageEmployee.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +82,7 @@ public class RNDAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageEmployee);
-        btnManageEmployee.setBounds(264, 252, 170, 40);
+        btnManageEmployee.setBounds(220, 260, 170, 40);
 
         btnManageUser.setText("Manage User");
         btnManageUser.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +91,7 @@ public class RNDAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageUser);
-        btnManageUser.setBounds(264, 316, 170, 40);
+        btnManageUser.setBounds(220, 320, 170, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Sensor.png"))); // NOI18N
         add(jLabel2);

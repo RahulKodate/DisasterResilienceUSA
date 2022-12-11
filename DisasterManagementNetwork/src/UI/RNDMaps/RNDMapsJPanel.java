@@ -92,6 +92,8 @@ public class RNDMapsJPanel extends javax.swing.JPanel {
         BtnAddWaypoints = new javax.swing.JButton();
         btnClearWaypoint = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(222, 222, 248));
+
         BtnAddWaypoints.setText("Add Waypoint");
         BtnAddWaypoints.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

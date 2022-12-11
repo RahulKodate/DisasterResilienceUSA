@@ -76,13 +76,13 @@ public class RNDOrganizationJPanel extends javax.swing.JPanel {
         btnDeleteOrg = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Organization Type ");
         add(jLabel1);
-        jLabel1.setBounds(53, 305, 190, 30);
+        jLabel1.setBounds(70, 300, 190, 30);
 
         combo_Organization.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_Organization.setForeground(new java.awt.Color(0, 0, 51));
@@ -98,7 +98,7 @@ public class RNDOrganizationJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Research and Development Organization");
         add(jLabel2);
-        jLabel2.setBounds(200, 40, 450, 29);
+        jLabel2.setBounds(110, 50, 510, 29);
 
         tbl_org.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -114,9 +114,8 @@ public class RNDOrganizationJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_org);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(81, 101, 452, 112);
+        jScrollPane2.setBounds(81, 101, 490, 112);
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,8 +125,6 @@ public class RNDOrganizationJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(10, 10, 95, 40);
 
-        btnAddOrg.setBackground(new java.awt.Color(0, 0, 255));
-        btnAddOrg.setForeground(new java.awt.Color(255, 255, 255));
         btnAddOrg.setText("Add Organization");
         btnAddOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,10 +132,8 @@ public class RNDOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(btnAddOrg);
-        btnAddOrg.setBounds(82, 445, 140, 50);
+        btnAddOrg.setBounds(100, 440, 180, 50);
 
-        btnDeleteOrg.setBackground(new java.awt.Color(0, 102, 255));
-        btnDeleteOrg.setForeground(new java.awt.Color(255, 255, 255));
         btnDeleteOrg.setText("Delete Organization");
         btnDeleteOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
