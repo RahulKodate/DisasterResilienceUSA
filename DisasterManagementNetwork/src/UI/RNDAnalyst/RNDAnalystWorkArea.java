@@ -11,6 +11,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.RNDAnalysisOrganization;
 import Business.UserAccount.UserAccount;
+import UI.RNDMaps.RNDMapsJPanel;
 //import UI.DisasterSensorEnterprise.CycloneStormManagement.CycloneStormSensorJPanel;
 //import UI.DisasterSensorEnterprise.EarthquakeManagement.EarthquakeSensorJPanel;
 //import UI.DisasterSensorEnterprise.FloodManagement.FloodSensorJPanel;
@@ -137,10 +138,10 @@ public class RNDAnalystWorkArea extends javax.swing.JPanel {
 
     private void btnCycloneStormManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCycloneStormManagementActionPerformed
         // TODO add your handling code here:
-//        CycloneStormSensorJPanel cycloneStormSensorManagement = new CycloneStormSensorJPanel(userProcessContainer, account, organization, enterprise, business);
-//        userProcessContainer.add("cycloneStormSensorJPanel", cycloneStormSensorManagement);
-//        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//        layout.next(userProcessContainer);
+        RNDMapsJPanel rNDMapsJPanel = new RNDMapsJPanel(userProcessContainer, account, organization, enterprise, business);
+        userProcessContainer.add("RND Maps", rNDMapsJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnCycloneStormManagementActionPerformed
 
     private void btnEarthquakeManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEarthquakeManagementActionPerformed

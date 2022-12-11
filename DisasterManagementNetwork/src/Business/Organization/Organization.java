@@ -31,7 +31,7 @@ public abstract class Organization {
         DisasterManagementAdmin("Disaster Management Admin Organization"), 
         CycloneStormManagement("Cyclone and Storm Management Organization"), 
         EarthquakeManagement("Earthquake Alert Management Organization"),
-        FloodManagement("Flood Management Organization");
+        FloodManagement("Flood Management Organization"); 
         private String value;
 
         private DisasterManagementType(String value) {
