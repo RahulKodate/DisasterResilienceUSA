@@ -12,6 +12,7 @@ import Business.Network.Network;
 import Business.Role.DisasterManagementAdminRole;
 import Business.Role.SensorManagementAdminRole;
 import Business.Role.GovernmentAgencyAdminRole;
+import Business.Role.RNDAdminRole;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -297,7 +298,14 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                     JOptionPane.showMessageDialog(null, "User name already exist");
                     return;
                 }
-            }
+            } else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.ResearchAndDevelopment) {
+                if (system.UniqueUserName(username)) {
+                    UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new RNDAdminRole());
+                } else {
+                    JOptionPane.showMessageDialog(null, "User name already exist");
+                    return;
+                }
+            }    
             populateTable();
             JOptionPane.showMessageDialog(this, "Enterprise Admin Added");
             txtName.setText("");
