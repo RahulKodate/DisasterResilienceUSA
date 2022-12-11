@@ -187,7 +187,7 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
             {
                 for(Organization orgzn : enterprise.getOrganizationDirectory().getOrganizationList())
                 {
-            //System.out.println(org.getName());
+ 
             if (orgzn instanceof GovernmentOfficialOrganization){
                 orgn = orgzn;
                 break;
@@ -202,8 +202,13 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
                     
             if(orgn.getWorkQueue().getWorkRequestList().isEmpty())
             {
-                orgn.getWorkQueue().getWorkRequestList().add(reques);
+                try {
+                 orgn.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
+                JOptionPane.showMessageDialog(null, "Request sent to Government successfully");
+                return;
+                } catch (Exception e) {
+                }
                 JOptionPane.showMessageDialog(null, "Request sent to Government successfully");
             }
             else
@@ -233,8 +238,13 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
                     }
                     else
                     {
+                        try {
                         orgn.getWorkQueue().getWorkRequestList().add(reques);
                         userAccount.getWorkQ().getWorkRequestList().add(reques);
+                        JOptionPane.showMessageDialog(null, "Request sent to Government successfully");
+                        return;
+                        } catch (Exception e) {
+                        }
                         JOptionPane.showMessageDialog(null, "Request sent to Government successfully");
                     }
                 }
@@ -244,12 +254,10 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        //JPanel panel = new NotifytoAirPolltuionSolutionDepartment(userProcessContainer,userAccount,business,organizationDirectory);
+        userProcessContainer.remove(this);  
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        //SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
-        //sysAdminwjp.populateTree();
+ 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed

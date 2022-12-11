@@ -301,7 +301,7 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
         if(row <0){
             JOptionPane.showMessageDialog(null, "No row selected");
         }else{
-        //AirPollutionSensor airPollutionSensor = (AirPollutionSensor)SensorReadingsjTable.getValueAt(row, 0);
+       
         
         Sensor sensor = (Sensor)tblEarthquake.getValueAt(row, 0);
         
@@ -342,10 +342,16 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
                     
             if(orgzn.getWorkQueue().getWorkRequestList().isEmpty())
             {
+                try {
                 orgzn.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
                 JOptionPane.showMessageDialog(null, "Request Successfully sent to Earthquake Solution Department");
-            }
+                return;
+                } catch (Exception e) {
+                }
+                JOptionPane.showMessageDialog(null, "Request Successfully sent to Earthquake Solution Department");
+                
+               }
             else
             {
             for(WorkRequest request1 : orgzn.getWorkQueue().getWorkRequestList())
@@ -369,10 +375,16 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
                     }
                     else
                     {
+                        try {
                         orgzn.getWorkQueue().getWorkRequestList().add(reques);
                         userAccount.getWorkQ().getWorkRequestList().add(reques);
                         JOptionPane.showMessageDialog(null, "Request sent to Earthquake Department successfully");
-                    }
+                        return;
+                        } catch (Exception e) {
+                        }
+                        JOptionPane.showMessageDialog(null, "Request sent to Earthquake Department successfully");
+                        
+                       }
                 }
             }
 
@@ -381,8 +393,13 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
             boolean workRequestAlreadyPresent = false;
             if(orgzn1.getWorkQueue().getWorkRequestList().isEmpty())
             {
+                try {
                 orgzn1.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
+                return;
+                } catch (Exception e) {
+                }
+   
             }
             else
             {
@@ -403,8 +420,14 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
             }
                     if(!(workRequestAlreadyPresent))                    
                     {
+                        try {
                         orgzn1.getWorkQueue().getWorkRequestList().add(reques);
                         userAccount.getWorkQ().getWorkRequestList().add(reques);
+                        return;
+                        } catch (Exception e) {
+                        }
+                        JOptionPane.showMessageDialog(null, "Request sent to Earthquake Department successfully");
+                        
                     }
                 }
         }

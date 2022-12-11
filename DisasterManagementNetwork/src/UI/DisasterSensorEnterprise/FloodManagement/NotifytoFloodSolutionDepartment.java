@@ -342,10 +342,15 @@ public class NotifytoFloodSolutionDepartment extends javax.swing.JPanel {
                     
             if(orgzn.getWorkQueue().getWorkRequestList().isEmpty())
             {
+                try {
                 orgzn.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
+                JOptionPane.showMessageDialog(null, "Request Successfully sent to Flood Solution Department"); 
+                return;
+                } catch (Exception e) {
+                }
                 JOptionPane.showMessageDialog(null, "Request Successfully sent to Flood Solution Department");
-            }
+                }
             else
             {
             for(WorkRequest request1 : orgzn.getWorkQueue().getWorkRequestList())
@@ -369,10 +374,16 @@ public class NotifytoFloodSolutionDepartment extends javax.swing.JPanel {
                     }
                     else
                     {
+                        try {
                         orgzn.getWorkQueue().getWorkRequestList().add(reques);
                         userAccount.getWorkQ().getWorkRequestList().add(reques);
-                        JOptionPane.showMessageDialog(null, "Request sent to Air Pollution Department successfully");
-                    }
+                        JOptionPane.showMessageDialog(null, "Request sent to Flood Solution Department successfully");
+                        return;
+                        } catch (Exception e) {
+                        }
+                        JOptionPane.showMessageDialog(null, "Request sent to Flood Solution Department successfully");
+                        
+                        }
                 }
             }
 
@@ -381,8 +392,13 @@ public class NotifytoFloodSolutionDepartment extends javax.swing.JPanel {
             boolean workRequestAlreadyPresent = false;
             if(orgzn1.getWorkQueue().getWorkRequestList().isEmpty())
             {
+                try {
                 orgzn1.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
+                return;
+                } catch (Exception e) {
+                }
+                
             }
             else
             {
@@ -403,8 +419,14 @@ public class NotifytoFloodSolutionDepartment extends javax.swing.JPanel {
             }
                     if(!(workRequestAlreadyPresent))                    
                     {
+                        try {
                         orgzn1.getWorkQueue().getWorkRequestList().add(reques);
                         userAccount.getWorkQ().getWorkRequestList().add(reques);
+                        return;
+                        } catch (Exception e) {
+                        }
+                        JOptionPane.showMessageDialog(null, "Request sent to Flood Solution Department successfully");
+                        
                     }
                 }
         }

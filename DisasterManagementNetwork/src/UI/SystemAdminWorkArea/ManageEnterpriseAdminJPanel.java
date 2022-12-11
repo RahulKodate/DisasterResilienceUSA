@@ -116,7 +116,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_city);
-        combo_city.setBounds(280, 440, 227, 23);
+        combo_city.setBounds(280, 440, 227, 30);
 
         Combo_enterprise.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Combo_enterprise.setForeground(new java.awt.Color(0, 0, 51));
@@ -126,7 +126,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(Combo_enterprise);
-        Combo_enterprise.setBounds(280, 500, 227, 23);
+        Combo_enterprise.setBounds(280, 500, 227, 30);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Enterprise");
@@ -141,7 +141,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         txtUsername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtUsername.setForeground(new java.awt.Color(0, 0, 51));
         add(txtUsername);
-        txtUsername.setBounds(280, 620, 227, 23);
+        txtUsername.setBounds(280, 620, 227, 30);
 
         txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPassword.setForeground(new java.awt.Color(0, 0, 51));
@@ -151,7 +151,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(txtPassword);
-        txtPassword.setBounds(280, 670, 227, 23);
+        txtPassword.setBounds(280, 670, 227, 30);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Password");
@@ -171,7 +171,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(txtName);
-        txtName.setBounds(280, 570, 227, 23);
+        txtName.setBounds(280, 570, 227, 30);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setText("Manage Enterprise Admin");
@@ -219,7 +219,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(txt_submit);
-        txt_submit.setBounds(276, 710, 290, 40);
+        txt_submit.setBounds(280, 720, 290, 40);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/enter.jpg"))); // NOI18N
         add(jLabel7);

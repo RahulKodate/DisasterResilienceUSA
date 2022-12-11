@@ -169,8 +169,8 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         if(row <0){
             JOptionPane.showMessageDialog(null, "No row selected");
         }else{
-        //AirPollutionSensor airPollutionSensor = (AirPollutionSensor)SensorReadingsjTable.getValueAt(row, 0);
         
+     
         Sensor sensor = (Sensor)tblEarthquake.getValueAt(row, 0);
         
         EarthquakeSensor earthquakeSensor = (EarthquakeSensor) sensor;
@@ -187,7 +187,7 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
             {
                 for(Organization orgzn : enterprise.getOrganizationDirectory().getOrganizationList())
                 {
-            //System.out.println(org.getName());
+            
             if (orgzn instanceof GovernmentOfficialOrganization){
                 orgn = orgzn;
                 break;
@@ -202,8 +202,13 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
                     
             if(orgn.getWorkQueue().getWorkRequestList().isEmpty())
             {
+                try {
                 orgn.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
+                JOptionPane.showMessageDialog(null, "Request sent to Government successfully");
+                return;
+                } catch (Exception e) {
+                }
                 JOptionPane.showMessageDialog(null, "Request sent to Government successfully");
             }
             else
@@ -233,8 +238,13 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
                     }
                     else
                     {
+                        try {
                         orgn.getWorkQueue().getWorkRequestList().add(reques);
                         userAccount.getWorkQ().getWorkRequestList().add(reques);
+                        JOptionPane.showMessageDialog(null, "Request sent to Government successfully");
+                        return;
+                        } catch (Exception e) {
+                        }
                         JOptionPane.showMessageDialog(null, "Request sent to Government successfully");
                     }
                 }
@@ -248,8 +258,6 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         //JPanel panel = new NotifytoAirPolltuionSolutionDepartment(userProcessContainer,userAccount,business,organizationDirectory);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        //SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
-        //sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed

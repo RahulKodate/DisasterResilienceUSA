@@ -301,7 +301,6 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
         if(row <0){
             JOptionPane.showMessageDialog(null, "No row selected");
         }else{
-        //AirPollutionSensor airPollutionSensor = (AirPollutionSensor)SensorReadingsjTable.getValueAt(row, 0);
         
         Sensor sensor = (Sensor)tblCycloneStorm.getValueAt(row, 0);
         
@@ -342,10 +341,15 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                     
             if(orgzn.getWorkQueue().getWorkRequestList().isEmpty())
             {
+                
+                try {
                 orgzn.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
                 JOptionPane.showMessageDialog(null, "Request Successfully sent to Cyclone Storm Solution Department");
                 return;
+                } catch (Exception e) {
+                }
+                JOptionPane.showMessageDialog(null, "Request Successfully sent to Cyclone Storm Solution Department");
             }
             else
             {
@@ -370,9 +374,14 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                     }
                     else
                     {
-                        orgzn.getWorkQueue().getWorkRequestList().add(reques);
+                        try {
+                            orgzn.getWorkQueue().getWorkRequestList().add(reques);
                         userAccount.getWorkQ().getWorkRequestList().add(reques);
                         JOptionPane.showMessageDialog(null, "Request sent to Cyclone Storm Department successfully");
+                        return;
+                        } catch (Exception e) {
+                        }
+                        JOptionPane.showMessageDialog(null, "Request Successfully sent to Cyclone Storm Solution Department");
                     }
                 }
             }
@@ -382,8 +391,13 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
             boolean workRequestAlreadyPresent = false;
             if(orgzn1.getWorkQueue().getWorkRequestList().isEmpty())
             {
+                try {
                 orgzn1.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
+                return;
+                } catch (Exception e) {
+                }
+             //   JOptionPane.showMessageDialog(null, "Request Successfully sent to Cyclone Storm Solution Department");
             }
             else
             {
@@ -404,8 +418,14 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
             }
                     if(!(workRequestAlreadyPresent))                    
                     {
+                        
+                        try {
                         orgzn1.getWorkQueue().getWorkRequestList().add(reques);
                         userAccount.getWorkQ().getWorkRequestList().add(reques);
+                        return;
+                        } catch (Exception e) {
+                        }
+                        JOptionPane.showMessageDialog(null, "Request Successfully sent to Cyclone Storm Solution Department");
                     }
                 }
         }

@@ -51,7 +51,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(290, 70, 431, 29);
 
-        btnManageCity.setBackground(new java.awt.Color(0, 0, 0));
+        btnManageCity.setBackground(new java.awt.Color(0, 51, 255));
         btnManageCity.setForeground(new java.awt.Color(255, 255, 255));
         btnManageCity.setText("MANAGE CITY");
         btnManageCity.addActionListener(new java.awt.event.ActionListener() {
@@ -60,9 +60,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageCity);
-        btnManageCity.setBounds(140, 150, 171, 23);
+        btnManageCity.setBounds(140, 150, 170, 40);
 
-        btnManageEnterprise.setBackground(new java.awt.Color(0, 0, 0));
+        btnManageEnterprise.setBackground(new java.awt.Color(0, 51, 255));
         btnManageEnterprise.setForeground(new java.awt.Color(255, 255, 255));
         btnManageEnterprise.setText("MANAGE ENTERPRISE");
         btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
@@ -71,9 +71,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageEnterprise);
-        btnManageEnterprise.setBounds(400, 150, 171, 30);
+        btnManageEnterprise.setBounds(400, 150, 170, 40);
 
-        btnMangeEnteprise.setBackground(new java.awt.Color(0, 0, 0));
+        btnMangeEnteprise.setBackground(new java.awt.Color(0, 51, 255));
         btnMangeEnteprise.setForeground(new java.awt.Color(255, 255, 255));
         btnMangeEnteprise.setText("MANAGE ENTERPRISE ADMIN");
         btnMangeEnteprise.addActionListener(new java.awt.event.ActionListener() {
@@ -82,8 +82,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnMangeEnteprise);
-        btnMangeEnteprise.setBounds(650, 150, 240, 23);
+        btnMangeEnteprise.setBounds(650, 150, 240, 40);
 
+        jLabel2.setForeground(new java.awt.Color(0, 51, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/enterprise1.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, -160, 1060, 930);
