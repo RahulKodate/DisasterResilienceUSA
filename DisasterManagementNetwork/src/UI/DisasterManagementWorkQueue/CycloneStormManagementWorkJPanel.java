@@ -52,13 +52,16 @@ public class CycloneStormManagementWorkJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(91, 130, 170));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Cyclone & Storm Management Work Area");
         add(lblTitle);
-        lblTitle.setBounds(90, 60, 520, 29);
+        lblTitle.setBounds(90, 130, 919, 50);
 
-        btnViewWorkRequest.setForeground(new java.awt.Color(0, 0, 153));
+        btnViewWorkRequest.setBackground(new java.awt.Color(91, 130, 170));
+        btnViewWorkRequest.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnViewWorkRequest.setForeground(new java.awt.Color(255, 255, 255));
         btnViewWorkRequest.setText("View Work request");
         btnViewWorkRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,12 +69,12 @@ public class CycloneStormManagementWorkJPanel extends javax.swing.JPanel {
             }
         });
         add(btnViewWorkRequest);
-        btnViewWorkRequest.setBounds(280, 140, 170, 60);
+        btnViewWorkRequest.setBounds(430, 510, 290, 60);
 
         jLabel2.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/air-pollution.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Cyclone/Cyclone1.jpeg")); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, -20, 980, 680);
+        jLabel2.setBounds(0, 190, 1130, 750);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewWorkRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewWorkRequestActionPerformed

@@ -49,28 +49,29 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageUser = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(91, 130, 170));
         lblTitle.setText("Disaster Management Admin Work Area");
         add(lblTitle);
-        lblTitle.setBounds(110, 100, 530, 29);
+        lblTitle.setBounds(0, 150, 900, 60);
 
         lblEnterprise.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblEnterprise.setText("Enterprise :");
         add(lblEnterprise);
-        lblEnterprise.setBounds(150, 160, 120, 30);
+        lblEnterprise.setBounds(0, 230, 110, 22);
 
         valueLabel.setBackground(new java.awt.Color(255, 255, 255));
         valueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         valueLabel.setForeground(new java.awt.Color(0, 0, 51));
         valueLabel.setText("<value>");
         add(valueLabel);
-        valueLabel.setBounds(330, 160, 406, 22);
+        valueLabel.setBounds(120, 230, 80, 20);
 
-        btnManageOrganization.setBackground(new java.awt.Color(51, 255, 0));
-        btnManageOrganization.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnManageOrganization.setBackground(new java.awt.Color(91, 130, 170));
+        btnManageOrganization.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnManageOrganization.setForeground(new java.awt.Color(255, 255, 255));
         btnManageOrganization.setText("Manage Organization");
         btnManageOrganization.addActionListener(new java.awt.event.ActionListener() {
@@ -79,10 +80,10 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageOrganization);
-        btnManageOrganization.setBounds(260, 230, 220, 40);
+        btnManageOrganization.setBounds(730, 360, 220, 40);
 
-        btnManageEmployee.setBackground(new java.awt.Color(51, 255, 0));
-        btnManageEmployee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnManageEmployee.setBackground(new java.awt.Color(91, 130, 170));
+        btnManageEmployee.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnManageEmployee.setForeground(new java.awt.Color(255, 255, 255));
         btnManageEmployee.setText("Manage Employee");
         btnManageEmployee.addActionListener(new java.awt.event.ActionListener() {
@@ -91,10 +92,10 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageEmployee);
-        btnManageEmployee.setBounds(260, 320, 220, 40);
+        btnManageEmployee.setBounds(730, 460, 220, 40);
 
-        btnManageUser.setBackground(new java.awt.Color(51, 255, 0));
-        btnManageUser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnManageUser.setBackground(new java.awt.Color(91, 130, 170));
+        btnManageUser.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnManageUser.setForeground(new java.awt.Color(255, 255, 255));
         btnManageUser.setText("Manage User");
         btnManageUser.addActionListener(new java.awt.event.ActionListener() {
@@ -103,12 +104,12 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageUser);
-        btnManageUser.setBounds(260, 420, 220, 40);
+        btnManageUser.setBounds(730, 570, 220, 40);
 
         jLabel2.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/admin_work_area.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Disaster/Disaster1.png")); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 790, 600);
+        jLabel2.setBounds(0, 180, 1160, 700);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganizationActionPerformed

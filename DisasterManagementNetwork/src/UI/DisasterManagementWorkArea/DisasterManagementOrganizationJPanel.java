@@ -75,7 +75,7 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         organizationJTable.setBackground(new java.awt.Color(234, 234, 249));
@@ -100,16 +100,14 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(organizationJTable);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(140, 90, 546, 190);
+        jScrollPane1.setBounds(130, 290, 546, 190);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel1.setText("Organization Type ");
         add(jLabel1);
-        jLabel1.setBounds(130, 400, 200, 22);
+        jLabel1.setBounds(190, 540, 200, 21);
 
-        organizationJComboBox.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        organizationJComboBox.setForeground(new java.awt.Color(51, 51, 255));
+        organizationJComboBox.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,7 +115,7 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(organizationJComboBox);
-        organizationJComboBox.setBounds(350, 400, 268, 23);
+        organizationJComboBox.setBounds(370, 540, 268, 23);
 
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnBack.setText("<< Back");
@@ -127,37 +125,39 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(btnBack);
-        btnBack.setBounds(70, 520, 130, 40);
+        btnBack.setBounds(20, 30, 130, 40);
 
         btnCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnCreate.setText("CREATE");
+        btnCreate.setSize(new java.awt.Dimension(120, 40));
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateActionPerformed(evt);
             }
         });
         add(btnCreate);
-        btnCreate.setBounds(330, 480, 130, 50);
+        btnCreate.setBounds(270, 590, 120, 40);
 
         btnDeleteOrganization.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnDeleteOrganization.setText("Delete Organization");
+        btnDeleteOrganization.setText("Delete ");
         btnDeleteOrganization.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteOrganizationActionPerformed(evt);
             }
         });
         add(btnDeleteOrganization);
-        btnDeleteOrganization.setBounds(540, 480, 200, 50);
+        btnDeleteOrganization.setBounds(410, 590, 130, 40);
 
         jLabel2.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(91, 130, 170));
         jLabel2.setText("Disaster Management Organization");
         add(jLabel2);
-        jLabel2.setBounds(140, 60, 590, 29);
+        jLabel2.setBounds(10, 140, 810, 57);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/organization-management-team-group-company-concept-58264684.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Management/Management3.jpeg")); // NOI18N
         add(jLabel3);
-        jLabel3.setBounds(-20, 0, 900, 610);
+        jLabel3.setBounds(0, 200, 1140, 670);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

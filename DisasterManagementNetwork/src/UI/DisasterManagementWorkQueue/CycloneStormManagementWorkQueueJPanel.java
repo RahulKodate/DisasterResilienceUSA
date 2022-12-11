@@ -63,13 +63,14 @@ private OrganizationDirectory directory;
         btnResolve = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(91, 130, 170));
         lblTitle.setText("Cyclone & Storm Management Work Queue");
         add(lblTitle);
-        lblTitle.setBounds(0, 10, 530, 44);
+        lblTitle.setBounds(10, 100, 970, 50);
 
         tblWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -85,17 +86,19 @@ private OrganizationDirectory directory;
         jScrollPane1.setViewportView(tblWorkQueue);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(10, 60, 520, 120);
+        jScrollPane1.setBounds(160, 260, 670, 270);
 
         btnBack.setText("<<Back");
+        btnBack.setSize(new java.awt.Dimension(120, 40));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         add(btnBack);
-        btnBack.setBounds(24, 220, 91, 50);
+        btnBack.setBounds(20, 30, 91, 50);
 
+        btnResolve.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         btnResolve.setText("Resolve");
         btnResolve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,12 +106,12 @@ private OrganizationDirectory directory;
             }
         });
         add(btnResolve);
-        btnResolve.setBounds(300, 220, 122, 50);
+        btnResolve.setBounds(410, 570, 150, 40);
 
         jLabel2.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/air-pollution.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cyclone786.jpeg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 550, 500);
+        jLabel2.setBounds(0, 160, 980, 670);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

@@ -82,9 +82,8 @@ public class DisasterManagementEmployeeJPanel extends javax.swing.JPanel {
         btnCreate = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
         lblAddEmployee = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         cmbOrg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -96,12 +95,12 @@ public class DisasterManagementEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         add(cmbOrg);
-        cmbOrg.setBounds(230, 100, 184, 23);
+        cmbOrg.setBounds(290, 280, 230, 23);
 
-        lblOrganization.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblOrganization.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         lblOrganization.setText("Organization");
         add(lblOrganization);
-        lblOrganization.setBounds(10, 90, 160, 22);
+        lblOrganization.setBounds(140, 280, 160, 21);
 
         tblOrganization.setBackground(new java.awt.Color(234, 234, 249));
         tblOrganization.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -132,63 +131,60 @@ public class DisasterManagementEmployeeJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblOrganization);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(110, 150, 480, 92);
+        jScrollPane1.setBounds(50, 330, 520, 160);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel3.setText("Organization");
         add(jLabel3);
-        jLabel3.setBounds(10, 400, 160, 22);
+        jLabel3.setBounds(140, 590, 160, 21);
 
         cmbOrganization.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cmbOrganization.setForeground(new java.awt.Color(0, 0, 51));
         cmbOrganization.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(cmbOrganization);
-        cmbOrganization.setBounds(220, 390, 250, 23);
+        cmbOrganization.setBounds(280, 590, 230, 23);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setText("Name");
         add(jLabel2);
-        jLabel2.setBounds(10, 450, 120, 22);
+        jLabel2.setBounds(200, 660, 70, 21);
 
-        btnBack.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnBack.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnBack.setText("<< Back");
+        btnBack.setSize(new java.awt.Dimension(120, 40));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         add(btnBack);
-        btnBack.setBounds(20, 510, 130, 50);
+        btnBack.setBounds(20, 40, 130, 50);
 
         txtName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));
         add(txtName);
-        txtName.setBounds(220, 460, 250, 30);
+        txtName.setBounds(280, 660, 230, 30);
 
-        btnCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnCreate.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btnCreate.setText("Create");
+        btnCreate.setSize(new java.awt.Dimension(120, 40));
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateActionPerformed(evt);
             }
         });
         add(btnCreate);
-        btnCreate.setBounds(390, 500, 150, 50);
+        btnCreate.setBounds(310, 750, 150, 50);
 
-        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         lblTitle.setText("View Employees");
         add(lblTitle);
-        lblTitle.setBounds(10, 10, 310, 29);
+        lblTitle.setBounds(180, 220, 210, 29);
 
-        lblAddEmployee.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lblAddEmployee.setText("Add Employee");
+        lblAddEmployee.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        lblAddEmployee.setText("Add Employees");
         add(lblAddEmployee);
-        lblAddEmployee.setBounds(0, 330, 180, 29);
-
-        jLabel6.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/view_employee.jpg"))); // NOI18N
-        add(jLabel6);
-        jLabel6.setBounds(0, 0, 780, 600);
+        lblAddEmployee.setBounds(190, 520, 180, 29);
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmbOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOrgActionPerformed
@@ -235,7 +231,6 @@ public class DisasterManagementEmployeeJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox cmbOrganization;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAddEmployee;
     private javax.swing.JLabel lblOrganization;

@@ -104,10 +104,10 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel1.setText("City");
         add(jLabel1);
-        jLabel1.setBounds(120, 340, 130, 22);
+        jLabel1.setBounds(120, 340, 130, 21);
 
         combo_city.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_city.setForeground(new java.awt.Color(0, 0, 51));
@@ -129,15 +129,15 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(Combo_enterprise);
         Combo_enterprise.setBounds(330, 400, 227, 30);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel3.setText("Enterprise");
         add(jLabel3);
-        jLabel3.setBounds(120, 400, 150, 22);
+        jLabel3.setBounds(120, 400, 150, 21);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setText("Username");
         add(jLabel2);
-        jLabel2.setBounds(120, 540, 140, 22);
+        jLabel2.setBounds(120, 540, 140, 21);
 
         txtUsername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtUsername.setForeground(new java.awt.Color(0, 0, 51));
@@ -154,15 +154,15 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(txtPassword);
         txtPassword.setBounds(330, 600, 227, 30);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel4.setText("Password");
         add(jLabel4);
-        jLabel4.setBounds(120, 600, 130, 22);
+        jLabel4.setBounds(120, 600, 130, 21);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel5.setText("Name");
         add(jLabel5);
-        jLabel5.setBounds(120, 470, 130, 22);
+        jLabel5.setBounds(120, 470, 130, 21);
 
         txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));
@@ -174,10 +174,10 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(txtName);
         txtName.setBounds(330, 460, 227, 30);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel6.setText("Manage Enterprise Admin");
         add(jLabel6);
-        jLabel6.setBounds(270, 100, 340, 29);
+        jLabel6.setBounds(230, 100, 340, 29);
 
         tbl_Admin.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -201,9 +201,11 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_Admin);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(80, 160, 720, 140);
+        jScrollPane2.setBounds(30, 160, 720, 140);
 
         btn_back.setText("<<Back");
+        btn_back.setPreferredSize(new java.awt.Dimension(120, 40));
+        btn_back.setSize(new java.awt.Dimension(120, 40));
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_backActionPerformed(evt);
@@ -213,18 +215,19 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         btn_back.setBounds(20, 10, 95, 50);
 
         txt_submit.setText("Sumit");
+        txt_submit.setSize(new java.awt.Dimension(120, 40));
         txt_submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_submitActionPerformed(evt);
             }
         });
         add(txt_submit);
-        txt_submit.setBounds(280, 720, 290, 40);
+        txt_submit.setBounds(380, 690, 120, 40);
 
         jLabel7.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Enterprise1.png"))); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(jLabel7);
-        jLabel7.setBounds(0, -70, 2000, 1010);
+        jLabel7.setBounds(0, 0, 2000, 1010);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_cityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_cityActionPerformed

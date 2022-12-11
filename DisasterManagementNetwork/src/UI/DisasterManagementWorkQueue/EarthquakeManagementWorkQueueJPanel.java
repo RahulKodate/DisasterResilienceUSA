@@ -63,13 +63,14 @@ private OrganizationDirectory directory;
         btnResolve = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(91, 130, 170));
         jLabel1.setText("Earthqauke Management Work Queue");
         add(jLabel1);
-        jLabel1.setBounds(20, 10, 500, 44);
+        jLabel1.setBounds(10, 170, 890, 70);
 
         tblWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -85,30 +86,33 @@ private OrganizationDirectory directory;
         jScrollPane1.setViewportView(tblWorkQueue);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(16, 60, 460, 99);
+        jScrollPane1.setBounds(170, 430, 710, 250);
 
         btnBack.setText("<<Back");
+        btnBack.setSize(new java.awt.Dimension(120, 40));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         add(btnBack);
-        btnBack.setBounds(24, 220, 91, 50);
+        btnBack.setBounds(10, 30, 91, 50);
 
+        btnResolve.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         btnResolve.setText("Resolve");
+        btnResolve.setSize(new java.awt.Dimension(120, 40));
         btnResolve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnResolveActionPerformed(evt);
             }
         });
         add(btnResolve);
-        btnResolve.setBounds(300, 220, 122, 50);
+        btnResolve.setBounds(470, 700, 122, 50);
 
         jLabel2.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/air-pollution.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/earthquake_management.jpeg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 500, 500);
+        jLabel2.setBounds(0, 250, 1070, 660);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

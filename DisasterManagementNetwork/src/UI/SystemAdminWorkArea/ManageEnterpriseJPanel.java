@@ -91,10 +91,10 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         setLayout(null);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel1.setText("City");
         add(jLabel1);
-        jLabel1.setBounds(190, 270, 100, 22);
+        jLabel1.setBounds(190, 270, 100, 21);
 
         combo_City.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_City.setForeground(new java.awt.Color(0, 0, 51));
@@ -116,15 +116,15 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         add(combo_enterprise);
         combo_enterprise.setBounds(390, 320, 242, 30);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel3.setText("Enterprise Type");
         add(jLabel3);
-        jLabel3.setBounds(190, 320, 170, 22);
+        jLabel3.setBounds(190, 320, 170, 21);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setText("Name");
         add(jLabel2);
-        jLabel2.setBounds(190, 380, 120, 22);
+        jLabel2.setBounds(190, 380, 120, 21);
 
         txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));
@@ -136,7 +136,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         add(txtName);
         txtName.setBounds(390, 380, 242, 30);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel4.setText("Manage Enterprise");
         add(jLabel4);
         jLabel4.setBounds(330, 50, 235, 41);
@@ -163,9 +163,10 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_ent);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(90, 110, 690, 110);
+        jScrollPane2.setBounds(90, 110, 690, 130);
 
         btn_back.setText("<<Back");
+        btn_back.setSize(new java.awt.Dimension(120, 40));
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_backActionPerformed(evt);
@@ -181,18 +182,20 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_Submit);
-        btn_Submit.setBounds(260, 450, 130, 40);
+        btn_Submit.setBounds(380, 450, 130, 40);
 
         btn_delete.setText("Delete");
+        btn_delete.setSize(new java.awt.Dimension(120, 40));
         btn_delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_deleteActionPerformed(evt);
             }
         });
         add(btn_delete);
-        btn_delete.setBounds(480, 450, 130, 40);
+        btn_delete.setBounds(530, 450, 120, 40);
 
         jLabel6.setBackground(new java.awt.Color(222, 222, 248));
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/enterprise.jpg"))); // NOI18N
         jLabel6.setText("jLabel6");
         add(jLabel6);

@@ -102,9 +102,8 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
         backjButton1 = new javax.swing.JButton();
         createUserJButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         userJTable.setBackground(new java.awt.Color(234, 234, 249));
@@ -136,15 +135,15 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(userJTable);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(50, 71, 537, 190);
+        jScrollPane1.setBounds(90, 170, 537, 190);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel5.setText("Organization");
         add(jLabel5);
-        jLabel5.setBounds(50, 313, 140, 22);
+        jLabel5.setBounds(180, 400, 110, 21);
 
-        organizationJComboBox.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        organizationJComboBox.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         organizationJComboBox.setForeground(new java.awt.Color(0, 0, 51));
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -153,27 +152,27 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
             }
         });
         add(organizationJComboBox);
-        organizationJComboBox.setBounds(337, 314, 250, 23);
+        organizationJComboBox.setBounds(320, 390, 250, 30);
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel3.setText("Employee");
         add(jLabel3);
-        jLabel3.setBounds(50, 355, 130, 22);
+        jLabel3.setBounds(200, 450, 90, 21);
 
-        employeeJComboBox.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        employeeJComboBox.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         employeeJComboBox.setForeground(new java.awt.Color(0, 0, 51));
         employeeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(employeeJComboBox);
-        employeeJComboBox.setBounds(337, 356, 250, 23);
+        employeeJComboBox.setBounds(320, 450, 250, 30);
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel4.setText("Role");
         add(jLabel4);
-        jLabel4.setBounds(50, 397, 100, 22);
+        jLabel4.setBounds(240, 500, 40, 21);
 
-        roleJComboBox.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        roleJComboBox.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         roleJComboBox.setForeground(new java.awt.Color(0, 0, 51));
         roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         roleJComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -182,15 +181,15 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
             }
         });
         add(roleJComboBox);
-        roleJComboBox.setBounds(337, 398, 250, 23);
+        roleJComboBox.setBounds(320, 500, 250, 30);
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel1.setText("User Name");
         add(jLabel1);
-        jLabel1.setBounds(50, 450, 190, 22);
+        jLabel1.setBounds(190, 550, 100, 20);
 
-        txtUserName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtUserName.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         txtUserName.setForeground(new java.awt.Color(0, 0, 51));
         txtUserName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,18 +197,18 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
             }
         });
         add(txtUserName);
-        txtUserName.setBounds(336, 451, 250, 23);
+        txtUserName.setBounds(320, 550, 250, 30);
 
-        txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtPassword.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         txtPassword.setForeground(new java.awt.Color(0, 0, 51));
         add(txtPassword);
-        txtPassword.setBounds(336, 493, 250, 23);
+        txtPassword.setBounds(320, 600, 250, 30);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setText("Password");
         add(jLabel2);
-        jLabel2.setBounds(50, 492, 110, 22);
+        jLabel2.setBounds(200, 600, 90, 21);
 
         backjButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         backjButton1.setText("<< Back");
@@ -219,28 +218,24 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
             }
         });
         add(backjButton1);
-        backjButton1.setBounds(50, 556, 120, 40);
+        backjButton1.setBounds(20, 30, 120, 40);
 
         createUserJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         createUserJButton.setForeground(new java.awt.Color(51, 51, 51));
         createUserJButton.setText("Create");
+        createUserJButton.setSize(new java.awt.Dimension(120, 40));
         createUserJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createUserJButtonActionPerformed(evt);
             }
         });
         add(createUserJButton);
-        createUserJButton.setBounds(290, 550, 100, 40);
+        createUserJButton.setBounds(380, 670, 120, 40);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel6.setText("Disaster Management User");
         add(jLabel6);
-        jLabel6.setBounds(100, 24, 410, 29);
-
-        jLabel7.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/add_employee.png"))); // NOI18N
-        add(jLabel7);
-        jLabel7.setBounds(0, 70, 640, 620);
+        jLabel6.setBounds(210, 130, 310, 29);
     }// </editor-fold>//GEN-END:initComponents
 
     private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed
@@ -306,7 +301,6 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox organizationJComboBox;
     private javax.swing.JComboBox roleJComboBox;

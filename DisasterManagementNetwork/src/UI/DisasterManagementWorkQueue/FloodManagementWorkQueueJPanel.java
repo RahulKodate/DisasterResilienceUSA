@@ -66,10 +66,11 @@ private OrganizationDirectory directory;
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(91, 130, 170));
         lblTitle.setText("Flood Management Work Queue");
         add(lblTitle);
-        lblTitle.setBounds(0, 10, 500, 44);
+        lblTitle.setBounds(10, 170, 820, 70);
 
         tblWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -85,7 +86,7 @@ private OrganizationDirectory directory;
         jScrollPane1.setViewportView(tblWorkQueue);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(24, 60, 452, 99);
+        jScrollPane1.setBounds(180, 370, 670, 220);
 
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -94,8 +95,9 @@ private OrganizationDirectory directory;
             }
         });
         add(btnBack);
-        btnBack.setBounds(24, 220, 91, 50);
+        btnBack.setBounds(20, 30, 91, 50);
 
+        btnResolve.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         btnResolve.setText("Resolve");
         btnResolve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,12 +105,12 @@ private OrganizationDirectory directory;
             }
         });
         add(btnResolve);
-        btnResolve.setBounds(300, 220, 122, 50);
+        btnResolve.setBounds(470, 630, 122, 50);
 
         jLabel2.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/air-pollution.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Flood.jpg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 500, 500);
+        jLabel2.setBounds(-390, 250, 1450, 660);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

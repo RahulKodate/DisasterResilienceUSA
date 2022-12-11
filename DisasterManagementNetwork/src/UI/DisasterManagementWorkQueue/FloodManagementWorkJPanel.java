@@ -54,23 +54,28 @@ public class FloodManagementWorkJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(91, 130, 170));
         lblTitle.setText("Flood Management Work Area");
         add(lblTitle);
-        lblTitle.setBounds(200, 40, 490, 44);
+        lblTitle.setBounds(240, 150, 760, 80);
 
+        btnViewWorkQueue.setBackground(new java.awt.Color(91, 130, 170));
+        btnViewWorkQueue.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        btnViewWorkQueue.setForeground(new java.awt.Color(255, 255, 255));
         btnViewWorkQueue.setText("View Work Queue");
+        btnViewWorkQueue.setSize(new java.awt.Dimension(260, 70));
         btnViewWorkQueue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewWorkQueueActionPerformed(evt);
             }
         });
         add(btnViewWorkQueue);
-        btnViewWorkQueue.setBounds(320, 120, 140, 40);
+        btnViewWorkQueue.setBounds(460, 530, 260, 70);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/flood_management.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Flood2.jpeg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(250, 90, 280, 410);
+        jLabel2.setBounds(0, 220, 1190, 710);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewWorkQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewWorkQueueActionPerformed

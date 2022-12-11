@@ -55,37 +55,45 @@ public class CycloneStormSensorJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(91, 130, 170));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Cyclone & Storm Sensor");
         add(jLabel1);
-        jLabel1.setBounds(110, 10, 527, 61);
+        jLabel1.setBounds(10, 140, 540, 60);
 
-        btnSendRequest.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnSendRequest.setForeground(new java.awt.Color(51, 51, 255));
+        btnSendRequest.setBackground(new java.awt.Color(91, 130, 170));
+        btnSendRequest.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        btnSendRequest.setForeground(java.awt.Color.white);
         btnSendRequest.setText("Send Request");
+        btnSendRequest.setSize(new java.awt.Dimension(290, 40));
         btnSendRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSendRequestActionPerformed(evt);
             }
         });
         add(btnSendRequest);
-        btnSendRequest.setBounds(490, 100, 180, 38);
+        btnSendRequest.setBounds(680, 460, 290, 40);
 
-        btnViewRequests.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnViewRequests.setForeground(new java.awt.Color(0, 51, 255));
+        btnViewRequests.setBackground(new java.awt.Color(91, 130, 170));
+        btnViewRequests.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        btnViewRequests.setForeground(java.awt.Color.white);
         btnViewRequests.setText("View Sent Requests");
+        btnViewRequests.setSize(new java.awt.Dimension(290, 40));
         btnViewRequests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewRequestsActionPerformed(evt);
             }
         });
         add(btnViewRequests);
-        btnViewRequests.setBounds(490, 190, 190, 38);
+        btnViewRequests.setBounds(680, 550, 290, 40);
 
+        btnBack.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btnBack.setText("<< Back");
+        btnBack.setSize(new java.awt.Dimension(120, 40));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -95,9 +103,11 @@ public class CycloneStormSensorJPanel extends javax.swing.JPanel {
         btnBack.setBounds(20, 30, 100, 50);
 
         jLabel2.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/maxresdefault.jpg"))); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel2.setForeground(java.awt.Color.white);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cycclone_sensor.jpeg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 840, 450);
+        jLabel2.setBounds(0, 200, 1260, 670);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSendRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendRequestActionPerformed
