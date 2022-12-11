@@ -220,7 +220,7 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
         add(backjButton1);
         backjButton1.setBounds(20, 30, 120, 40);
 
-        createUserJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        createUserJButton.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         createUserJButton.setForeground(new java.awt.Color(51, 51, 51));
         createUserJButton.setText("Create");
         createUserJButton.setSize(new java.awt.Dimension(120, 40));

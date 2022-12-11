@@ -58,13 +58,13 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(lblTitle);
         lblTitle.setBounds(0, 150, 900, 60);
 
-        lblEnterprise.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblEnterprise.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         lblEnterprise.setText("Enterprise :");
         add(lblEnterprise);
-        lblEnterprise.setBounds(0, 230, 110, 22);
+        lblEnterprise.setBounds(0, 230, 110, 21);
 
         valueLabel.setBackground(new java.awt.Color(255, 255, 255));
-        valueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        valueLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         valueLabel.setForeground(new java.awt.Color(0, 0, 51));
         valueLabel.setText("<value>");
         add(valueLabel);

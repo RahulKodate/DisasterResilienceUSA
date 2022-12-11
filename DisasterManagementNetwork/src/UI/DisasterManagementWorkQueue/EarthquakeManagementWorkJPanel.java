@@ -70,6 +70,7 @@ public class EarthquakeManagementWorkJPanel extends javax.swing.JPanel {
         });
         add(btnViewWorkRequest);
         btnViewWorkRequest.setBounds(440, 510, 260, 70);
+        btnViewWorkRequest.getAccessibleContext().setAccessibleDescription("");
 
         jLabel2.setBackground(new java.awt.Color(222, 222, 248));
         jLabel2.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Earthquake/Earthquake2.jpeg")); // NOI18N

@@ -54,6 +54,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setBounds(260, 260, 210, 80);
 
         btnManageCity.setBackground(new java.awt.Color(91, 130, 170));
+        btnManageCity.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnManageCity.setForeground(new java.awt.Color(255, 255, 255));
         btnManageCity.setText("MANAGE CITY");
         btnManageCity.addActionListener(new java.awt.event.ActionListener() {
@@ -62,9 +63,10 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageCity);
-        btnManageCity.setBounds(760, 350, 210, 40);
+        btnManageCity.setBounds(680, 350, 290, 40);
 
         btnManageEnterprise.setBackground(new java.awt.Color(91, 130, 170));
+        btnManageEnterprise.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnManageEnterprise.setForeground(new java.awt.Color(255, 255, 255));
         btnManageEnterprise.setText("MANAGE ENTERPRISE");
         btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
@@ -73,9 +75,10 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageEnterprise);
-        btnManageEnterprise.setBounds(760, 460, 210, 40);
+        btnManageEnterprise.setBounds(680, 460, 290, 40);
 
         btnMangeEnteprise.setBackground(new java.awt.Color(91, 130, 170));
+        btnMangeEnteprise.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnMangeEnteprise.setForeground(new java.awt.Color(255, 255, 255));
         btnMangeEnteprise.setText("MANAGE ENTERPRISE ADMIN");
         btnMangeEnteprise.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +87,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnMangeEnteprise);
-        btnMangeEnteprise.setBounds(760, 570, 210, 40);
+        btnMangeEnteprise.setBounds(680, 570, 290, 40);
 
         jLabel2.setForeground(new java.awt.Color(0, 51, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/SysAdmin1.jpeg"))); // NOI18N

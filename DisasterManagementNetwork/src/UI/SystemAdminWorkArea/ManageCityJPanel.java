@@ -68,11 +68,10 @@ public class ManageCityJPanel extends javax.swing.JPanel {
         setForeground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel1.setText("Name");
         add(jLabel1);
-        jLabel1.setBounds(240, 410, 60, 22);
+        jLabel1.setBounds(240, 410, 60, 21);
 
         txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));

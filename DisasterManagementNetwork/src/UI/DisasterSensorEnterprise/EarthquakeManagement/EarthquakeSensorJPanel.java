@@ -57,16 +57,19 @@ public class EarthquakeSensorJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(91, 130, 170));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Earthquake Sensor");
         add(jLabel1);
-        jLabel1.setBounds(110, 10, 527, 61);
+        jLabel1.setBounds(0, 110, 430, 61);
 
-        btnSendRequest.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnSendRequest.setForeground(new java.awt.Color(51, 51, 255));
+        btnSendRequest.setBackground(new java.awt.Color(91, 130, 170));
+        btnSendRequest.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        btnSendRequest.setForeground(new java.awt.Color(255, 255, 255));
         btnSendRequest.setText("Send Request");
         btnSendRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,10 +77,11 @@ public class EarthquakeSensorJPanel extends javax.swing.JPanel {
             }
         });
         add(btnSendRequest);
-        btnSendRequest.setBounds(490, 100, 180, 38);
+        btnSendRequest.setBounds(820, 440, 290, 50);
 
-        btnViewRequests.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnViewRequests.setForeground(new java.awt.Color(0, 51, 255));
+        btnViewRequests.setBackground(new java.awt.Color(91, 130, 170));
+        btnViewRequests.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        btnViewRequests.setForeground(new java.awt.Color(255, 255, 255));
         btnViewRequests.setText("View Sent Requests");
         btnViewRequests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,8 +89,10 @@ public class EarthquakeSensorJPanel extends javax.swing.JPanel {
             }
         });
         add(btnViewRequests);
-        btnViewRequests.setBounds(490, 190, 190, 38);
+        btnViewRequests.setBounds(820, 560, 290, 50);
 
+        btnBack.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        btnBack.setForeground(null);
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,12 +100,13 @@ public class EarthquakeSensorJPanel extends javax.swing.JPanel {
             }
         });
         add(btnBack);
-        btnBack.setBounds(20, 30, 100, 50);
+        btnBack.setBounds(20, 30, 130, 40);
 
-        jLabel2.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/maxresdefault.jpg"))); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(91, 130, 170));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/e-sensor-786.jpeg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 840, 450);
+        jLabel2.setBounds(-100, 170, 1520, 700);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSendRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendRequestActionPerformed

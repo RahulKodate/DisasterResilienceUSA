@@ -70,7 +70,7 @@ private OrganizationDirectory directory;
         lblTitle.setForeground(new java.awt.Color(91, 130, 170));
         lblTitle.setText("Cyclone & Storm Management Work Queue");
         add(lblTitle);
-        lblTitle.setBounds(10, 100, 970, 50);
+        lblTitle.setBounds(10, 100, 970, 60);
 
         tblWorkQueue.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -89,7 +89,6 @@ private OrganizationDirectory directory;
         jScrollPane1.setBounds(160, 260, 670, 270);
 
         btnBack.setText("<<Back");
-        btnBack.setSize(new java.awt.Dimension(120, 40));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);

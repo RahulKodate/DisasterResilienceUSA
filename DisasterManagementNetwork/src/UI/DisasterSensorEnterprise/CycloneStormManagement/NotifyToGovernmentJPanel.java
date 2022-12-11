@@ -132,14 +132,14 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblCycloneStorm);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(50, 350, 695, 110);
+        jScrollPane1.setBounds(230, 420, 710, 220);
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(91, 130, 170));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Cyclone & Storm Sensor Readings");
         add(jLabel1);
-        jLabel1.setBounds(0, 130, 770, 50);
+        jLabel1.setBounds(0, 140, 770, 50);
 
         btnBack.setText("<< Back");
         btnBack.setSize(new java.awt.Dimension(120, 40));
@@ -161,11 +161,11 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
             }
         });
         add(btnRequestToGovernment);
-        btnRequestToGovernment.setBounds(240, 520, 310, 30);
+        btnRequestToGovernment.setBounds(430, 680, 310, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/maxresdefault.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Cyclone/cyclone786.jpeg")); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 190, 990, 650);
+        jLabel2.setBounds(0, 200, 1160, 760);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestToGovernmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestToGovernmentActionPerformed
