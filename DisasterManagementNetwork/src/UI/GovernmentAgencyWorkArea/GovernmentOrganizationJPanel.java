@@ -77,14 +77,14 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Organization Type ");
         add(jLabel1);
-        jLabel1.setBounds(60, 250, 230, 22);
+        jLabel1.setBounds(120, 250, 230, 22);
 
         combo_org.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_org.setForeground(new java.awt.Color(0, 0, 51));
@@ -95,7 +95,7 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_org);
-        combo_org.setBounds(300, 250, 268, 23);
+        combo_org.setBounds(360, 250, 268, 23);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,7 +126,7 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_govorg);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(107, 111, 570, 120);
+        jScrollPane2.setBounds(107, 111, 660, 120);
 
         btnAddOrg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnAddOrg.setText("Add organization");
@@ -136,7 +136,7 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(btnAddOrg);
-        btnAddOrg.setBounds(140, 420, 157, 21);
+        btnAddOrg.setBounds(230, 420, 170, 40);
 
         btnDeleteOrg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnDeleteOrg.setText("Delete Organization");
@@ -146,7 +146,7 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(btnDeleteOrg);
-        btnDeleteOrg.setBounds(360, 420, 177, 24);
+        btnDeleteOrg.setBounds(460, 420, 200, 40);
 
         btnBack.setText("<<BACK");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +155,7 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(btnBack);
-        btnBack.setBounds(60, 20, 95, 23);
+        btnBack.setBounds(60, 20, 95, 30);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/govorganization.jpg"))); // NOI18N
         add(jLabel3);

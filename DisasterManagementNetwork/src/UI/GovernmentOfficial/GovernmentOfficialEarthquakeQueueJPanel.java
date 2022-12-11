@@ -99,13 +99,13 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
         btnAlert = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Government Official Work Queue");
         add(jLabel1);
-        jLabel1.setBounds(340, 30, 450, 29);
+        jLabel1.setBounds(340, 40, 450, 29);
 
         MessagejLabel.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         MessagejLabel.setForeground(new java.awt.Color(255, 0, 51));
@@ -134,7 +134,7 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
         jScrollPane2.setViewportView(tblWorkQueue);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(10, 144, 1000, 90);
+        jScrollPane2.setBounds(70, 110, 1000, 130);
 
         btnBack.setBackground(new java.awt.Color(0, 51, 255));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
@@ -145,7 +145,7 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
             }
         });
         add(btnBack);
-        btnBack.setBounds(10, 20, 100, 23);
+        btnBack.setBounds(10, 20, 100, 40);
 
         btnResolve.setBackground(new java.awt.Color(0, 255, 0));
         btnResolve.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -157,7 +157,7 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
             }
         });
         add(btnResolve);
-        btnResolve.setBounds(30, 530, 280, 24);
+        btnResolve.setBounds(60, 490, 280, 60);
 
         btnAlert.setBackground(new java.awt.Color(255, 0, 51));
         btnAlert.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -169,7 +169,7 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
             }
         });
         add(btnAlert);
-        btnAlert.setBounds(720, 520, 260, 24);
+        btnAlert.setBounds(720, 483, 260, 60);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Boston-120419-Governor-office-renovations-PHOTO-scaled.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");

@@ -103,7 +103,7 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         btn_create = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         combo_Org.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -121,19 +121,19 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Organization");
         add(jLabel5);
-        jLabel5.setBounds(126, 287, 150, 22);
+        jLabel5.setBounds(190, 290, 150, 22);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Employee");
         add(jLabel3);
-        jLabel3.setBounds(130, 330, 160, 22);
+        jLabel3.setBounds(190, 330, 160, 22);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Role");
         add(jLabel4);
-        jLabel4.setBounds(126, 385, 150, 22);
+        jLabel4.setBounds(190, 390, 150, 22);
 
         Combo_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Combo_role.setForeground(new java.awt.Color(0, 0, 51));
@@ -166,13 +166,13 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("User Name");
         add(jLabel1);
-        jLabel1.setBounds(126, 443, 130, 22);
+        jLabel1.setBounds(190, 440, 130, 22);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password");
         add(jLabel2);
-        jLabel2.setBounds(126, 498, 150, 22);
+        jLabel2.setBounds(190, 500, 150, 22);
 
         txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPassword.setForeground(new java.awt.Color(0, 0, 51));
@@ -183,7 +183,7 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Government User");
         add(jLabel6);
-        jLabel6.setBounds(248, 19, 430, 29);
+        jLabel6.setBounds(260, 30, 430, 29);
 
         tbl_GovUser.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tbl_GovUser.setModel(new javax.swing.table.DefaultTableModel(
@@ -208,7 +208,7 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_GovUser);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(141, 95, 610, 140);
+        jScrollPane2.setBounds(110, 90, 690, 140);
 
         btn_Back.setText("<<Back");
         btn_Back.addActionListener(new java.awt.event.ActionListener() {
@@ -217,7 +217,7 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_Back);
-        btn_Back.setBounds(70, 20, 112, 23);
+        btn_Back.setBounds(70, 20, 112, 30);
 
         btn_create.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_create.setText("Create");
@@ -227,8 +227,9 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_create);
-        btn_create.setBounds(410, 550, 81, 24);
+        btn_create.setBounds(380, 570, 110, 40);
 
+        jLabel7.setBackground(new java.awt.Color(222, 222, 248));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/govuser.jpg"))); // NOI18N
         add(jLabel7);
         jLabel7.setBounds(-550, -50, 1700, 1350);

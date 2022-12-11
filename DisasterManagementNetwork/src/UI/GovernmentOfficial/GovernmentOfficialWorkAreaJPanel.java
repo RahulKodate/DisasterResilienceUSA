@@ -50,7 +50,7 @@ public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
         btnEarthquakeQueue = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(102, 0, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -66,7 +66,7 @@ public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnCycloneStormQueue);
-        btnCycloneStormQueue.setBounds(130, 200, 240, 40);
+        btnCycloneStormQueue.setBounds(50, 200, 240, 60);
 
         btnViewFloodQueue.setForeground(new java.awt.Color(0, 51, 255));
         btnViewFloodQueue.setText("View Flood Queue");
@@ -76,7 +76,7 @@ public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnViewFloodQueue);
-        btnViewFloodQueue.setBounds(500, 190, 240, 40);
+        btnViewFloodQueue.setBounds(380, 200, 240, 60);
 
         btnEarthquakeQueue.setForeground(new java.awt.Color(0, 0, 255));
         btnEarthquakeQueue.setText("View Earthquake queue");
@@ -86,7 +86,7 @@ public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnEarthquakeQueue);
-        btnEarthquakeQueue.setBounds(340, 310, 240, 40);
+        btnEarthquakeQueue.setBounds(690, 200, 240, 60);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/govworkqueue.jpg"))); // NOI18N
         add(jLabel2);

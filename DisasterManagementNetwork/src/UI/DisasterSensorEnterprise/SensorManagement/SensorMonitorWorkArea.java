@@ -66,7 +66,7 @@ public class SensorMonitorWorkArea extends javax.swing.JPanel {
         btnFloodManagement = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -94,7 +94,7 @@ public class SensorMonitorWorkArea extends javax.swing.JPanel {
         add(lblEnterprisevalue);
         lblEnterprisevalue.setBounds(370, 86, 308, 34);
 
-        btnCycloneStormManagement.setBackground(new java.awt.Color(0, 102, 255));
+        btnCycloneStormManagement.setBackground(new java.awt.Color(51, 255, 51));
         btnCycloneStormManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnCycloneStormManagement.setForeground(new java.awt.Color(255, 255, 255));
         btnCycloneStormManagement.setText("Cyclone Storm Management");
@@ -106,7 +106,7 @@ public class SensorMonitorWorkArea extends javax.swing.JPanel {
         add(btnCycloneStormManagement);
         btnCycloneStormManagement.setBounds(460, 210, 340, 42);
 
-        btnEarthquakeManagement.setBackground(new java.awt.Color(0, 51, 255));
+        btnEarthquakeManagement.setBackground(new java.awt.Color(51, 255, 51));
         btnEarthquakeManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnEarthquakeManagement.setForeground(new java.awt.Color(255, 255, 255));
         btnEarthquakeManagement.setText("Earthquake Management");
@@ -118,7 +118,7 @@ public class SensorMonitorWorkArea extends javax.swing.JPanel {
         add(btnEarthquakeManagement);
         btnEarthquakeManagement.setBounds(460, 280, 340, 42);
 
-        btnFloodManagement.setBackground(new java.awt.Color(0, 51, 255));
+        btnFloodManagement.setBackground(new java.awt.Color(51, 255, 51));
         btnFloodManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnFloodManagement.setForeground(new java.awt.Color(255, 255, 255));
         btnFloodManagement.setText("Flood Management");

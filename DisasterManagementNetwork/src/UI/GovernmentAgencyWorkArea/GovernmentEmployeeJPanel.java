@@ -85,7 +85,7 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
         btnAddEmp = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         jLabel4.setBackground(new java.awt.Color(102, 102, 102));
@@ -93,7 +93,7 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("View Employees");
         add(jLabel4);
-        jLabel4.setBounds(350, 50, 210, 40);
+        jLabel4.setBounds(350, 40, 210, 40);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -122,13 +122,13 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Organization");
         add(jLabel3);
-        jLabel3.setBounds(110, 410, 160, 22);
+        jLabel3.setBounds(140, 410, 160, 22);
 
         combo_employeeorg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_employeeorg.setForeground(new java.awt.Color(0, 0, 51));
         combo_employeeorg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(combo_employeeorg);
-        combo_employeeorg.setBounds(380, 420, 250, 23);
+        combo_employeeorg.setBounds(380, 420, 250, 30);
 
         txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));
@@ -145,7 +145,7 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name");
         add(jLabel2);
-        jLabel2.setBounds(140, 480, 90, 22);
+        jLabel2.setBounds(170, 480, 90, 22);
 
         tbl_Org.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -170,7 +170,7 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         add(Btn_Back);
-        Btn_Back.setBounds(770, 90, 95, 23);
+        Btn_Back.setBounds(770, 90, 95, 30);
 
         btnAddEmp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnAddEmp.setText("Create Employee");
@@ -180,8 +180,9 @@ public class GovernmentEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         add(btnAddEmp);
-        btnAddEmp.setBounds(390, 520, 160, 24);
+        btnAddEmp.setBounds(390, 520, 170, 40);
 
+        jLabel6.setBackground(new java.awt.Color(222, 222, 248));
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/g.png"))); // NOI18N
         add(jLabel6);
