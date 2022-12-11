@@ -157,9 +157,9 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(60, 20, 95, 30);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/govorganization.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Government/Gov2.jpeg")); // NOI18N
         add(jLabel3);
-        jLabel3.setBounds(0, 0, 1030, 710);
+        jLabel3.setBounds(0, 150, 1030, 710);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_orgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_orgActionPerformed

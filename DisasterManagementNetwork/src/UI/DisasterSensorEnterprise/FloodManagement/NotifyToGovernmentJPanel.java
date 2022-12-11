@@ -132,24 +132,26 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblFlood);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(50, 150, 695, 110);
+        jScrollPane1.setBounds(190, 300, 700, 190);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(91, 130, 170));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Flood Sensor Readings");
         add(jLabel1);
-        jLabel1.setBounds(50, 90, 708, 45);
+        jLabel1.setBounds(270, 130, 540, 60);
 
         btnBack.setText("<< Back");
+        btnBack.setSize(new java.awt.Dimension(120, 40));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         add(btnBack);
-        btnBack.setBounds(20, 300, 80, 50);
+        btnBack.setBounds(20, 20, 80, 50);
 
-        btnRequestToGovernment.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnRequestToGovernment.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnRequestToGovernment.setText("Send Request To Government");
         btnRequestToGovernment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,11 +159,11 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
             }
         });
         add(btnRequestToGovernment);
-        btnRequestToGovernment.setBounds(490, 310, 330, 33);
+        btnRequestToGovernment.setBounds(390, 530, 330, 33);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/maxresdefault.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/flood-read-1.jpeg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 870, 630);
+        jLabel2.setBounds(-60, 190, 1160, 670);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestToGovernmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestToGovernmentActionPerformed
