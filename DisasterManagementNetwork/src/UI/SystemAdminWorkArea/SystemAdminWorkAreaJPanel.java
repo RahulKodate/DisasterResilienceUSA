@@ -43,15 +43,17 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnMangeEnteprise = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
+        setPreferredSize(new java.awt.Dimension(1000, 926));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("System Admin Workarea");
+        jLabel1.setFont(new java.awt.Font("Savoye LET", 1, 70)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(161, 181, 201));
+        jLabel1.setText("Workarea");
         add(jLabel1);
-        jLabel1.setBounds(290, 70, 431, 29);
+        jLabel1.setBounds(260, 260, 210, 80);
 
-        btnManageCity.setBackground(new java.awt.Color(0, 51, 255));
+        btnManageCity.setBackground(new java.awt.Color(91, 130, 170));
         btnManageCity.setForeground(new java.awt.Color(255, 255, 255));
         btnManageCity.setText("MANAGE CITY");
         btnManageCity.addActionListener(new java.awt.event.ActionListener() {
@@ -60,9 +62,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageCity);
-        btnManageCity.setBounds(140, 150, 170, 40);
+        btnManageCity.setBounds(760, 350, 210, 40);
 
-        btnManageEnterprise.setBackground(new java.awt.Color(0, 51, 255));
+        btnManageEnterprise.setBackground(new java.awt.Color(91, 130, 170));
         btnManageEnterprise.setForeground(new java.awt.Color(255, 255, 255));
         btnManageEnterprise.setText("MANAGE ENTERPRISE");
         btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
@@ -71,9 +73,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageEnterprise);
-        btnManageEnterprise.setBounds(400, 150, 170, 40);
+        btnManageEnterprise.setBounds(760, 460, 210, 40);
 
-        btnMangeEnteprise.setBackground(new java.awt.Color(0, 51, 255));
+        btnMangeEnteprise.setBackground(new java.awt.Color(91, 130, 170));
         btnMangeEnteprise.setForeground(new java.awt.Color(255, 255, 255));
         btnMangeEnteprise.setText("MANAGE ENTERPRISE ADMIN");
         btnMangeEnteprise.addActionListener(new java.awt.event.ActionListener() {
@@ -82,12 +84,12 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnMangeEnteprise);
-        btnMangeEnteprise.setBounds(650, 150, 240, 40);
+        btnMangeEnteprise.setBounds(760, 570, 210, 40);
 
         jLabel2.setForeground(new java.awt.Color(0, 51, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/enterprise1.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/SysAdmin1.jpeg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, -160, 1060, 930);
+        jLabel2.setBounds(-100, 170, 1080, 680);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCityActionPerformed

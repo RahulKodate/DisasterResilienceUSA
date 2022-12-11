@@ -64,7 +64,7 @@ public class ManageCityJPanel extends javax.swing.JPanel {
         btn_delete = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setForeground(new java.awt.Color(255, 255, 255));
         setLayout(null);
 
@@ -72,17 +72,17 @@ public class ManageCityJPanel extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Name");
         add(jLabel1);
-        jLabel1.setBounds(30, 190, 80, 22);
+        jLabel1.setBounds(250, 410, 80, 22);
 
         txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));
         add(txtName);
-        txtName.setBounds(140, 190, 180, 30);
+        txtName.setBounds(320, 410, 180, 30);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel2.setText("Manage City");
         add(jLabel2);
-        jLabel2.setBounds(298, 23, 230, 29);
+        jLabel2.setBounds(290, 70, 150, 29);
 
         tbl_city.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -98,9 +98,8 @@ public class ManageCityJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_city);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(160, 70, 452, 92);
+        jScrollPane2.setBounds(120, 130, 490, 230);
 
-        btn_submit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/submit.png"))); // NOI18N
         btn_submit.setText("Submit");
         btn_submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,9 +107,8 @@ public class ManageCityJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_submit);
-        btn_submit.setBounds(650, 10, 110, 50);
+        btn_submit.setBounds(250, 490, 120, 40);
 
-        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
         btn_back.setText("<<Back");
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,9 +116,8 @@ public class ManageCityJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_back);
-        btn_back.setBounds(10, 10, 120, 40);
+        btn_back.setBounds(30, 30, 120, 40);
 
-        btn_delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete_Final.png"))); // NOI18N
         btn_delete.setText("Delete");
         btn_delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,12 +125,12 @@ public class ManageCityJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_delete);
-        btn_delete.setBounds(640, 190, 120, 40);
+        btn_delete.setBounds(390, 490, 120, 40);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/city.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/City3.jpeg"))); // NOI18N
+        jLabel3.setPreferredSize(new java.awt.Dimension(1500, 800));
         add(jLabel3);
-        jLabel3.setBounds(-1250, -1610, 2800, 2730);
+        jLabel3.setBounds(-510, -720, 2800, 2730);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
