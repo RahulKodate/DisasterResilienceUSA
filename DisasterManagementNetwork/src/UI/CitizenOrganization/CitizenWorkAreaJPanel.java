@@ -58,7 +58,7 @@ public class CitizenWorkAreaJPanel extends javax.swing.JPanel {
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Resident Work Area");
         add(lblTitle);
-        lblTitle.setBounds(0, 23, 970, 44);
+        lblTitle.setBounds(-10, 40, 970, 44);
 
         btnViewNotification.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btnViewNotification.setText("View Notification");
@@ -70,6 +70,7 @@ public class CitizenWorkAreaJPanel extends javax.swing.JPanel {
         add(btnViewNotification);
         btnViewNotification.setBounds(350, 180, 210, 40);
 
+        jLabel2.setBackground(new java.awt.Color(222, 222, 248));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/resident.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(-90, -160, 1150, 710);

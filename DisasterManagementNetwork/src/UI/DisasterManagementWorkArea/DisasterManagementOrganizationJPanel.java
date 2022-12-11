@@ -120,8 +120,6 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
         organizationJComboBox.setBounds(350, 400, 268, 23);
 
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
         btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,7 +127,7 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(btnBack);
-        btnBack.setBounds(60, 510, 130, 50);
+        btnBack.setBounds(70, 520, 130, 40);
 
         btnCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnCreate.setText("CREATE");
@@ -139,11 +137,9 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(btnCreate);
-        btnCreate.setBounds(310, 480, 130, 60);
+        btnCreate.setBounds(330, 480, 130, 50);
 
         btnDeleteOrganization.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnDeleteOrganization.setForeground(new java.awt.Color(255, 255, 255));
-        btnDeleteOrganization.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete_Final.png"))); // NOI18N
         btnDeleteOrganization.setText("Delete Organization");
         btnDeleteOrganization.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,8 +147,9 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(btnDeleteOrganization);
-        btnDeleteOrganization.setBounds(550, 530, 130, 40);
+        btnDeleteOrganization.setBounds(540, 480, 200, 50);
 
+        jLabel2.setBackground(new java.awt.Color(222, 222, 248));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Disaster Management Organization");
         add(jLabel2);

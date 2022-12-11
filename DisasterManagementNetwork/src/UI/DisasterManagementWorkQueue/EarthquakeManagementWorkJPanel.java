@@ -49,14 +49,14 @@ public class EarthquakeManagementWorkJPanel extends javax.swing.JPanel {
         btnViewWorkRequest = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Earthquake Management Work Area");
         add(lblTitle);
-        lblTitle.setBounds(10, 27, 480, 29);
+        lblTitle.setBounds(160, 60, 480, 29);
 
         btnViewWorkRequest.setForeground(new java.awt.Color(0, 0, 153));
         btnViewWorkRequest.setText("View Work request");
@@ -66,11 +66,12 @@ public class EarthquakeManagementWorkJPanel extends javax.swing.JPanel {
             }
         });
         add(btnViewWorkRequest);
-        btnViewWorkRequest.setBounds(140, 140, 170, 60);
+        btnViewWorkRequest.setBounds(330, 130, 170, 60);
 
+        jLabel2.setBackground(new java.awt.Color(222, 222, 248));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/air-pollution.jpg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 980, 680);
+        jLabel2.setBounds(0, -20, 980, 680);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewWorkRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewWorkRequestActionPerformed

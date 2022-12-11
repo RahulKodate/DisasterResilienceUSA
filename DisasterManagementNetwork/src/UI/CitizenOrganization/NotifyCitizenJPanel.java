@@ -85,7 +85,7 @@ public class NotifyCitizenJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblWorkRequest);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(209, 85, 644, 166);
+        jScrollPane1.setBounds(143, 85, 710, 166);
 
         btnBack.setText("<<BACK");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -94,7 +94,7 @@ public class NotifyCitizenJPanel extends javax.swing.JPanel {
             }
         });
         add(btnBack);
-        btnBack.setBounds(730, 275, 123, 23);
+        btnBack.setBounds(730, 275, 123, 30);
 
         btnViewFullMessage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnViewFullMessage.setText("View Full Message");
@@ -110,6 +110,7 @@ public class NotifyCitizenJPanel extends javax.swing.JPanel {
         add(lblMessage);
         lblMessage.setBounds(106, 401, 811, 91);
 
+        jLabel2.setBackground(new java.awt.Color(222, 222, 248));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/alert.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(-250, -520, 1580, 1350);

@@ -69,7 +69,7 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(valueLabel);
         valueLabel.setBounds(330, 160, 406, 22);
 
-        btnManageOrganization.setBackground(new java.awt.Color(0, 0, 204));
+        btnManageOrganization.setBackground(new java.awt.Color(51, 255, 0));
         btnManageOrganization.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnManageOrganization.setForeground(new java.awt.Color(255, 255, 255));
         btnManageOrganization.setText("Manage Organization");
@@ -79,9 +79,9 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageOrganization);
-        btnManageOrganization.setBounds(250, 230, 220, 24);
+        btnManageOrganization.setBounds(260, 230, 220, 40);
 
-        btnManageEmployee.setBackground(new java.awt.Color(0, 0, 204));
+        btnManageEmployee.setBackground(new java.awt.Color(51, 255, 0));
         btnManageEmployee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnManageEmployee.setForeground(new java.awt.Color(255, 255, 255));
         btnManageEmployee.setText("Manage Employee");
@@ -91,9 +91,9 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageEmployee);
-        btnManageEmployee.setBounds(260, 340, 220, 24);
+        btnManageEmployee.setBounds(260, 320, 220, 40);
 
-        btnManageUser.setBackground(new java.awt.Color(0, 0, 204));
+        btnManageUser.setBackground(new java.awt.Color(51, 255, 0));
         btnManageUser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnManageUser.setForeground(new java.awt.Color(255, 255, 255));
         btnManageUser.setText("Manage User");
@@ -103,8 +103,9 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageUser);
-        btnManageUser.setBounds(260, 460, 220, 24);
+        btnManageUser.setBounds(260, 420, 220, 40);
 
+        jLabel2.setBackground(new java.awt.Color(222, 222, 248));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/admin_work_area.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 0, 790, 600);

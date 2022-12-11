@@ -51,13 +51,13 @@ public class FloodManagementWorkJPanel extends javax.swing.JPanel {
         btnViewWorkQueue = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitle.setText("Flood Management Work Area");
         add(lblTitle);
-        lblTitle.setBounds(60, 10, 490, 44);
+        lblTitle.setBounds(200, 40, 490, 44);
 
         btnViewWorkQueue.setText("View Work Queue");
         btnViewWorkQueue.addActionListener(new java.awt.event.ActionListener() {
@@ -66,11 +66,11 @@ public class FloodManagementWorkJPanel extends javax.swing.JPanel {
             }
         });
         add(btnViewWorkQueue);
-        btnViewWorkQueue.setBounds(175, 116, 140, 40);
+        btnViewWorkQueue.setBounds(320, 120, 140, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/flood_management.jpg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(100, 90, 280, 410);
+        jLabel2.setBounds(250, 90, 280, 410);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewWorkQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewWorkQueueActionPerformed

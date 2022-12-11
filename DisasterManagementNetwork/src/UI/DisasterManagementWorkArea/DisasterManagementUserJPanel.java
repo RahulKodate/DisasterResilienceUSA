@@ -212,8 +212,6 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
         jLabel2.setBounds(50, 492, 110, 22);
 
         backjButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        backjButton1.setForeground(new java.awt.Color(255, 255, 255));
-        backjButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
         backjButton1.setText("<< Back");
         backjButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,24 +219,25 @@ public class DisasterManagementUserJPanel extends javax.swing.JPanel {
             }
         });
         add(backjButton1);
-        backjButton1.setBounds(50, 546, 80, 50);
+        backjButton1.setBounds(50, 556, 120, 40);
 
         createUserJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         createUserJButton.setForeground(new java.awt.Color(51, 51, 51));
-        createUserJButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/create.png"))); // NOI18N
+        createUserJButton.setText("Create");
         createUserJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createUserJButtonActionPerformed(evt);
             }
         });
         add(createUserJButton);
-        createUserJButton.setBounds(250, 550, 80, 40);
+        createUserJButton.setBounds(290, 550, 100, 40);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setText("Disaster Management User");
         add(jLabel6);
         jLabel6.setBounds(100, 24, 410, 29);
 
+        jLabel7.setBackground(new java.awt.Color(222, 222, 248));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/add_employee.png"))); // NOI18N
         add(jLabel7);
         jLabel7.setBounds(0, 70, 640, 620);

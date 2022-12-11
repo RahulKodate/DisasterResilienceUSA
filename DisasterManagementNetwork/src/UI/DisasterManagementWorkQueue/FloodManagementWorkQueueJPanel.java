@@ -63,7 +63,7 @@ private OrganizationDirectory directory;
         btnResolve = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -87,7 +87,6 @@ private OrganizationDirectory directory;
         add(jScrollPane1);
         jScrollPane1.setBounds(24, 60, 452, 99);
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,8 +96,6 @@ private OrganizationDirectory directory;
         add(btnBack);
         btnBack.setBounds(24, 220, 91, 50);
 
-        btnResolve.setBackground(new java.awt.Color(0, 0, 255));
-        btnResolve.setForeground(new java.awt.Color(255, 255, 255));
         btnResolve.setText("Resolve");
         btnResolve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +105,7 @@ private OrganizationDirectory directory;
         add(btnResolve);
         btnResolve.setBounds(300, 220, 122, 50);
 
+        jLabel2.setBackground(new java.awt.Color(222, 222, 248));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/air-pollution.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 0, 500, 500);

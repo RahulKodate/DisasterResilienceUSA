@@ -151,15 +151,14 @@ public class DisasterManagementEmployeeJPanel extends javax.swing.JPanel {
         jLabel2.setBounds(10, 450, 120, 22);
 
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         add(btnBack);
-        btnBack.setBounds(20, 500, 130, 50);
+        btnBack.setBounds(20, 510, 130, 50);
 
         txtName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));
@@ -167,14 +166,14 @@ public class DisasterManagementEmployeeJPanel extends javax.swing.JPanel {
         txtName.setBounds(220, 460, 250, 30);
 
         btnCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/_Final.png"))); // NOI18N
+        btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateActionPerformed(evt);
             }
         });
         add(btnCreate);
-        btnCreate.setBounds(370, 500, 150, 50);
+        btnCreate.setBounds(390, 500, 150, 50);
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblTitle.setText("View Employees");
@@ -186,6 +185,7 @@ public class DisasterManagementEmployeeJPanel extends javax.swing.JPanel {
         add(lblAddEmployee);
         lblAddEmployee.setBounds(0, 330, 180, 29);
 
+        jLabel6.setBackground(new java.awt.Color(222, 222, 248));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/view_employee.jpg"))); // NOI18N
         add(jLabel6);
         jLabel6.setBounds(0, 0, 780, 600);
