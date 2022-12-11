@@ -425,7 +425,7 @@ public class NotifytoFloodSolutionDepartment extends javax.swing.JPanel {
                         return;
                         } catch (Exception e) {
                         }
-                        JOptionPane.showMessageDialog(null, "Request sent to Flood Solution Department successfully");
+                       // JOptionPane.showMessageDialog(null, "Request sent to Flood Solution Department successfully");
                         
                     }
                 }

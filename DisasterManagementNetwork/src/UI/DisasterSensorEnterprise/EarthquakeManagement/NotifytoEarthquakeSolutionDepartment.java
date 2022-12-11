@@ -426,7 +426,7 @@ public class NotifytoEarthquakeSolutionDepartment extends javax.swing.JPanel {
                         return;
                         } catch (Exception e) {
                         }
-                        JOptionPane.showMessageDialog(null, "Request sent to Earthquake Department successfully");
+                     //   JOptionPane.showMessageDialog(null, "Request sent to Earthquake Department successfully");
                         
                     }
                 }

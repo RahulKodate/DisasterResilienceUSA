@@ -220,13 +220,23 @@ public class GovernmentOfficialFloodQueueJPanel extends javax.swing.JPanel {
             
             } }
         if (orgn!=null){
+            try {
             orgn.getWorkQueue().getWorkRequestList().add(citizenWorkRequest);
             userAccount.getWorkQ().getWorkRequestList().add(citizenWorkRequest);
+            return;
+            } catch (Exception e) {
+            }
+
         }
         
         if (orgn1!=null){            
+            try {
             orgn1.getWorkQueue().getWorkRequestList().add(citizenWorkRequest);
             userAccount.getWorkQ().getWorkRequestList().add(citizenWorkRequest);
+            return;
+            } catch (Exception e) {
+            }
+            
         }
          JOptionPane.showMessageDialog(null, "Request Sent to Citizen");
         }
@@ -267,13 +277,24 @@ public class GovernmentOfficialFloodQueueJPanel extends javax.swing.JPanel {
             
             } }
         if (orgn!=null){
+            try {
             orgn.getWorkQueue().getWorkRequestList().add(citizenWorkRequest);
             userAccount.getWorkQ().getWorkRequestList().add(citizenWorkRequest);
+            return;
+            } catch (Exception e) {
+            }
+
         }
         
-        if (orgn1!=null){            
+        if (orgn1!=null){
+
+            try {
             orgn1.getWorkQueue().getWorkRequestList().add(citizenWorkRequest);
             userAccount.getWorkQ().getWorkRequestList().add(citizenWorkRequest);
+            return;
+            } catch (Exception e) {
+            }
+            
         }
          JOptionPane.showMessageDialog(null, "Request Sent to Citizen");
         }
