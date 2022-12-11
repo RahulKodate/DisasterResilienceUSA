@@ -131,7 +131,7 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblEarthquake);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(50, 150, 695, 110);
+        jScrollPane1.setBounds(50, 150, 700, 110);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -139,14 +139,14 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(50, 90, 708, 45);
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         add(btnBack);
-        btnBack.setBounds(20, 300, 88, 50);
+        btnBack.setBounds(20, 300, 80, 50);
 
         btnRequestToGovernment.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnRequestToGovernment.setText("Send Request To Government");
@@ -158,6 +158,7 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         add(btnRequestToGovernment);
         btnRequestToGovernment.setBounds(490, 310, 330, 33);
 
+        jLabel2.setBackground(new java.awt.Color(222, 222, 248));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/maxresdefault.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 0, 870, 630);

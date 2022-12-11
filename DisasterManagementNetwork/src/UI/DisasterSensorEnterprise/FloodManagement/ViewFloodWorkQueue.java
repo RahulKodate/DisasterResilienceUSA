@@ -103,7 +103,7 @@ public class ViewFloodWorkQueue extends javax.swing.JPanel {
         jScrollPane3 = new javax.swing.JScrollPane();
         ResolvedJTable = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setForeground(new java.awt.Color(0, 153, 102));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -125,7 +125,7 @@ public class ViewFloodWorkQueue extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(PendingReqJTable);
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -213,7 +213,7 @@ public class ViewFloodWorkQueue extends javax.swing.JPanel {
                                 .addGap(109, 109, 109)
                                 .addComponent(btnPendingReq, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(130, 130, 130)
-                                .addComponent(btnBack))))
+                                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

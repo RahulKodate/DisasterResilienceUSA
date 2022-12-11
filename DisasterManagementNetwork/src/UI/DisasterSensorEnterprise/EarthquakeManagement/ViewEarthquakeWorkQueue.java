@@ -103,8 +103,8 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
         jScrollPane3 = new javax.swing.JScrollPane();
         ResolvedJTable = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(0, 153, 102));
-        setForeground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
+        setForeground(new java.awt.Color(222, 222, 248));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -125,7 +125,7 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(PendingReqJTable);
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);

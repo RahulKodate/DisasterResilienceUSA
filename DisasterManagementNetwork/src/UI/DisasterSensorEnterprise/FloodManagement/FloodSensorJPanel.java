@@ -72,7 +72,7 @@ public class FloodSensorJPanel extends javax.swing.JPanel {
             }
         });
         add(btnSendRequest);
-        btnSendRequest.setBounds(490, 100, 180, 38);
+        btnSendRequest.setBounds(490, 100, 190, 38);
 
         btnViewRequests.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnViewRequests.setForeground(new java.awt.Color(0, 51, 255));
@@ -85,7 +85,7 @@ public class FloodSensorJPanel extends javax.swing.JPanel {
         add(btnViewRequests);
         btnViewRequests.setBounds(490, 190, 190, 38);
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -94,6 +94,7 @@ public class FloodSensorJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(20, 30, 100, 50);
 
+        jLabel2.setBackground(new java.awt.Color(222, 222, 248));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/maxresdefault.jpg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 0, 840, 450);

@@ -115,6 +115,7 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         btnRequestToGovernment = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         tblFlood.setModel(new javax.swing.table.DefaultTableModel(
@@ -139,14 +140,14 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(50, 90, 708, 45);
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.setText("<< Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         add(btnBack);
-        btnBack.setBounds(20, 300, 88, 50);
+        btnBack.setBounds(20, 300, 80, 50);
 
         btnRequestToGovernment.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnRequestToGovernment.setText("Send Request To Government");
