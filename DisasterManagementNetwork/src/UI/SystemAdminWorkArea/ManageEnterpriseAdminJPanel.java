@@ -101,13 +101,13 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         txt_submit = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("City");
         add(jLabel1);
-        jLabel1.setBounds(30, 440, 130, 22);
+        jLabel1.setBounds(120, 340, 130, 22);
 
         combo_city.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_city.setForeground(new java.awt.Color(0, 0, 51));
@@ -117,7 +117,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_city);
-        combo_city.setBounds(280, 440, 227, 30);
+        combo_city.setBounds(330, 330, 227, 30);
 
         Combo_enterprise.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Combo_enterprise.setForeground(new java.awt.Color(0, 0, 51));
@@ -127,22 +127,22 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(Combo_enterprise);
-        Combo_enterprise.setBounds(280, 500, 227, 30);
+        Combo_enterprise.setBounds(330, 400, 227, 30);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Enterprise");
         add(jLabel3);
-        jLabel3.setBounds(20, 500, 150, 22);
+        jLabel3.setBounds(120, 400, 150, 22);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Username");
         add(jLabel2);
-        jLabel2.setBounds(20, 610, 140, 22);
+        jLabel2.setBounds(120, 540, 140, 22);
 
         txtUsername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtUsername.setForeground(new java.awt.Color(0, 0, 51));
         add(txtUsername);
-        txtUsername.setBounds(280, 620, 227, 30);
+        txtUsername.setBounds(330, 530, 227, 30);
 
         txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPassword.setForeground(new java.awt.Color(0, 0, 51));
@@ -152,17 +152,17 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(txtPassword);
-        txtPassword.setBounds(280, 670, 227, 30);
+        txtPassword.setBounds(330, 600, 227, 30);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Password");
         add(jLabel4);
-        jLabel4.setBounds(20, 670, 130, 22);
+        jLabel4.setBounds(120, 600, 130, 22);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("Name");
         add(jLabel5);
-        jLabel5.setBounds(20, 560, 130, 22);
+        jLabel5.setBounds(120, 470, 130, 22);
 
         txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));
@@ -172,12 +172,12 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             }
         });
         add(txtName);
-        txtName.setBounds(280, 570, 227, 30);
+        txtName.setBounds(330, 460, 227, 30);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setText("Manage Enterprise Admin");
         add(jLabel6);
-        jLabel6.setBounds(209, 22, 340, 29);
+        jLabel6.setBounds(270, 100, 340, 29);
 
         tbl_Admin.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -201,9 +201,8 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_Admin);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(110, 150, 690, 140);
+        jScrollPane2.setBounds(80, 160, 720, 140);
 
-        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.png"))); // NOI18N
         btn_back.setText("<<Back");
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,7 +212,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(btn_back);
         btn_back.setBounds(20, 10, 95, 50);
 
-        txt_submit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/submit.png"))); // NOI18N
+        txt_submit.setText("Sumit");
         txt_submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_submitActionPerformed(evt);
@@ -222,9 +221,10 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(txt_submit);
         txt_submit.setBounds(280, 720, 290, 40);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/enter.jpg"))); // NOI18N
+        jLabel7.setBackground(new java.awt.Color(222, 222, 248));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Enterprise1.png"))); // NOI18N
         add(jLabel7);
-        jLabel7.setBounds(-550, 0, 2000, 1010);
+        jLabel7.setBounds(0, -70, 2000, 1010);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_cityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_cityActionPerformed

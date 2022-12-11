@@ -103,13 +103,13 @@ public class SensorUserJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         btnCreate = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setText("Organization");
         add(jLabel5);
-        jLabel5.setBounds(120, 300, 160, 22);
+        jLabel5.setBounds(180, 300, 160, 22);
 
         combo_Org.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_Org.setForeground(new java.awt.Color(0, 0, 51));
@@ -131,12 +131,12 @@ public class SensorUserJPanel extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setText("Employee");
         add(jLabel3);
-        jLabel3.setBounds(150, 350, 100, 22);
+        jLabel3.setBounds(180, 350, 100, 22);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Role");
         add(jLabel4);
-        jLabel4.setBounds(154, 395, 70, 22);
+        jLabel4.setBounds(180, 400, 70, 22);
 
         combo_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_role.setForeground(new java.awt.Color(0, 0, 51));
@@ -162,12 +162,12 @@ public class SensorUserJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Password");
         add(jLabel2);
-        jLabel2.setBounds(154, 500, 100, 22);
+        jLabel2.setBounds(180, 500, 100, 22);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("User Name");
         add(jLabel1);
-        jLabel1.setBounds(154, 450, 120, 22);
+        jLabel1.setBounds(180, 450, 120, 22);
 
         txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPassword.setForeground(new java.awt.Color(0, 0, 51));
@@ -177,7 +177,7 @@ public class SensorUserJPanel extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel6.setText("Sensor Management");
         add(jLabel6);
-        jLabel6.setBounds(216, 30, 430, 29);
+        jLabel6.setBounds(220, 40, 430, 29);
 
         tblUser.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -193,9 +193,9 @@ public class SensorUserJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblUser);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(117, 105, 452, 94);
+        jScrollPane2.setBounds(100, 110, 550, 94);
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back_Final.png"))); // NOI18N
+        btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -204,14 +204,14 @@ public class SensorUserJPanel extends javax.swing.JPanel {
         add(btnBack);
         btnBack.setBounds(10, 10, 90, 50);
 
-        btnCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/create.png"))); // NOI18N
+        btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateActionPerformed(evt);
             }
         });
         add(btnCreate);
-        btnCreate.setBounds(260, 550, 110, 40);
+        btnCreate.setBounds(290, 560, 140, 40);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_OrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_OrgActionPerformed
