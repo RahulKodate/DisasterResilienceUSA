@@ -142,7 +142,7 @@ private OrganizationDirectory directory;
         cycloneStormSolutionWorkRequest.setStatus("Resolved");
         cycloneStormSolutionWorkRequest.setResolveDate(new Date());
         
-        cycloneStormSolutionWorkRequest.getCycloneStormSensor().setWindSpeed(rn.nextInt(75));
+        cycloneStormSolutionWorkRequest.getCycloneStormSensor().setWindSpeed(rn.nextInt(30));
         
         populateTable();
         

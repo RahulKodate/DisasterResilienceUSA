@@ -66,7 +66,7 @@ public class NotifyCitizenJPanel extends javax.swing.JPanel {
         setLayout(null);
 
         lblTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lblTitle.setText("RESIDENT WORK QUEUE");
+        lblTitle.setText("CITIZEN WORK QUEUE");
         add(lblTitle);
         lblTitle.setBounds(300, 27, 838, 40);
 
@@ -127,6 +127,7 @@ public class NotifyCitizenJPanel extends javax.swing.JPanel {
         int getSelectedRow = tblWorkRequest.getSelectedRow();
         if(getSelectedRow <0){
             JOptionPane.showMessageDialog(null, "No row selected");
+            return;
         }
         else
         {
@@ -134,10 +135,14 @@ public class NotifyCitizenJPanel extends javax.swing.JPanel {
         if(request.getCycloneStormSensor() != null){
         lblMessage.setText(request.getCycloneStormMessage());
         }
-        else
+        else if(request.getFloodSensor() != null)
         {
         lblMessage.setText(request.getFloodMessage());
         }
+        else if(request.getEarthquakeSensor() != null)
+        {
+        lblMessage.setText(request.getEarthquakeMessage());
+        }    
         }
     }//GEN-LAST:event_btnViewFullMessageActionPerformed
 
@@ -153,7 +158,7 @@ public class NotifyCitizenJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     public void populateTable() {
-        CitizenWorkRequest resident_wrs = null;
+        CitizenWorkRequest cwr = null;
         DefaultTableModel model = (DefaultTableModel) tblWorkRequest.getModel();
         model.setRowCount(0);
         
@@ -163,32 +168,32 @@ public class NotifyCitizenJPanel extends javax.swing.JPanel {
         for (WorkRequest wr : organization.getWorkQueue().getWorkRequestList()) {
             if (wr instanceof CitizenWorkRequest) 
             {
-                resident_wrs = (CitizenWorkRequest)wr;
+                cwr = (CitizenWorkRequest)wr;
             
-                if(resident_wrs.getCycloneStormSensor()!=null)
+                if(cwr.getCycloneStormSensor()!=null)
                 {
                 Object[] row1 = new Object[3];
-                row1[0] = resident_wrs;
-                row1[1] = resident_wrs.getSender();
-                row1[2] = resident_wrs.getCycloneStormMessage();
+                row1[0] = cwr;
+                row1[1] = cwr.getSender();
+                row1[2] = cwr.getCycloneStormMessage();
                 model.addRow(row1);
                 }
                             
-                else if(resident_wrs.getEarthquakeSensor() != null)
+                else if(cwr.getEarthquakeSensor() != null)
                 {
                 Object[] row = new Object[3];
-                row[0] = resident_wrs;
-                row[1] = resident_wrs.getSender();
-                row[2] = resident_wrs.getEarthquakeMessage();
+                row[0] = cwr;
+                row[1] = cwr.getSender();
+                row[2] = cwr.getEarthquakeMessage();
                 model.addRow(row);
                 }
                 
-                else if(resident_wrs.getFloodSensor() != null)
+                else if(cwr.getFloodSensor() != null)
                 {
                 Object[] row = new Object[3];
-                row[0] = resident_wrs;
-                row[1] = resident_wrs.getSender();
-                row[2] = resident_wrs.getFloodMessage();
+                row[0] = cwr;
+                row[1] = cwr.getSender();
+                row[2] = cwr.getFloodMessage();
                 model.addRow(row);
                 }
                 

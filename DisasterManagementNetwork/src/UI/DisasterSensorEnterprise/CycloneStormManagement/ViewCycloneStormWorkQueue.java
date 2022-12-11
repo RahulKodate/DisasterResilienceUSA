@@ -54,7 +54,7 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
     }
     
     public void populateTable(){
-        CycloneStormWorkRequest air_works = null;
+        CycloneStormWorkRequest cs_works = null;
         DefaultTableModel model = (DefaultTableModel) WorkQueueJTable.getModel();
         model.setRowCount(0);
         
@@ -64,16 +64,16 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
             {
                 for (WorkRequest workr : organization.getWorkQueue().getWorkRequestList()) {
                     if (workr instanceof CycloneStormWorkRequest){
-                        air_works = (CycloneStormWorkRequest)workr;
+                        cs_works = (CycloneStormWorkRequest)workr;
             
                         Object[] row = new Object[7];
-                        row[0] = air_works;
-                        row[1] = air_works.getSender();
-                        row[2] = air_works.getCycloneStormSensor().getSensorId();
-                        row[3] = air_works.getCycloneStormSensor().getZipcode();
-                        row[4] = air_works.getStatus();
-                        row[5] = air_works.getMessage();
-                        row[6] = air_works.getRequestDate();
+                        row[0] = cs_works;
+                        row[1] = cs_works.getSender().getUsername();
+                        row[2] = cs_works.getCycloneStormSensor().getSensorId();
+                        row[3] = cs_works.getCycloneStormSensor().getZipcode();
+                        row[4] = cs_works.getStatus();
+                        row[5] = cs_works.getMessage();
+                        row[6] = cs_works.getRequestDate();
                         model.addRow(row);
                     }
                 }
@@ -264,7 +264,7 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
 
     private void btnPendingReqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPendingReqActionPerformed
         // TODO add your handling code here:
-        CycloneStormWorkRequest air_works = null;
+        CycloneStormWorkRequest cs_works = null;
         DefaultTableModel model = (DefaultTableModel) PendingReqJTable.getModel();
         model.setRowCount(0);
         
@@ -274,18 +274,18 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
             {
                 for (WorkRequest workr : organization.getWorkQueue().getWorkRequestList()) {
                     if (workr instanceof CycloneStormWorkRequest)  {
-                        air_works = (CycloneStormWorkRequest)workr;
+                        cs_works = (CycloneStormWorkRequest)workr;
             
-                    if(!air_works.getStatus().equalsIgnoreCase("Resolved"))
+                    if(!cs_works.getStatus().equalsIgnoreCase("Resolved"))
                     {
                         Object[] row = new Object[7];
-                        row[0] = air_works;
-                        row[1] = air_works.getSender();
-                        row[2] = air_works.getCycloneStormSensor().getSensorId();
-                        row[3] = air_works.getCycloneStormSensor().getZipcode();
-                        row[4] = air_works.getStatus();
-                        row[5] = air_works.getMessage();
-                        row[6] = air_works.getRequestDate();
+                        row[0] = cs_works;
+                        row[1] = cs_works.getSender().getUsername();
+                        row[2] = cs_works.getCycloneStormSensor().getSensorId();
+                        row[3] = cs_works.getCycloneStormSensor().getZipcode();
+                        row[4] = cs_works.getStatus();
+                        row[5] = cs_works.getMessage();
+                        row[6] = cs_works.getRequestDate();
                         model.addRow(row);
                     }
                     }
@@ -296,7 +296,7 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
 
     private void btnResolvedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResolvedActionPerformed
         // TODO add your handling code here:
-        CycloneStormWorkRequest air_works = null;
+        CycloneStormWorkRequest cs_works = null;
         DefaultTableModel model = (DefaultTableModel) ResolvedJTable.getModel();
         model.setRowCount(0);
         
@@ -307,19 +307,19 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
                 for (WorkRequest workr : organization.getWorkQueue().getWorkRequestList()) {
                     if (workr instanceof CycloneStormWorkRequest)
                     {
-                        air_works = (CycloneStormWorkRequest)workr;
+                        cs_works = (CycloneStormWorkRequest)workr;
             
-                    if(air_works.getStatus().equalsIgnoreCase("Resolved"))
+                    if(cs_works.getStatus().equalsIgnoreCase("Resolved"))
                     {
                         Object[] row = new Object[8];
-                        row[0] = air_works;
-                        row[1] = air_works.getSender();
-                        row[2] = air_works.getCycloneStormSensor().getSensorId();
-                        row[3] = air_works.getCycloneStormSensor().getZipcode();
-                        row[4] = air_works.getStatus();
-                        row[5] = air_works.getMessage();
-                        row[6] = air_works.getRequestDate();
-                        row[7] = air_works.getResolveDate();
+                        row[0] = cs_works;
+                        row[1] = cs_works.getSender().getUsername();
+                        row[2] = cs_works.getCycloneStormSensor().getSensorId();
+                        row[3] = cs_works.getCycloneStormSensor().getZipcode();
+                        row[4] = cs_works.getStatus();
+                        row[5] = cs_works.getMessage();
+                        row[6] = cs_works.getRequestDate();
+                        row[7] = cs_works.getResolveDate();
                         model.addRow(row);
                     }
                     }

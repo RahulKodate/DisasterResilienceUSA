@@ -96,7 +96,7 @@ public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
     private void btnCycloneStormQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCycloneStormQueueActionPerformed
         // TODO add your handling code here:
         GovernmentOfficialCycloneStormQueueJPanel governmentOfficialCycloneStormQueueJPanel = new GovernmentOfficialCycloneStormQueueJPanel(userProcessContainer, account, enterprise, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("governmentOfficialWorkQueueJPanel", governmentOfficialCycloneStormQueueJPanel);
+        userProcessContainer.add("governmentOfficialCycloneStormQueueJPanel", governmentOfficialCycloneStormQueueJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnCycloneStormQueueActionPerformed
@@ -104,7 +104,7 @@ public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
     private void btnViewFloodQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewFloodQueueActionPerformed
         // TODO add your handling code here:
         GovernmentOfficialFloodQueueJPanel governmentOfficialFloodQueueJPanel = new GovernmentOfficialFloodQueueJPanel(userProcessContainer, account, enterprise, enterprise.getOrganizationDirectory());
-        userProcessContainer.add("governmentOfficialWorkQueue2JPanel", governmentOfficialFloodQueueJPanel);
+        userProcessContainer.add("governmentOfficialFloodQueueJPanel", governmentOfficialFloodQueueJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnViewFloodQueueActionPerformed

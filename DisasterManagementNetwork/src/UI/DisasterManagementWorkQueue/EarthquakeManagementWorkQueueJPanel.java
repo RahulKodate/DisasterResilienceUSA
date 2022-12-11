@@ -142,7 +142,7 @@ private OrganizationDirectory directory;
         earthquakeSolutionWorkRequest.setStatus("Resolved");
         earthquakeSolutionWorkRequest.setResolveDate(new Date());
         
-        earthquakeSolutionWorkRequest.getEarthquakeSensor().setSeismicReading(rn.nextInt(75));
+        earthquakeSolutionWorkRequest.getEarthquakeSensor().setSeismicReading(rn.nextInt(5));
         
         populateTable();
         

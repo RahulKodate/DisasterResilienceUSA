@@ -142,7 +142,7 @@ private OrganizationDirectory directory;
         floodSolutionWorkRequest.setStatus("Resolved");
         floodSolutionWorkRequest.setResolveDate(new Date());
         
-        floodSolutionWorkRequest.getFloodSensor().setCurrentlevel(rn.nextInt(75));
+        floodSolutionWorkRequest.getFloodSensor().setCurrentlevel(rn.nextInt(100));
         
         populateTable();
         
