@@ -102,14 +102,16 @@ public class SensorUserJPanel extends javax.swing.JPanel {
         tblUser = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
         btnCreate = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setBackground(new java.awt.Color(91, 130, 170));
+        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel5.setText("Organization");
         add(jLabel5);
-        jLabel5.setBounds(180, 300, 160, 22);
+        jLabel5.setBounds(130, 370, 190, 29);
 
         combo_Org.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_Org.setForeground(new java.awt.Color(0, 0, 51));
@@ -120,23 +122,25 @@ public class SensorUserJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_Org);
-        combo_Org.setBounds(391, 298, 250, 23);
+        combo_Org.setBounds(340, 370, 250, 23);
 
         combo_emp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_emp.setForeground(new java.awt.Color(0, 0, 51));
         combo_emp.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(combo_emp);
-        combo_emp.setBounds(391, 348, 250, 23);
+        combo_emp.setBounds(340, 420, 250, 23);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setBackground(new java.awt.Color(91, 130, 170));
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel3.setText("Employee");
         add(jLabel3);
-        jLabel3.setBounds(180, 350, 100, 22);
+        jLabel3.setBounds(130, 420, 130, 29);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setBackground(new java.awt.Color(91, 130, 170));
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel4.setText("Role");
         add(jLabel4);
-        jLabel4.setBounds(180, 400, 70, 22);
+        jLabel4.setBounds(130, 470, 100, 29);
 
         combo_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_role.setForeground(new java.awt.Color(0, 0, 51));
@@ -147,7 +151,7 @@ public class SensorUserJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_role);
-        combo_role.setBounds(391, 396, 250, 23);
+        combo_role.setBounds(340, 470, 250, 23);
 
         txtUsername.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtUsername.setForeground(new java.awt.Color(0, 0, 51));
@@ -157,27 +161,29 @@ public class SensorUserJPanel extends javax.swing.JPanel {
             }
         });
         add(txtUsername);
-        txtUsername.setBounds(391, 451, 250, 23);
+        txtUsername.setBounds(340, 520, 250, 23);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(91, 130, 170));
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel2.setText("Password");
         add(jLabel2);
-        jLabel2.setBounds(180, 500, 100, 22);
+        jLabel2.setBounds(130, 570, 130, 29);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(91, 130, 170));
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel1.setText("User Name");
         add(jLabel1);
-        jLabel1.setBounds(180, 450, 120, 22);
+        jLabel1.setBounds(130, 520, 150, 29);
 
         txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPassword.setForeground(new java.awt.Color(0, 0, 51));
         add(txtPassword);
-        txtPassword.setBounds(391, 501, 250, 23);
+        txtPassword.setBounds(340, 570, 250, 23);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
         jLabel6.setText("Sensor Management");
         add(jLabel6);
-        jLabel6.setBounds(220, 40, 430, 29);
+        jLabel6.setBounds(150, 140, 460, 57);
 
         tblUser.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -193,8 +199,9 @@ public class SensorUserJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblUser);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(100, 110, 550, 94);
+        jScrollPane2.setBounds(120, 230, 550, 94);
 
+        btnBack.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,8 +209,9 @@ public class SensorUserJPanel extends javax.swing.JPanel {
             }
         });
         add(btnBack);
-        btnBack.setBounds(10, 10, 90, 50);
+        btnBack.setBounds(10, 20, 110, 50);
 
+        btnCreate.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -211,7 +219,11 @@ public class SensorUserJPanel extends javax.swing.JPanel {
             }
         });
         add(btnCreate);
-        btnCreate.setBounds(290, 560, 140, 40);
+        btnCreate.setBounds(270, 640, 140, 40);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Senmanag.jpg"))); // NOI18N
+        add(jLabel7);
+        jLabel7.setBounds(30, 130, 1050, 650);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_OrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_OrgActionPerformed
@@ -279,6 +291,7 @@ public class SensorUserJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblUser;
     private javax.swing.JPasswordField txtPassword;

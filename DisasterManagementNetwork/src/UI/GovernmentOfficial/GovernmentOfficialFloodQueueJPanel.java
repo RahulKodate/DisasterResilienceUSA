@@ -157,7 +157,7 @@ public class GovernmentOfficialFloodQueueJPanel extends javax.swing.JPanel {
             }
         });
         add(btnResolve);
-        btnResolve.setBounds(40, 400, 360, 50);
+        btnResolve.setBounds(410, 490, 360, 50);
 
         btnAlert.setBackground(new java.awt.Color(202, 150, 160));
         btnAlert.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -169,7 +169,7 @@ public class GovernmentOfficialFloodQueueJPanel extends javax.swing.JPanel {
             }
         });
         add(btnAlert);
-        btnAlert.setBounds(410, 400, 340, 50);
+        btnAlert.setBounds(50, 490, 340, 50);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Organization4.jpeg"))); // NOI18N
         add(jLabel2);

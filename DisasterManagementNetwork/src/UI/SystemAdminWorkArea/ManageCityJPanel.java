@@ -254,7 +254,7 @@ public class ManageCityJPanel extends javax.swing.JPanel {
         Network selectedNetwork = (Network) model.getValueAt(selectedRowIndex, 0);
         String name = txtName.getText();
 
-        if (!system.checkIfCityNameisUnique(name)) {
+        
             if (!name.isEmpty()) {
                 selectedNetwork.setName(name);
                 populateCityTable();
@@ -265,13 +265,13 @@ public class ManageCityJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "City Should have a name.");
                 return;
             }
-        } else {
+        {
             JOptionPane.showMessageDialog(null, "City Already Exists");
             return;
-        }
+        
     }//GEN-LAST:event_btnUpdateActionPerformed
 
-
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLocate;
     private javax.swing.JButton btnUpdate;

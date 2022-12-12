@@ -86,15 +86,15 @@ public class SensorEmployeeJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
         jLabel4.setText("View Employees");
         add(jLabel4);
-        jLabel4.setBounds(190, 30, 270, 29);
+        jLabel4.setBounds(130, 150, 400, 50);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel1.setText("Organization");
         add(jLabel1);
-        jLabel1.setBounds(80, 85, 116, 22);
+        jLabel1.setBounds(130, 230, 150, 29);
 
         combo_Org.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_Org.setForeground(new java.awt.Color(0, 0, 51));
@@ -105,33 +105,33 @@ public class SensorEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_Org);
-        combo_Org.setBounds(264, 86, 184, 23);
+        combo_Org.setBounds(310, 230, 184, 23);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel5.setText("Add Employee");
         add(jLabel5);
-        jLabel5.setBounds(190, 330, 280, 29);
+        jLabel5.setBounds(240, 460, 280, 29);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel3.setText("Organization");
         add(jLabel3);
-        jLabel3.setBounds(80, 398, 160, 22);
+        jLabel3.setBounds(130, 530, 180, 29);
 
         Combo_organizationEmp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Combo_organizationEmp.setForeground(new java.awt.Color(0, 0, 51));
         Combo_organizationEmp.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(Combo_organizationEmp);
-        Combo_organizationEmp.setBounds(291, 398, 250, 23);
+        Combo_organizationEmp.setBounds(340, 530, 250, 23);
 
         txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));
         add(txtName);
-        txtName.setBounds(291, 451, 250, 30);
+        txtName.setBounds(340, 580, 250, 30);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel2.setText("Name");
         add(jLabel2);
-        jLabel2.setBounds(80, 450, 90, 22);
+        jLabel2.setBounds(130, 580, 110, 29);
 
         tbl_emp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -155,8 +155,9 @@ public class SensorEmployeeJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_emp);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(50, 149, 530, 95);
+        jScrollPane2.setBounds(60, 280, 530, 95);
 
+        btn_Back.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btn_Back.setText("<< Back");
         btn_Back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,8 +165,9 @@ public class SensorEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_Back);
-        btn_Back.setBounds(110, 520, 120, 50);
+        btn_Back.setBounds(10, 10, 120, 50);
 
+        btnCreate.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnCreate.setText("Create");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,7 +175,7 @@ public class SensorEmployeeJPanel extends javax.swing.JPanel {
             }
         });
         add(btnCreate);
-        btnCreate.setBounds(380, 520, 120, 50);
+        btnCreate.setBounds(300, 660, 120, 50);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_OrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_OrgActionPerformed

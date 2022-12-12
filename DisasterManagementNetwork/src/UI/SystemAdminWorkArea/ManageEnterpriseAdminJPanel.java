@@ -28,6 +28,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private EcoSystem system;
+    public static int selectedRowIndex = -1;
     /**
      * Creates new form ManageEnterpriseAdminJPanel
      */
@@ -205,7 +206,6 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
         btn_back.setText("<<Back");
         btn_back.setPreferredSize(new java.awt.Dimension(120, 40));
-        btn_back.setSize(new java.awt.Dimension(120, 40));
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_backActionPerformed(evt);
@@ -214,8 +214,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(btn_back);
         btn_back.setBounds(20, 10, 95, 50);
 
-        txt_submit.setText("Sumit");
-        txt_submit.setSize(new java.awt.Dimension(120, 40));
+        txt_submit.setText("Submit");
         txt_submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_submitActionPerformed(evt);
@@ -227,7 +226,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         jLabel7.setBackground(new java.awt.Color(222, 222, 248));
         jLabel7.setFont(new java.awt.Font("Trebuchet MS", 0, 13)); // NOI18N
         add(jLabel7);
-        jLabel7.setBounds(0, 0, 2000, 1010);
+        jLabel7.setBounds(0, -60, 1870, 1010);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_cityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_cityActionPerformed

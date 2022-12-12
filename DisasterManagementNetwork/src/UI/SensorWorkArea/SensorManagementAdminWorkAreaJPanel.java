@@ -45,27 +45,30 @@ public class SensorManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageOrganization = new javax.swing.JButton();
         btnManageEmployee = new javax.swing.JButton();
         btnManageUser = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
         jLabel1.setText("Sensor Management Admin Work Area");
         add(jLabel1);
-        jLabel1.setBounds(120, 30, 540, 29);
+        jLabel1.setBounds(10, 40, 860, 57);
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        enterpriseLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         enterpriseLabel.setText("Enterprise :");
         add(enterpriseLabel);
-        enterpriseLabel.setBounds(145, 103, 120, 30);
+        enterpriseLabel.setBounds(20, 120, 140, 30);
 
-        valueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        valueLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         valueLabel.setForeground(new java.awt.Color(0, 0, 51));
         valueLabel.setText("<value>");
         add(valueLabel);
-        valueLabel.setBounds(296, 107, 717, 22);
+        valueLabel.setBounds(200, 120, 230, 29);
 
+        btnManageOrganization.setBackground(new java.awt.Color(91, 130, 170));
+        btnManageOrganization.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        btnManageOrganization.setForeground(new java.awt.Color(255, 255, 255));
         btnManageOrganization.setText("Manage Organization");
         btnManageOrganization.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,8 +76,11 @@ public class SensorManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageOrganization);
-        btnManageOrganization.setBounds(210, 190, 230, 50);
+        btnManageOrganization.setBounds(130, 230, 230, 50);
 
+        btnManageEmployee.setBackground(new java.awt.Color(91, 130, 170));
+        btnManageEmployee.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        btnManageEmployee.setForeground(new java.awt.Color(255, 255, 255));
         btnManageEmployee.setText("Manage Employee");
         btnManageEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,8 +88,11 @@ public class SensorManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageEmployee);
-        btnManageEmployee.setBounds(210, 270, 230, 50);
+        btnManageEmployee.setBounds(130, 320, 230, 50);
 
+        btnManageUser.setBackground(new java.awt.Color(91, 130, 170));
+        btnManageUser.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        btnManageUser.setForeground(new java.awt.Color(255, 255, 255));
         btnManageUser.setText("Manage User");
         btnManageUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,11 +100,11 @@ public class SensorManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageUser);
-        btnManageUser.setBounds(210, 360, 230, 50);
+        btnManageUser.setBounds(130, 400, 230, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Sensor.png"))); // NOI18N
-        add(jLabel2);
-        jLabel2.setBounds(510, -20, 620, 590);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/SenAdmin.png"))); // NOI18N
+        add(jLabel3);
+        jLabel3.setBounds(0, 120, 1050, 570);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganizationActionPerformed
@@ -130,7 +139,7 @@ public class SensorManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageUser;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel valueLabel;
     // End of variables declaration//GEN-END:variables
 }

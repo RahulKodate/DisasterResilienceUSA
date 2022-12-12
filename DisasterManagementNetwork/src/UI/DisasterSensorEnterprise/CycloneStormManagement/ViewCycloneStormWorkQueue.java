@@ -74,6 +74,7 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
                         row[4] = csWorks.getStatus();
                         row[5] = csWorks.getMessage();
                         row[6] = csWorks.getRequestDate();
+                        
                         model.addRow(row);
                     }
                 }
@@ -127,7 +128,6 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
 
         btnBack.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
         btnBack.setText("<< Back");
-        btnBack.setSize(new java.awt.Dimension(120, 40));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -231,8 +231,8 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPendingReq, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -362,10 +362,14 @@ public class ViewCycloneStormWorkQueue extends javax.swing.JPanel {
 
                 ArrayList<Integer> sensorIDsArray = new ArrayList<Integer>();
                 boolean workRequestAlreadyPresent = false;
-
+                try {
                 orgzn.getWorkQueue().getWorkRequestList().add(request);
                 userAccount.getWorkQ().getWorkRequestList().add(request);
-                JOptionPane.showMessageDialog(null, "Request Successfully sent to Government");
+               
+                return;
+                } catch (Exception e) {
+                }
+                 JOptionPane.showMessageDialog(null, "Request Successfully sent to Government");
             }
         }
     }//GEN-LAST:event_btnResolvedMessageGovActionPerformed

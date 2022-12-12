@@ -158,7 +158,7 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
             }
         });
         add(btnResolve);
-        btnResolve.setBounds(50, 360, 350, 60);
+        btnResolve.setBounds(420, 450, 350, 60);
 
         btnAlert.setBackground(new java.awt.Color(202, 150, 160));
         btnAlert.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
@@ -170,7 +170,7 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
             }
         });
         add(btnAlert);
-        btnAlert.setBounds(410, 360, 340, 60);
+        btnAlert.setBounds(60, 450, 340, 60);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Organization4.jpeg"))); // NOI18N
         add(jLabel2);

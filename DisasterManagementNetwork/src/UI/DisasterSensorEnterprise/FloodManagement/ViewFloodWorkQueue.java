@@ -366,8 +366,13 @@ public class ViewFloodWorkQueue extends javax.swing.JPanel {
                 ArrayList<Integer> sensorIDsArray = new ArrayList<Integer>();
                 boolean workRequestAlreadyPresent = false;
 
+                try {
                 orgzn.getWorkQueue().getWorkRequestList().add(reques);
                 userAccount.getWorkQ().getWorkRequestList().add(reques);
+                
+                return;
+                } catch (Exception e) {
+                }
                 JOptionPane.showMessageDialog(null, "Request Successfully sent to Government");
             }
         }

@@ -158,7 +158,7 @@ public class GovernmentOfficialCycloneStormQueueJPanel extends javax.swing.JPane
             }
         });
         add(btnResolve);
-        btnResolve.setBounds(40, 380, 350, 50);
+        btnResolve.setBounds(430, 440, 350, 50);
 
         btnAlert.setBackground(new java.awt.Color(202, 150, 160));
         btnAlert.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
@@ -170,7 +170,7 @@ public class GovernmentOfficialCycloneStormQueueJPanel extends javax.swing.JPane
             }
         });
         add(btnAlert);
-        btnAlert.setBounds(410, 380, 350, 50);
+        btnAlert.setBounds(40, 440, 350, 50);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Organization4.jpeg"))); // NOI18N
         add(jLabel2);

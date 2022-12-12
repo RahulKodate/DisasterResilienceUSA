@@ -364,10 +364,16 @@ public class ViewEarthquakeWorkQueue extends javax.swing.JPanel {
 
                 ArrayList<Integer> sensorIDsArray = new ArrayList<Integer>();
                 boolean workRequestAlreadyPresent = false;
-
+                
+                try {
                 orgzn.getWorkQueue().getWorkRequestList().add(request);
                 userAccount.getWorkQ().getWorkRequestList().add(request);
+                
+                return;
+                } catch (Exception e) {
+                }
                 JOptionPane.showMessageDialog(null, "Request Successfully sent to Government");
+
             }
         }
     }//GEN-LAST:event_btnResolvedMessageGovActionPerformed

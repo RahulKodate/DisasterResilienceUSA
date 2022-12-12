@@ -428,7 +428,7 @@ public class NotifytoCycloneStormSolutionDepartment extends javax.swing.JPanel {
                         return;
                         } catch (Exception e) {
                         }
-                        JOptionPane.showMessageDialog(null, "Request Successfully sent to Cyclone Storm Solution Department");
+                   //     JOptionPane.showMessageDialog(null, "Request Successfully sent to Cyclone Storm Solution Department");
                     }
                 }
         }

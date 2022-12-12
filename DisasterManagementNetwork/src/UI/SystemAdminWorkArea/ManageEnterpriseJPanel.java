@@ -174,7 +174,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         add(btn_back);
         btn_back.setBounds(30, 30, 140, 40);
 
-        btn_Submit.setText("Sumit");
+        btn_Submit.setText("Submit");
         btn_Submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_SubmitActionPerformed(evt);

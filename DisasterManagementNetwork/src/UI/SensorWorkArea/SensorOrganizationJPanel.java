@@ -74,15 +74,15 @@ public class SensorOrganizationJPanel extends javax.swing.JPanel {
         btn_back = new javax.swing.JButton();
         btnAddOrg = new javax.swing.JButton();
         btnDeleteOrg = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel1.setText("Organization Type ");
         add(jLabel1);
-        jLabel1.setBounds(80, 300, 190, 30);
+        jLabel1.setBounds(100, 350, 190, 30);
 
         combo_Organization.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_Organization.setForeground(new java.awt.Color(0, 0, 51));
@@ -93,12 +93,13 @@ public class SensorOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_Organization);
-        combo_Organization.setBounds(298, 306, 268, 23);
+        combo_Organization.setBounds(310, 360, 268, 23);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(91, 130, 170));
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
         jLabel2.setText("Sensor Management Organization");
         add(jLabel2);
-        jLabel2.setBounds(170, 40, 450, 29);
+        jLabel2.setBounds(40, 100, 770, 60);
 
         tbl_org.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -114,8 +115,9 @@ public class SensorOrganizationJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_org);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(63, 101, 490, 112);
+        jScrollPane2.setBounds(50, 180, 490, 112);
 
+        btn_back.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btn_back.setText("<<Back");
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,6 +127,7 @@ public class SensorOrganizationJPanel extends javax.swing.JPanel {
         add(btn_back);
         btn_back.setBounds(10, 10, 95, 40);
 
+        btnAddOrg.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnAddOrg.setForeground(new java.awt.Color(51, 51, 51));
         btnAddOrg.setText("Add Organization");
         btnAddOrg.addActionListener(new java.awt.event.ActionListener() {
@@ -133,8 +136,9 @@ public class SensorOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(btnAddOrg);
-        btnAddOrg.setBounds(100, 440, 180, 50);
+        btnAddOrg.setBounds(110, 440, 180, 50);
 
+        btnDeleteOrg.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnDeleteOrg.setForeground(new java.awt.Color(51, 51, 51));
         btnDeleteOrg.setText("Delete Organization");
         btnDeleteOrg.addActionListener(new java.awt.event.ActionListener() {
@@ -145,9 +149,9 @@ public class SensorOrganizationJPanel extends javax.swing.JPanel {
         add(btnDeleteOrg);
         btnDeleteOrg.setBounds(340, 440, 210, 50);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Sensor.png"))); // NOI18N
-        add(jLabel3);
-        jLabel3.setBounds(570, -40, 960, 600);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/emp2.jpeg"))); // NOI18N
+        add(jLabel4);
+        jLabel4.setBounds(10, 60, 1010, 660);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_OrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_OrganizationActionPerformed
@@ -194,7 +198,7 @@ public class SensorOrganizationJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox combo_Organization;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tbl_org;
     // End of variables declaration//GEN-END:variables
