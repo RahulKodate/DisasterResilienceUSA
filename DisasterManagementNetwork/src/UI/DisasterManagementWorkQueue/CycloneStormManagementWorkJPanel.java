@@ -72,7 +72,7 @@ public class CycloneStormManagementWorkJPanel extends javax.swing.JPanel {
         btnViewWorkRequest.setBounds(430, 510, 290, 60);
 
         jLabel2.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Cyclone/Cyclone1.jpeg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Cyclone1.jpeg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 190, 1130, 750);
     }// </editor-fold>//GEN-END:initComponents

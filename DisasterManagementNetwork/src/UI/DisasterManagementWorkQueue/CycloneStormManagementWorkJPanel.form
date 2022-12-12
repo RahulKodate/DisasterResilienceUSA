@@ -68,7 +68,7 @@
           <Color blue="f8" green="de" red="de" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/Users/rahulkodate/Downloads/Images for AED Project/Cyclone/Cyclone1.jpeg"/>
+          <Image iconType="3" name="/image/Cyclone1.jpeg"/>
         </Property>
       </Properties>
       <Constraints>

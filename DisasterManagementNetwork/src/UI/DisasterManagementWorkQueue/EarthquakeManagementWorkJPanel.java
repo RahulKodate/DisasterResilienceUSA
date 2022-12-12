@@ -73,7 +73,7 @@ public class EarthquakeManagementWorkJPanel extends javax.swing.JPanel {
         btnViewWorkRequest.getAccessibleContext().setAccessibleDescription("");
 
         jLabel2.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Earthquake/Earthquake2.jpeg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/earthquake_management.jpeg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(-330, 200, 1530, 720);
     }// </editor-fold>//GEN-END:initComponents

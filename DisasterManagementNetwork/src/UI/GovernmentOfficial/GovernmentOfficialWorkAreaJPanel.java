@@ -53,12 +53,15 @@ public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(91, 130, 170));
         jLabel1.setText("Government Official Work Area");
         add(jLabel1);
-        jLabel1.setBounds(270, 60, 510, 29);
+        jLabel1.setBounds(0, 30, 840, 70);
 
-        btnCycloneStormQueue.setForeground(new java.awt.Color(0, 0, 255));
+        btnCycloneStormQueue.setBackground(new java.awt.Color(91, 130, 170));
+        btnCycloneStormQueue.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        btnCycloneStormQueue.setForeground(new java.awt.Color(255, 255, 255));
         btnCycloneStormQueue.setText("View Cyclone Storm Queue");
         btnCycloneStormQueue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,9 +69,11 @@ public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnCycloneStormQueue);
-        btnCycloneStormQueue.setBounds(50, 200, 240, 60);
+        btnCycloneStormQueue.setBounds(660, 270, 280, 40);
 
-        btnViewFloodQueue.setForeground(new java.awt.Color(0, 51, 255));
+        btnViewFloodQueue.setBackground(new java.awt.Color(91, 130, 170));
+        btnViewFloodQueue.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        btnViewFloodQueue.setForeground(new java.awt.Color(255, 255, 255));
         btnViewFloodQueue.setText("View Flood Queue");
         btnViewFloodQueue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,21 +81,25 @@ public class GovernmentOfficialWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnViewFloodQueue);
-        btnViewFloodQueue.setBounds(380, 200, 240, 60);
+        btnViewFloodQueue.setBounds(660, 430, 280, 40);
 
-        btnEarthquakeQueue.setForeground(new java.awt.Color(0, 0, 255));
-        btnEarthquakeQueue.setText("View Earthquake queue");
+        btnEarthquakeQueue.setBackground(new java.awt.Color(91, 130, 170));
+        btnEarthquakeQueue.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        btnEarthquakeQueue.setForeground(new java.awt.Color(255, 255, 255));
+        btnEarthquakeQueue.setText("View Earthquake Queue");
         btnEarthquakeQueue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEarthquakeQueueActionPerformed(evt);
             }
         });
         add(btnEarthquakeQueue);
-        btnEarthquakeQueue.setBounds(690, 200, 240, 60);
+        btnEarthquakeQueue.setBounds(660, 350, 280, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/govworkqueue.jpg"))); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/off.jpg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(-30, -80, 1740, 870);
+        jLabel2.setBounds(0, 90, 1740, 680);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCycloneStormQueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCycloneStormQueueActionPerformed

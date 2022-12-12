@@ -103,6 +103,7 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
         jScrollPane1.setBounds(130, 290, 546, 190);
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Organization Type ");
         add(jLabel1);
         jLabel1.setBounds(190, 540, 200, 21);
@@ -129,7 +130,6 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
 
         btnCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnCreate.setText("CREATE");
-        btnCreate.setSize(new java.awt.Dimension(120, 40));
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateActionPerformed(evt);
@@ -155,9 +155,9 @@ public class DisasterManagementOrganizationJPanel extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(10, 140, 810, 57);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Management/Management3.jpeg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Disaster4(Home).jpeg"))); // NOI18N
         add(jLabel3);
-        jLabel3.setBounds(0, 200, 1140, 670);
+        jLabel3.setBounds(0, 200, 900, 490);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

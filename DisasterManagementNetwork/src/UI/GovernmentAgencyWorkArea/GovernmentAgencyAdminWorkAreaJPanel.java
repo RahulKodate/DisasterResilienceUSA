@@ -50,26 +50,26 @@ public class GovernmentAgencyAdminWorkAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(91, 130, 170));
         jLabel1.setText("Government Admin Work Area");
         add(jLabel1);
-        jLabel1.setBounds(250, 40, 482, 55);
+        jLabel1.setBounds(0, 80, 720, 40);
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        enterpriseLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         enterpriseLabel.setForeground(new java.awt.Color(255, 255, 255));
         enterpriseLabel.setText("Enterprise :");
         add(enterpriseLabel);
-        enterpriseLabel.setBounds(260, 120, 120, 30);
+        enterpriseLabel.setBounds(10, 130, 120, 30);
 
         valueLabel.setBackground(new java.awt.Color(255, 255, 255));
-        valueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        valueLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         valueLabel.setForeground(new java.awt.Color(255, 255, 255));
         valueLabel.setText("<value>");
         add(valueLabel);
-        valueLabel.setBounds(440, 120, 556, 22);
+        valueLabel.setBounds(130, 130, 90, 30);
 
-        btn_Manage_Ogr.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_Manage_Ogr.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btn_Manage_Ogr.setText("Manage Organization");
         btn_Manage_Ogr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,9 +77,9 @@ public class GovernmentAgencyAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_Manage_Ogr);
-        btn_Manage_Ogr.setBounds(520, 180, 320, 40);
+        btn_Manage_Ogr.setBounds(620, 300, 280, 40);
 
-        btn_Employee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_Employee.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btn_Employee.setText("Manage Employee");
         btn_Employee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,9 +87,9 @@ public class GovernmentAgencyAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_Employee);
-        btn_Employee.setBounds(520, 280, 330, 40);
+        btn_Employee.setBounds(620, 400, 280, 40);
 
-        btn_Manage_User.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btn_Manage_User.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         btn_Manage_User.setText("Manage User");
         btn_Manage_User.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,11 +97,11 @@ public class GovernmentAgencyAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_Manage_User);
-        btn_Manage_User.setBounds(520, 390, 330, 40);
+        btn_Manage_User.setBounds(620, 500, 280, 40);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/governemntadminwork.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/gov1.jpeg"))); // NOI18N
         add(jLabel3);
-        jLabel3.setBounds(0, 10, 930, 600);
+        jLabel3.setBounds(0, 120, 970, 600);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_Manage_OgrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Manage_OgrActionPerformed

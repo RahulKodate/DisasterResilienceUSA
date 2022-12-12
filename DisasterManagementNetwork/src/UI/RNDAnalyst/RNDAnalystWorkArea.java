@@ -67,36 +67,41 @@ public class RNDAnalystWorkArea extends javax.swing.JPanel {
         btnFloodManagement = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 102));
+        setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Sensor Management Work Area");
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(91, 130, 170));
+        jLabel1.setText("Research And Development Work Area");
         add(jLabel1);
-        jLabel1.setBounds(279, 10, 399, 31);
+        jLabel1.setBounds(0, 70, 870, 40);
 
-        lblEnterprise.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblEnterprise.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        lblEnterprise.setForeground(new java.awt.Color(255, 255, 255));
         lblEnterprise.setText("Enterprise");
         add(lblEnterprise);
-        lblEnterprise.setBounds(233, 80, 110, 47);
+        lblEnterprise.setBounds(30, 170, 110, 47);
 
-        lblOrganizationvalue.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblOrganizationvalue.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        lblOrganizationvalue.setForeground(new java.awt.Color(255, 255, 255));
         lblOrganizationvalue.setText("<value>");
         add(lblOrganizationvalue);
-        lblOrganizationvalue.setBounds(370, 140, 308, 30);
+        lblOrganizationvalue.setBounds(140, 130, 308, 30);
 
-        lblEnterprise2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblEnterprise2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        lblEnterprise2.setForeground(new java.awt.Color(255, 255, 255));
         lblEnterprise2.setText("Organization");
         add(lblEnterprise2);
-        lblEnterprise2.setBounds(190, 140, 140, 30);
+        lblEnterprise2.setBounds(10, 130, 140, 30);
 
-        lblEnterprisevalue.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblEnterprisevalue.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        lblEnterprisevalue.setForeground(new java.awt.Color(255, 255, 255));
         lblEnterprisevalue.setText("<value>");
         add(lblEnterprisevalue);
-        lblEnterprisevalue.setBounds(370, 86, 308, 34);
+        lblEnterprisevalue.setBounds(140, 174, 308, 40);
 
-        btnCycloneStormManagement.setBackground(new java.awt.Color(0, 102, 255));
-        btnCycloneStormManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnCycloneStormManagement.setBackground(new java.awt.Color(91, 130, 170));
+        btnCycloneStormManagement.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnCycloneStormManagement.setForeground(new java.awt.Color(255, 255, 255));
         btnCycloneStormManagement.setText("Cyclone Storm Management");
         btnCycloneStormManagement.addActionListener(new java.awt.event.ActionListener() {
@@ -105,10 +110,10 @@ public class RNDAnalystWorkArea extends javax.swing.JPanel {
             }
         });
         add(btnCycloneStormManagement);
-        btnCycloneStormManagement.setBounds(460, 210, 340, 42);
+        btnCycloneStormManagement.setBounds(620, 330, 320, 42);
 
-        btnEarthquakeManagement.setBackground(new java.awt.Color(0, 51, 255));
-        btnEarthquakeManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnEarthquakeManagement.setBackground(new java.awt.Color(91, 130, 170));
+        btnEarthquakeManagement.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnEarthquakeManagement.setForeground(new java.awt.Color(255, 255, 255));
         btnEarthquakeManagement.setText("Earthquake Management");
         btnEarthquakeManagement.addActionListener(new java.awt.event.ActionListener() {
@@ -117,10 +122,10 @@ public class RNDAnalystWorkArea extends javax.swing.JPanel {
             }
         });
         add(btnEarthquakeManagement);
-        btnEarthquakeManagement.setBounds(460, 280, 340, 42);
+        btnEarthquakeManagement.setBounds(620, 410, 320, 42);
 
-        btnFloodManagement.setBackground(new java.awt.Color(0, 51, 255));
-        btnFloodManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnFloodManagement.setBackground(new java.awt.Color(91, 130, 170));
+        btnFloodManagement.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnFloodManagement.setForeground(new java.awt.Color(255, 255, 255));
         btnFloodManagement.setText("Flood Management");
         btnFloodManagement.addActionListener(new java.awt.event.ActionListener() {
@@ -129,11 +134,11 @@ public class RNDAnalystWorkArea extends javax.swing.JPanel {
             }
         });
         add(btnFloodManagement);
-        btnFloodManagement.setBounds(470, 350, 340, 42);
+        btnFloodManagement.setBounds(620, 490, 320, 42);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/airwatersound.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/R_D2.jpeg"))); // NOI18N
         add(jLabel3);
-        jLabel3.setBounds(-20, 50, 990, 660);
+        jLabel3.setBounds(0, 120, 990, 570);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCycloneStormManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCycloneStormManagementActionPerformed

@@ -47,11 +47,11 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1000, 926));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Savoye LET", 1, 70)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 60)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(161, 181, 201));
         jLabel1.setText("Workarea");
         add(jLabel1);
-        jLabel1.setBounds(260, 260, 210, 80);
+        jLabel1.setBounds(260, 250, 500, 80);
 
         btnManageCity.setBackground(new java.awt.Color(91, 130, 170));
         btnManageCity.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N

@@ -98,14 +98,17 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
         btnResolve = new javax.swing.JButton();
         btnAlert = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("Government Official Work Queue");
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(91, 130, 170));
+        jLabel1.setText("Earthquake Queue");
         add(jLabel1);
-        jLabel1.setBounds(340, 40, 450, 29);
+        jLabel1.setBounds(540, 180, 220, 40);
 
         MessagejLabel.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         MessagejLabel.setForeground(new java.awt.Color(255, 0, 51));
@@ -134,10 +137,8 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
         jScrollPane2.setViewportView(tblWorkQueue);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(70, 110, 1000, 130);
+        jScrollPane2.setBounds(50, 210, 700, 130);
 
-        btnBack.setBackground(new java.awt.Color(0, 51, 255));
-        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("<<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,8 +148,8 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
         add(btnBack);
         btnBack.setBounds(10, 20, 100, 40);
 
-        btnResolve.setBackground(new java.awt.Color(0, 255, 0));
-        btnResolve.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnResolve.setBackground(new java.awt.Color(166, 202, 166));
+        btnResolve.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnResolve.setForeground(new java.awt.Color(255, 255, 255));
         btnResolve.setText("Send Resolved Notification");
         btnResolve.addActionListener(new java.awt.event.ActionListener() {
@@ -157,10 +158,10 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
             }
         });
         add(btnResolve);
-        btnResolve.setBounds(60, 490, 280, 60);
+        btnResolve.setBounds(50, 360, 350, 60);
 
-        btnAlert.setBackground(new java.awt.Color(255, 0, 51));
-        btnAlert.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAlert.setBackground(new java.awt.Color(202, 150, 160));
+        btnAlert.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         btnAlert.setForeground(new java.awt.Color(255, 255, 255));
         btnAlert.setText("Send Alert Notification to Residents");
         btnAlert.addActionListener(new java.awt.event.ActionListener() {
@@ -169,12 +170,24 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
             }
         });
         add(btnAlert);
-        btnAlert.setBounds(720, 483, 260, 60);
+        btnAlert.setBounds(410, 360, 340, 60);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Boston-120419-Governor-office-renovations-PHOTO-scaled.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Organization4.jpeg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(0, 0, 1120, 590);
+        jLabel2.setBounds(0, 120, 1120, 590);
+
+        jLabel3.setBackground(new java.awt.Color(193, 243, 243));
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 3, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(91, 130, 170));
+        jLabel3.setText("Cyclone Storm ");
+        add(jLabel3);
+        jLabel3.setBounds(600, 160, 190, 50);
+
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(91, 130, 170));
+        jLabel4.setText("Government Official Work Queue");
+        add(jLabel4);
+        jLabel4.setBounds(0, 80, 790, 60);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -308,6 +321,8 @@ public class GovernmentOfficialEarthquakeQueueJPanel extends javax.swing.JPanel 
     private javax.swing.JButton btnResolve;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblWorkQueue;
     // End of variables declaration//GEN-END:variables
