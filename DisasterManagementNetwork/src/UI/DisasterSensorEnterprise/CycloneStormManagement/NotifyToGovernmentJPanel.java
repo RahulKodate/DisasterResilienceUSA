@@ -142,14 +142,13 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         jLabel1.setBounds(0, 140, 770, 50);
 
         btnBack.setText("<< Back");
-        btnBack.setSize(new java.awt.Dimension(120, 40));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         add(btnBack);
-        btnBack.setBounds(20, 30, 80, 50);
+        btnBack.setBounds(20, 30, 74, 50);
 
         btnRequestToGovernment.setBackground(new java.awt.Color(91, 130, 170));
         btnRequestToGovernment.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
@@ -163,7 +162,7 @@ public class NotifyToGovernmentJPanel extends javax.swing.JPanel {
         add(btnRequestToGovernment);
         btnRequestToGovernment.setBounds(430, 680, 310, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Cyclone/cyclone786.jpeg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cyclone786.jpeg"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 200, 1160, 760);
     }// </editor-fold>//GEN-END:initComponents

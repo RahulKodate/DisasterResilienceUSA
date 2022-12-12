@@ -80,13 +80,13 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Organization Type ");
         add(jLabel1);
-        jLabel1.setBounds(120, 250, 230, 22);
+        jLabel1.setBounds(150, 430, 180, 21);
 
-        combo_org.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        combo_org.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
         combo_org.setForeground(new java.awt.Color(0, 0, 51));
         combo_org.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         combo_org.addActionListener(new java.awt.event.ActionListener() {
@@ -95,13 +95,13 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_org);
-        combo_org.setBounds(360, 250, 268, 23);
+        combo_org.setBounds(330, 430, 268, 21);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(91, 130, 170));
         jLabel2.setText("Government Organization");
         add(jLabel2);
-        jLabel2.setBounds(240, 40, 380, 29);
+        jLabel2.setBounds(80, 90, 660, 60);
 
         tbl_govorg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tbl_govorg.setModel(new javax.swing.table.DefaultTableModel(
@@ -126,27 +126,27 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_govorg);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(107, 111, 660, 120);
+        jScrollPane2.setBounds(40, 250, 660, 120);
 
-        btnAddOrg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnAddOrg.setText("Add organization");
+        btnAddOrg.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        btnAddOrg.setText("Add ");
         btnAddOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddOrgActionPerformed(evt);
             }
         });
         add(btnAddOrg);
-        btnAddOrg.setBounds(230, 420, 170, 40);
+        btnAddOrg.setBounds(190, 490, 170, 40);
 
-        btnDeleteOrg.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnDeleteOrg.setText("Delete Organization");
+        btnDeleteOrg.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        btnDeleteOrg.setText("Delete");
         btnDeleteOrg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteOrgActionPerformed(evt);
             }
         });
         add(btnDeleteOrg);
-        btnDeleteOrg.setBounds(460, 420, 200, 40);
+        btnDeleteOrg.setBounds(370, 490, 170, 40);
 
         btnBack.setText("<<BACK");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -155,11 +155,12 @@ public class GovernmentOrganizationJPanel extends javax.swing.JPanel {
             }
         });
         add(btnBack);
-        btnBack.setBounds(60, 20, 95, 30);
+        btnBack.setBounds(30, 20, 95, 30);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Government/Gov2.jpeg")); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 0, 12)); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/gov3.jpeg"))); // NOI18N
         add(jLabel3);
-        jLabel3.setBounds(0, 150, 1030, 710);
+        jLabel3.setBounds(0, 50, 1030, 710);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_orgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_orgActionPerformed

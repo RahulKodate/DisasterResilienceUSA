@@ -166,14 +166,13 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         jScrollPane2.setBounds(90, 110, 690, 130);
 
         btn_back.setText("<<Back");
-        btn_back.setSize(new java.awt.Dimension(120, 40));
         btn_back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_backActionPerformed(evt);
             }
         });
         add(btn_back);
-        btn_back.setBounds(20, 20, 80, 50);
+        btn_back.setBounds(30, 30, 140, 40);
 
         btn_Submit.setText("Sumit");
         btn_Submit.addActionListener(new java.awt.event.ActionListener() {
@@ -185,7 +184,6 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         btn_Submit.setBounds(380, 450, 130, 40);
 
         btn_delete.setText("Delete");
-        btn_delete.setSize(new java.awt.Dimension(120, 40));
         btn_delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_deleteActionPerformed(evt);

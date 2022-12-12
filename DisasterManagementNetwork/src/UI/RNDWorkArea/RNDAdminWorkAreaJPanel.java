@@ -50,22 +50,27 @@ public class RNDAdminWorkAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(222, 222, 248));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("RND Admin Work Area");
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(91, 130, 170));
+        jLabel1.setText("Research & Development Admin Work Area");
         add(jLabel1);
-        jLabel1.setBounds(160, 40, 540, 29);
+        jLabel1.setBounds(0, 50, 1080, 50);
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        enterpriseLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        enterpriseLabel.setForeground(java.awt.Color.white);
         enterpriseLabel.setText("Enterprise :");
         add(enterpriseLabel);
-        enterpriseLabel.setBounds(145, 103, 120, 30);
+        enterpriseLabel.setBounds(10, 110, 180, 30);
 
-        valueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        valueLabel.setForeground(new java.awt.Color(0, 0, 51));
+        valueLabel.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        valueLabel.setForeground(java.awt.Color.white);
         valueLabel.setText("<value>");
         add(valueLabel);
-        valueLabel.setBounds(296, 107, 717, 22);
+        valueLabel.setBounds(140, 110, 580, 30);
 
+        btnManageOrganization.setBackground(new java.awt.Color(91, 130, 170));
+        btnManageOrganization.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        btnManageOrganization.setForeground(new java.awt.Color(255, 255, 255));
         btnManageOrganization.setText("Manage Organization");
         btnManageOrganization.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,8 +78,11 @@ public class RNDAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageOrganization);
-        btnManageOrganization.setBounds(220, 200, 170, 40);
+        btnManageOrganization.setBounds(540, 240, 230, 40);
 
+        btnManageEmployee.setBackground(new java.awt.Color(91, 130, 170));
+        btnManageEmployee.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        btnManageEmployee.setForeground(new java.awt.Color(255, 255, 255));
         btnManageEmployee.setText("Manage Employee");
         btnManageEmployee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,8 +90,11 @@ public class RNDAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageEmployee);
-        btnManageEmployee.setBounds(220, 260, 170, 40);
+        btnManageEmployee.setBounds(540, 310, 230, 40);
 
+        btnManageUser.setBackground(new java.awt.Color(91, 130, 170));
+        btnManageUser.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        btnManageUser.setForeground(new java.awt.Color(255, 255, 255));
         btnManageUser.setText("Manage User");
         btnManageUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,11 +102,11 @@ public class RNDAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageUser);
-        btnManageUser.setBounds(220, 320, 170, 40);
+        btnManageUser.setBounds(540, 380, 230, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Sensor.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/R_D3.jpeg"))); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(450, 0, 620, 590);
+        jLabel2.setBounds(0, 100, 860, 410);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganizationActionPerformed

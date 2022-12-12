@@ -107,7 +107,7 @@ public class DisasterManagementAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageUser.setBounds(730, 570, 220, 40);
 
         jLabel2.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/rahulkodate/Downloads/Images for AED Project/Disaster/Disaster1.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Disaster1.png"))); // NOI18N
         add(jLabel2);
         jLabel2.setBounds(0, 180, 1160, 700);
     }// </editor-fold>//GEN-END:initComponents

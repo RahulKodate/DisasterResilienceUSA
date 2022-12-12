@@ -115,25 +115,25 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
             }
         });
         add(combo_Org);
-        combo_Org.setBounds(413, 288, 250, 23);
+        combo_Org.setBounds(370, 340, 250, 23);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Organization");
         add(jLabel5);
-        jLabel5.setBounds(190, 290, 150, 22);
+        jLabel5.setBounds(210, 340, 120, 30);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Employee");
         add(jLabel3);
-        jLabel3.setBounds(190, 330, 160, 22);
+        jLabel3.setBounds(240, 390, 90, 22);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Role");
         add(jLabel4);
-        jLabel4.setBounds(190, 390, 150, 22);
+        jLabel4.setBounds(280, 440, 50, 22);
 
         Combo_role.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Combo_role.setForeground(new java.awt.Color(0, 0, 51));
@@ -144,13 +144,13 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
             }
         });
         add(Combo_role);
-        Combo_role.setBounds(413, 386, 250, 23);
+        Combo_role.setBounds(370, 440, 250, 23);
 
         combo_employee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         combo_employee.setForeground(new java.awt.Color(0, 0, 51));
         combo_employee.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(combo_employee);
-        combo_employee.setBounds(413, 338, 250, 23);
+        combo_employee.setBounds(370, 390, 250, 23);
 
         txtUserName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtUserName.setForeground(new java.awt.Color(0, 0, 51));
@@ -160,30 +160,30 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
             }
         });
         add(txtUserName);
-        txtUserName.setBounds(413, 444, 250, 23);
+        txtUserName.setBounds(370, 490, 250, 23);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("User Name");
         add(jLabel1);
-        jLabel1.setBounds(190, 440, 130, 22);
+        jLabel1.setBounds(230, 490, 100, 22);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password");
         add(jLabel2);
-        jLabel2.setBounds(190, 500, 150, 22);
+        jLabel2.setBounds(240, 540, 100, 22);
 
         txtPassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPassword.setForeground(new java.awt.Color(0, 0, 51));
         add(txtPassword);
-        txtPassword.setBounds(413, 499, 250, 23);
+        txtPassword.setBounds(370, 540, 250, 23);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 48)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(91, 130, 170));
         jLabel6.setText("Government User");
         add(jLabel6);
-        jLabel6.setBounds(260, 30, 430, 29);
+        jLabel6.setBounds(10, 100, 430, 50);
 
         tbl_GovUser.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tbl_GovUser.setModel(new javax.swing.table.DefaultTableModel(
@@ -208,7 +208,7 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_GovUser);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(110, 90, 690, 140);
+        jScrollPane2.setBounds(20, 190, 690, 140);
 
         btn_Back.setText("<<Back");
         btn_Back.addActionListener(new java.awt.event.ActionListener() {
@@ -217,7 +217,7 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_Back);
-        btn_Back.setBounds(70, 20, 112, 30);
+        btn_Back.setBounds(20, 30, 112, 30);
 
         btn_create.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_create.setText("Create");
@@ -227,12 +227,13 @@ public class GovernmentUserJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_create);
-        btn_create.setBounds(380, 570, 110, 40);
+        btn_create.setBounds(430, 580, 110, 40);
 
         jLabel7.setBackground(new java.awt.Color(222, 222, 248));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/govuser.jpg"))); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/gov3.jpeg"))); // NOI18N
         add(jLabel7);
-        jLabel7.setBounds(-550, -50, 1700, 1350);
+        jLabel7.setBounds(0, -270, 1700, 1350);
     }// </editor-fold>//GEN-END:initComponents
 
     private void combo_OrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_OrgActionPerformed

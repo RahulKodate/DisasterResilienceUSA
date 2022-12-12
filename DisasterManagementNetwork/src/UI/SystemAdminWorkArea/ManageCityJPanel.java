@@ -6,11 +6,13 @@
 package UI.SystemAdminWorkArea;
 
 import Business.EcoSystem;
+import Business.Map.MapViewer;
 import Business.Network.Network;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -21,6 +23,8 @@ public class ManageCityJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private EcoSystem system;
+    public static int selectedRowIndex = -1;
+
     
     /**
      * Creates new form ManageCityJPanel
@@ -59,7 +63,10 @@ public class ManageCityJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_city = new javax.swing.JTable();
+        btnView = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
         btn_submit = new javax.swing.JButton();
+        btnLocate = new javax.swing.JButton();
         btn_back = new javax.swing.JButton();
         btn_delete = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -71,12 +78,12 @@ public class ManageCityJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel1.setText("Name");
         add(jLabel1);
-        jLabel1.setBounds(240, 410, 60, 21);
+        jLabel1.setBounds(250, 440, 60, 30);
 
         txtName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtName.setForeground(new java.awt.Color(0, 0, 51));
         add(txtName);
-        txtName.setBounds(310, 410, 190, 30);
+        txtName.setBounds(310, 440, 190, 30);
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel2.setText("Manage City");
@@ -97,7 +104,25 @@ public class ManageCityJPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tbl_city);
 
         add(jScrollPane2);
-        jScrollPane2.setBounds(120, 130, 490, 230);
+        jScrollPane2.setBounds(120, 110, 490, 230);
+
+        btnView.setText("View");
+        btnView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewActionPerformed(evt);
+            }
+        });
+        add(btnView);
+        btnView.setBounds(250, 350, 120, 40);
+
+        btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
+        add(btnUpdate);
+        btnUpdate.setBounds(400, 350, 120, 40);
 
         btn_submit.setText("Submit");
         btn_submit.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +131,16 @@ public class ManageCityJPanel extends javax.swing.JPanel {
             }
         });
         add(btn_submit);
-        btn_submit.setBounds(250, 490, 120, 40);
+        btn_submit.setBounds(260, 490, 120, 40);
+
+        btnLocate.setText("Locate");
+        btnLocate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLocateActionPerformed(evt);
+            }
+        });
+        add(btnLocate);
+        btnLocate.setBounds(540, 440, 80, 30);
 
         btn_back.setText("<<Back");
         btn_back.addActionListener(new java.awt.event.ActionListener() {
@@ -180,8 +214,68 @@ public class ManageCityJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btn_submitActionPerformed
 
+    private void btnLocateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLocateActionPerformed
+        // TODO add your handling code here:
+        if (txtName.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please Enter City To Locate");
+        } 
+        else {
+            SwingUtilities.invokeLater(new Runnable() 
+            {
+                @Override
+                public void run() {
+                    MapViewer browser = new MapViewer();
+                    browser.setVisible(true);
+                    browser.loadURL("https://www.google.com/maps/search/?api=1&query="+ txtName.getText().trim());
+                }
+            });
+        }
+    }//GEN-LAST:event_btnLocateActionPerformed
+
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+        // TODO add your handling code here:
+        selectedRowIndex = tbl_city.getSelectedRow();
+        if(selectedRowIndex==-1){
+            JOptionPane.showMessageDialog(this, "Please Select A Row To View.");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel)tbl_city.getModel();
+        Network selectedNetwork = (Network) model.getValueAt(selectedRowIndex, 0);
+        txtName.setText(selectedNetwork.getName());
+    }//GEN-LAST:event_btnViewActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+        if (selectedRowIndex == -1) {
+        JOptionPane.showMessageDialog(this, "Please Select A Row To Update");
+        return;    
+        }
+        DefaultTableModel model = (DefaultTableModel)tbl_city.getModel();
+        Network selectedNetwork = (Network) model.getValueAt(selectedRowIndex, 0);
+        String name = txtName.getText();
+
+        if (!system.checkIfCityNameisUnique(name)) {
+            if (!name.isEmpty()) {
+                selectedNetwork.setName(name);
+                populateCityTable();
+                JOptionPane.showMessageDialog(this, "City Added Successfully!");
+                txtName.setText("");
+                
+            } else {
+                JOptionPane.showMessageDialog(null, "City Should have a name.");
+                return;
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "City Already Exists");
+            return;
+        }
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLocate;
+    private javax.swing.JButton btnUpdate;
+    private javax.swing.JButton btnView;
     private javax.swing.JButton btn_back;
     private javax.swing.JButton btn_delete;
     private javax.swing.JButton btn_submit;
