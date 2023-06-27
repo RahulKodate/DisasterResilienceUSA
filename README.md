@@ -1,4 +1,4 @@
-# Disaster Management Network (DMN) 🌍
+# DisasterResilienceUSA: Disaster Management Network (DMN) 🌍
 
 ## Introduction
 
@@ -16,7 +16,7 @@ The objectives of DMN are strongly connected to the governance framework. We foc
 
 3. **Enhancing Disaster Preparedness** 🚨: We strive to develop and strengthen coordinated regional approaches and operational mechanisms for effective disaster response. Our goal is to prepare for and swiftly respond to situations that surpass national coping capacities. We also encourage the development and dissemination of innovative instruments.
 
-## Repository Name: [DisasterResilienceUSA](https://github.com/DisasterResilienceUSA)
+## Repository Name: [DisasterResilienceUSA](https://github.com/RahulKodate/DisasterResilienceUSA)
 
 To better reflect the essence of our project, we have chosen the name "DisasterResilienceUSA" for our repository. This name highlights our commitment to building disaster resilience within the United States of America.
 
@@ -24,7 +24,7 @@ To better reflect the essence of our project, we have chosen the name "DisasterR
 
 We welcome contributions from developers, disaster management professionals, researchers, and anyone interested in improving disaster resilience. If you would like to contribute to the DMN project, please follow these steps:
 
-1. Fork the repository [DisasterResilienceUSA](https://github.com/DisasterResilienceUSA) to your GitHub account.
+1. Fork the repository [DisasterResilienceUSA](https://github.com/RahulKodate/DisasterResilienceUSA) to your GitHub account.
 
 2. Clone the forked repository to your local machine:
    
